@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Furman D1 Sports Rules</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+    header {
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      padding: 1rem 0;
+      overflow-x: auto;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .tab {
+      padding: 0.75rem 1.5rem;
+      background: #e8e8e8;
+      border: none;
+      border-radius: 6px 6px 0 0;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #555;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab:hover {
+      background: #d0d0d0;
+      color: #1a1a1a;
+    }
+    .tab.active {
+      background: #4a1e7c;
+      color: white;
+    }
+    .tab-content {
+      display: none;
+      padding: 2rem 0;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .sport-header {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .sport-header h2 {
+      margin: 0 0 0.5rem 0;
+      color: #4a1e7c;
+    }
+    .sport-header a {
+      color: #6b2d9e;
+      text-decoration: none;
+    }
+    .sport-header a:hover {
+      text-decoration: underline;
+    }
+    .search-box {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .search-box input:focus {
+      outline: none;
+      border-color: #4a1e7c;
+    }
+    .rule {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      border-left: 4px solid #4a1e7c;
+    }
+    .rule h3 {
+      margin: 0 0 0.5rem 0;
+      color: #4a1e7c;
+      font-size: 1.3rem;
+    }
+    .rule-meta {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .rule-content {
+      white-space: pre-wrap;
+      color: #333;
+      max-height: 300px;
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+    .rule-content::-webkit-scrollbar {
+      width: 8px;
+    }
+    .rule-content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    .rule-content::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    .rule-content::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .expand-btn {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #4a1e7c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .expand-btn:hover {
+      background: #6b2d9e;
+    }
+    .no-results {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>🎓 Furman D1 Sports Rulebooks</h1>
+      <p>Official NCAA rules for all Furman Division I sports</p>
+    </div>
+  </header>
+
+  <div class="tabs container" id="tabs"></div>
+
+  <main class="container">
+    <div id="content"></div>
+  </main>
+
+  <script>
+    let allData = null;
+    let currentSport = 0;
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[m]));
+    }
+
+    function renderTabs(sports) {
+      const tabsContainer = document.getElementById('tabs');
+      tabsContainer.innerHTML = '';
+      
+      sports.forEach((sport, idx) => {
+        const btn = document.createElement('button');
+        btn.className = `tab ${idx === currentSport ? 'active' : ''}`;
+        btn.textContent = sport.sport;
+        btn.onclick = () => switchSport(idx);
+        tabsContainer.appendChild(btn);
+      });
+    }
+
+    function switchSport(idx) {
+      currentSport = idx;
+      renderTabs(allData.sports);
+      renderSport(allData.sports[idx]);
+    }
+
+    function renderSport(sportData) {
+      const content = document.getElementById('content');
+      const sportId = sportData.sport.toLowerCase().replace(/[^\w]+/g, '-');
+      
+      content.innerHTML = `
+        <div class="tab-content active">
+          <div class="sport-header">
+            <h2>${escapeHtml(sportData.sport)}</h2>
+            <p>Source: <a href="${escapeHtml(sportData.source_url)}" target="_blank">Official Rulebook PDF</a></p>
+            <p>${sportData.sections.length} sections</p>
+          </div>
+          
+          <div class="search-box">
+            <input 
+              type="text" 
+              id="search-${sportId}" 
+              placeholder="Search rules for ${escapeHtml(sportData.sport)}..."
+              oninput="filterRules('${sportId}')"
+            />
+          </div>
+          
+          <div id="rules-${sportId}"></div>
+        </div>
+      `;
+      
+      renderRules(sportData, sportId);
+    }
+
+    function renderRules(sportData, sportId, filter = '') {
+      const rulesContainer = document.getElementById(`rules-${sportId}`);
+      const filteredSections = filter 
+        ? sportData.sections.filter(r => 
+            r.title.toLowerCase().includes(filter.toLowerCase()) ||
+            r.content.toLowerCase().includes(filter.toLowerCase())
+          )
+        : sportData.sections;
+
+      if (filteredSections.length === 0) {
+        rulesContainer.innerHTML = '<div class="no-results">No rules found matching your search.</div>';
+        return;
+      }
+
+      rulesContainer.innerHTML = filteredSections.map(rule => `
+        <div class="rule">
+          <h3 id="${escapeHtml(rule.id)}">${escapeHtml(rule.title)}</h3>
+          <div class="rule-meta">
+            ${rule.start_page ? `Page ${rule.start_page}` : 'Page not available'}
+          </div>
+          <div class="rule-content" id="content-${escapeHtml(rule.id)}">
+${escapeHtml(rule.content)}
+          </div>
+          <button class="expand-btn" onclick="toggleExpand('${escapeHtml(rule.id)}')">
+            Expand Full Rule
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function filterRules(sportId) {
+      const searchInput = document.getElementById(`search-${sportId}`);
+      const filter = searchInput.value;
+      const sportData = allData.sports[currentSport];
+      renderRules(sportData, sportId, filter);
+    }
+
+    function toggleExpand(ruleId) {
+      const contentEl = document.getElementById(`content-${ruleId}`);
+      if (contentEl.style.maxHeight === 'none') {
+        contentEl.style.maxHeight = '300px';
+        event.target.textContent = 'Expand Full Rule';
+      } else {
+        contentEl.style.maxHeight = 'none';
+        event.target.textContent = 'Collapse Rule';
+      }
+    }
+
+    async function loadRules() {
+      try {
+        const resp = await fetch('../output/rules.json');
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        
+        allData = await resp.json();
+        
+        if (!allData.sports || allData.sports.length === 0) {
+          throw new Error('No sports data found');
+        }
+        
+        renderTabs(allData.sports);
+        renderSport(allData.sports[0]);
+        
+      } catch (err) {
+        document.getElementById('content').innerHTML = `
+          <div class="loading" style="color: red;">
+            <h2>Error Loading Rules</h2>
+            <p>${escapeHtml(err.message)}</p>
+            <p>Make sure rules.json exists in the output directory.</p>
+          </div>
+        `;
+      }
+    }
+
+    loadRules();
+  </script>
+</body>
+</html>

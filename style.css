@@ -1,0 +1,7 @@
+body {font-family: system-ui, Segoe UI, Roboto, Arial; margin:0; padding:0; color:#111; line-height:1.5;}
+header {padding:1rem; background:#036; color:white; border-bottom:6px solid #024;}
+main {padding:1rem;}
+.rule {margin-bottom:2rem; padding:1rem; border:1px solid #ddd; border-radius:6px; background:#fafafa;}
+.rule h2 {margin-top:0; color:#024;}
+small {color:#555;}
+pre {white-space:pre-wrap; font-family:inherit;}
