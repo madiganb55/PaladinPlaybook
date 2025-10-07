@@ -30,23 +30,22 @@ SPORTS_RULEBOOKS = {
     "Men's Basketball": "https://cdn1.sportngin.com/attachments/document/e0d1-2810991/2023-2024_Mens_BBall_Rules_Book.pdf",
     "Women's Basketball": "https://ncaaorg.s3.amazonaws.com/championships/sports/basketball/d1/2024-25WBB_OfficialPlayingRules.pdf",
     
-    # Baseball - https://www.ncaapublications.com/p-4709-2025-and-2026-baseball-rules-book.aspx
-    "Baseball": "https://ncaaorg.s3.amazonaws.com/championships/sports/baseball/rules/2025-26BB_RulesBook.pdf",
+    
     
     # Soccer - https://www.ncaapublications.com/p-4692-2024-and-2025-soccer-rules.aspx
-    "Men's Soccer": "https://ncaaorg.s3.amazonaws.com/championships/sports/soccer/d1/2024-25MSO_RulesBook.pdf",
-    "Women's Soccer": "https://ncaaorg.s3.amazonaws.com/championships/sports/soccer/d1/2024-25WSO_RulesBook.pdf",
+    "Men's Soccer": "https://cdn1.sportngin.com/attachments/document/18d0-3216650/2024-2025_Rule_Book.pdf",
+    "Women's Soccer": "https://cdn1.sportngin.com/attachments/document/18d0-3216650/2024-2025_Rule_Book.pdf",
     
     # Volleyball - https://www.ncaapublications.com/p-4691-2024-and-2025-womens-volleyball-rules-book.aspx
-    "Volleyball": "https://ncaaorg.s3.amazonaws.com/championships/sports/volleyball/rules/2024-25WVB_RulesBook.pdf",
+    "Volleyball": "https://www.ncaapublications.com/productdownloads/VBR24.pdf",
     
     # Golf - USGA Rules apply, but NCAA has modifications
-    "Men's Golf": "https://ncaaorg.s3.amazonaws.com/championships/sports/golf/rules/2024-25Golf_ModificationsUSGARules.pdf",
-    "Women's Golf": "https://ncaaorg.s3.amazonaws.com/championships/sports/golf/rules/2024-25Golf_ModificationsUSGARules.pdf",
+    "Men's Golf": "https://www.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html#!ruletype=pe&section=rule&rulenum=1",
+    "Women's Golf": "https://www.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html#!ruletype=pe&section=rule&rulenum=1",
     
     # Tennis - USTA Rules apply with NCAA modifications
-    "Men's Tennis": "https://ncaaorg.s3.amazonaws.com/championships/sports/tennis/rules/2024TEN_ModificationsITFRules.pdf",
-    "Women's Tennis": "https://ncaaorg.s3.amazonaws.com/championships/sports/tennis/rules/2024TEN_ModificationsITFRules.pdf",
+    "Men's Tennis": "https://ncaaorg.s3.amazonaws.com/championships/sports/tennis/rules/2022-23PRXTE_ITARulesBook.pdf",
+    "Women's Tennis": "https://ncaaorg.s3.amazonaws.com/championships/sports/tennis/rules/2022-23PRXTE_ITARulesBook.pdf",
 
 }
 
