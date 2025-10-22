@@ -21,10 +21,7 @@ SPORTS_RULEBOOKS = {
     "Women's Lacrosse": "https://cdn1.sportngin.com/attachments/document/3c7d-3127216/WLRules2024_2025.pdf",
     
     # Football - check your conference or athletics department for PDF access
-    # NCAA Publications page: https://www.ncaapublications.com/p-4705-2024-ncaa-football-rules-book-online-only.aspx
-    "Football": "https://www.ncaapublications.com/productdownloads/FR25.pdf",
-    
-    # Basketball - NCAA Publications (may require purchase)
+    # NCAA Publications page: https://www.ncaapublications.comuire purchase)
     # Men's: https://www.ncaapublications.com/p-4700-2024-25-ncaa-mens-basketball-rules-book.aspx
     # Women's: https://www.ncaapublications.com/p-4699-2024-25-ncaa-womens-basketball-rules-book.aspx
     "Men's Basketball": "https://cdn1.sportngin.com/attachments/document/e0d1-2810991/2023-2024_Mens_BBall_Rules_Book.pdf",
