@@ -357,6 +357,7 @@
     </div>
   </header>
 
+
   <main class="container">
     <!-- Home View -->
     <div id="homeView">
@@ -722,30 +723,41 @@
     function showSport(idx) {
       currentView = 'sport';
       const sport = allData.sports[idx];
-      const sportView = document.getElementById('sportView');
+
+      url = sport['sport'].replace("'", "").replace(" ", "_").toLowerCase()+".html";
+      window.location.href = url;
+
+      // Navigate to sport .html 
+
+      // Take out apostrophes and spaces for filename
+      // window.location.href = `${sport.sport.replace(/['\s]+/g, '_').toLowerCase()}.html`;
+
+      // window.location.href = `${sport.sport.replace(/\s+/g, '_').toLowerCase()}.html`;
+
+      // const sportView = document.getElementById('sportView');
       
-      document.getElementById('homeView').style.display = 'none';
-      document.getElementById('sportDropdown').classList.remove('show');
+      // document.getElementById('homeView').style.display = 'none';
+      // document.getElementById('sportDropdown').classList.remove('show');
       
-      sportView.innerHTML = `
-        <a href="#" class="back-btn" onclick="showHome(); return false;">
-          ← Back to All Sports
-        </a>
+      // sportView.innerHTML = `
+      //   <a href="#" class="back-btn" onclick="showHome(); return false;">
+      //     ← Back to All Sports
+      //   </a>
         
-        <div class="sport-header">
-          <h2>${sportIcons[sport.sport] || '🏆'} ${escapeHtml(sport.sport)}</h2>
-          <div class="sport-meta">
-            <span><strong>${sport.sections.length}</strong> Essential Rules</span>
-            <span><a href="${escapeHtml(sport.source_url)}" target="_blank">View Full Rulebook PDF →</a></span>
-          </div>
-        </div>
+      //   <div class="sport-header">
+      //     <h2>${sportIcons[sport.sport] || '🏆'} ${escapeHtml(sport.sport)}</h2>
+      //     <div class="sport-meta">
+      //       <span><strong>${sport.sections.length}</strong> Essential Rules</span>
+      //       <span><a href="${escapeHtml(sport.source_url)}" target="_blank">View Full Rulebook PDF →</a></span>
+      //     </div>
+      //   </div>
         
-        <div id="rulesContainer"></div>
-      `;
+      //   <div id="rulesContainer"></div>
+      // `;
       
-      sportView.classList.add('active');
-      renderRules(sport);
-      window.scrollTo(0, 0);
+      // sportView.classList.add('active');
+      // renderRules(sport);
+      // window.scrollTo(0, 0);
     }
 
     function renderRules(sport) {

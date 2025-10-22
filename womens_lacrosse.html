@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NCAA Women’s Lacrosse Rules 2024–2025</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="soccer.html">Soccer</a>
+      <a href="basketball.html">Men’s Basketball</a>
+      <a href="lacrosse.html">Women’s Lacrosse</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <!-- Embed the full content from ncaa-wlax-rules.html here -->
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAA Women's Lacrosse Rules 2024-2025</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #003366;
+            border-bottom: 3px solid #003366;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #004080;
+            margin-top: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #0059b3;
+            margin-top: 20px;
+        }
+        .rule-section {
+            margin-bottom: 30px;
+        }
+        .highlight {
+            background-color: #ffffcc;
+            padding: 2px 4px;
+        }
+        .toc {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #003366;
+        }
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .major-change {
+            background-color: #e6f3ff;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #0059b3;
+        }
+    </style>
+    <script>
+
+        function addGraphic(){
+            fieldDiagram = `
+                <div class="field-diagram-section">
+                    <h2 style="color: #4a1e7c; margin-bottom: 1rem;">🥍 Interactive Field Diagram</h2>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Click on any position to learn about their role</p>
+                    ${getLacrosseFieldSVG()}
+                    <div class="legend" style="display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: #4a1e7c; border: 2px solid white;"></div>
+                        <span>Home Team (Purple)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: #c41e3a; border: 2px solid white;"></div>
+                        <span>Away Team (Red)</span>
+                    </div>
+                    </div>
+                    <div class="info-panel" id="lacrosseInfoPanel" style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem; margin-top: 1rem; border-left: 4px solid #4a1e7c;">
+                    <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">Welcome to Women's Lacrosse!</h3>
+                    <p style="margin: 0.5rem 0;"><strong>Click on any position</strong> to learn about their role on the field.</p>
+                    <p style="margin: 0.5rem 0;"><strong>Field Dimensions:</strong> 110-120 yards long × 60-70 yards wide</p>
+                    <p style="margin: 0.5rem 0;"><strong>Teams:</strong> 12 players per side (11 field players + 1 goalie)</p>
+                    </div>
+                </div>
+                `;
+            
+            
+            container.innerHTML = fieldDiagram + sport.sections.map(rule => `
+                <div class="rule-card">
+                <h3>${escapeHtml(rule.title)}</h3>
+                <div class="rule-meta">
+                    ${rule.start_page ? `📄 Page ${rule.start_page}` : ''}
+                </div>
+                <div class="rule-content">${escapeHtml(rule.content)}</div>
+                </div>
+            `).join('');
+        }
+
+         
+    </script>
+</head>
+<body>
+    <div class="container" onload="addGraphic">
+        <h1>2024 and 2025 NCAA Women's Lacrosse Rules</h1>
+        
+        <p><strong>National Collegiate Athletic Association</strong><br>
+        P.O. Box 6222<br>
+        Indianapolis, Indiana 46206-6222<br>
+        317-917-6222<br>
+        WWW.NCAA.ORG</p>
+
+        <div class="toc">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#major-changes">Major Rules Changes for 2024 and 2025</a></li>
+                <li><a href="#points-emphasis">Points of Emphasis</a></li>
+                <li><a href="#rule1">Rule 1 — The Playing Area and Goals</a></li>
+                <li><a href="#rule2">Rule 2 — Equipment and Uniforms</a></li>
+                <li><a href="#rule3">Rule 3 — Game Personnel</a></li>
+                <li><a href="#rule4">Rule 4 — Time Factors and Scoring</a></li>
+                <li><a href="#rule5">Rule 5 — Play of the Game</a></li>
+                <li><a href="#rule6">Rule 6 — Fouls and Penalty Administration</a></li>
+                <li><a href="#rule7">Rule 7 — Definition of Terms</a></li>
+            </ul>
+        </div>
+
+        <div id="major-changes" class="rule-section">
+            <h2>Major Rules Changes for 2024 and 2025</h2>
+            
+            <div class="major-change">
+                <h3>Rule 2-13: Improper/Broken Equipment</h3>
+                <p>Modified the title of the section, changed the language from illegal equipment to improper/broken equipment, eliminated the requirement for reinspection, and clarified that bent/broken shafts are prohibited from being used for the remainder of the game.</p>
+            </div>
+
+            <div class="major-change">
+                <h3>Rule 2-19: Footwear/Cleats</h3>
+                <p>Moved footwear/cleats from Uniforms to Equipment. Permits players to wear shoes with soles containing aluminum, leather, rubber, nylon or plastic cleats, studs or bars, as long as officials do not consider them dangerous.</p>
+            </div>
+
+            <div class="major-change">
+                <h3>Rule 5-4: Draw Administration</h3>
+                <p>During the administration of the draw, requires officials to position the drawers' sticks in an upright position when placing the ball.</p>
+            </div>
+
+            <div class="major-change">
+                <h3>Rule 5-23: Retention of Possession During Power Play</h3>
+                <p>If a team with a numerical advantage due to penalties retains possession at the expiration of a quarter, overtime half or period, the team will be awarded possession at the start of the subsequent quarter, overtime half or period.</p>
+            </div>
+
+            <div class="major-change">
+                <h3>Rule 6-3: Increased Physical Foul Penalties</h3>
+                <p>Increased the penalty between the restraining lines for blocking/illegal pick, charging, cross checks, illegal use of the stick, and pushing to a one-minute releasable penalty.</p>
+            </div>
+
+            <div class="major-change">
+                <h3>Rule 6-11, 6-12: Embellishment and Flopping</h3>
+                <p>Added new fouls for Embellishment and Flopping which will result in the issuance of a green card.</p>
+            </div>
+
+            <div class="major-change">
+                <h3>Rule 6-27, 6-33, 6-38: Red Card Penalty Time</h3>
+                <p><span class="highlight">Increased the penalty time for a red card from two minutes to five minutes.</span></p>
+            </div>
+        </div>
+
+        <div id="points-emphasis" class="rule-section">
+            <h2>Points of Emphasis</h2>
+            
+            <h3>The Draw</h3>
+            <p>The committee asks officials to focus on the following during the administration of the draw:</p>
+            <ul>
+                <li>Placement of the ball in the top 1/3 of the sticks at the widest point and with the sticks in an upright position</li>
+                <li>Awareness of any advantage/disadvantage that may be in effect due to the placement of the ball between the sticks</li>
+                <li>Issuance of a green card to players who persistently place their finger/thumb on the throat, sidewall, pocket, or other part of the head of the stick</li>
+                <li>Identification of any movement after the official's verbal command, "Ready"</li>
+            </ul>
+
+            <h3>Picks</h3>
+            <p>The committee encourages officials to permit legal picks and call illegal picks consistently. For a pick to be legal, the picker shall stay within their vertical plane with a stance not wider than shoulder width apart and shall not lean into the path of an opponent or extend their hips into that path even though their feet are stationary.</p>
+
+            <h3>Three Seconds</h3>
+            <p>The committee encourages officials to focus on the change from a stick's length to a stick and arm's length in their evaluation of three seconds.</p>
+        </div>
+
+        <div id="rule1" class="rule-section">
+            <h2>Rule 1 — The Playing Area and Goals</h2>
+            
+            <h3>Field Dimensions</h3>
+            <p>The playing area shall be rectangular and marked with a solid lined boundary. Optimal field dimensions shall be 60 meters (65 yards) in width and 110 meters (120 yards) in total length, with goals 92 meters (100 yards) apart.</p>
+
+            <h3>Restraining Line</h3>
+            <p>The restraining line, a solid line 27 meters (30 yards) upfield from each goal line, shall extend across the width of the field.</p>
+
+            <h3>8-Meter Arc and 12-Meter Fan</h3>
+            <p>An arc and fan shall be marked 8 meters (26'4") and 12 meters (39'4"), respectively, from the goal circles.</p>
+
+            <h3>The Goals</h3>
+            <p>Each goal consists of two posts or pipes perpendicular to the ground, constructed of metal, 1.83 meters (6') high and 1.83 meters (6') apart, joined at the top by a crossbar 1.83 meters (6') from the ground.</p>
+        </div>
+
+        <div id="rule2" class="rule-section">
+            <h2>Rule 2 — Equipment and Uniforms</h2>
+            
+            <h3>Field Stick</h3>
+            <p>The field stick must be made of composite, metal alloy (shaft only), rubber, wood, gut, leather, fiberglass, nylon, plastic and any other synthetic material. The stick shall not have sharp or protruding edges, or parts, and shall not be dangerous to players in any way.</p>
+            <p>The stick's overall length shall be a minimum of 35½" and a maximum of 43¼".</p>
+
+            <h3>Eye Protection</h3>
+            <p>All field players must wear eye protection properly. Eye protection must meet the most current ASTM Specification Standard for eye protectors for women's lacrosse.</p>
+
+            <h3>Mouthpiece</h3>
+            <p>All players must properly wear a professionally manufactured intra-oral mouthpiece that fully covers the upper jaw teeth.</p>
+
+            <h3>Uniform Requirements</h3>
+            <p>All field players' uniform shirts shall be the same color, design, trim and cut. All players must wear numbers, differing from others on the team, on the front and back of the uniform shirt. Numbers on the back must be a minimum of 8 inches tall; numbers on the front must be a minimum of 6 inches tall.</p>
+        </div>
+
+        <div id="rule3" class="rule-section">
+            <h2>Rule 3 — Game Personnel</h2>
+            
+            <h3>The Teams</h3>
+            <p>A game is played between two teams. Twelve players constitute a full team, one member of whom acts as the speaking captain.</p>
+
+            <h3>The Coach</h3>
+            <p>Each head coach and the officials must meet at the scorer's/timer's table with 10 minutes showing on the pregame clock. At the meeting, each coach will verbally certify to the officials that all equipment is legal under these rules.</p>
+
+            <h3>The Officials</h3>
+            <p>It is highly recommended that three officials be used to officiate the game. A minimum of two officials must be used. The officials' jurisdiction extends from 30 minutes before the game begins until the officials approve the NCAA Carding/Score Verification Form and leave the playing venue.</p>
+        </div>
+
+        <div id="rule4" class="rule-section">
+            <h2>Rule 4 — Time Factors and Scoring</h2>
+            
+            <h3>Duration of Play</h3>
+            <p>The regulation playing time is four 15-minute quarters with two-minute breaks between the first and second quarters and between the third and fourth quarters. Halftime will be 10 minutes.</p>
+
+            <h3>Team Timeouts</h3>
+            <p>Each team shall be permitted three timeouts during regulation playing time that do not carry over into overtime. During the entire duration of overtime, each team is permitted one timeout.</p>
+
+            <h3>Overtime Procedures</h3>
+            <p>When the score is tied at the end of regular playing time, both teams will have a five-minute rest. One six-minute period of sudden-victory overtime will be played. The team that scores the first goal wins the game.</p>
+
+            <h3>Scoring</h3>
+            <p>The team scoring the greater number of goals is the winner. A goal is scored by the whole ball passing completely over the goal line, between the posts, and under the crossbar from in front, having been shot or propelled by the legal stick of a player of the attacking team.</p>
+        </div>
+
+        <div id="rule5" class="rule-section">
+            <h2>Rule 5 — Play of the Game</h2>
+            
+            <h3>Start/Restart of the Game</h3>
+            <p>Each quarter of the game, overtime half and period, and after each goal, is started by a draw, except when a free position or alternate possession at the center line has been awarded.</p>
+
+            <h3>Draw Positioning</h3>
+            <p>The opponents each stand with one foot toeing the center line. The sticks are held in the air, above each player's hip level with the lower side of the stick above the center line and back to back. The official shall place the ball in between the sticks, which shall be positioned in an upright position.</p>
+
+            <h3>90-Second Possession Clock</h3>
+            <p>After a team has gained possession of the ball, a visible 90-second possession clock will start. At the expiration of the 90 seconds, a change of possession will be awarded to the opposing team.</p>
+
+            <h3>Out of Bounds</h3>
+            <p>When the ball goes out of bounds, the official blows the whistle to stop play and signals the direction of possession. When a shot or deflected shot on goal goes out of bounds, the team of the player who is inbounds and nearest to the ball when it crosses the boundary line is awarded possession.</p>
+
+            <h3>Substitution</h3>
+            <p>Each team may substitute an unlimited number of players at any time during play. All substitutions must be made through the substitution area.</p>
+        </div>
+
+        <div id="rule6" class="rule-section">
+            <h2>Rule 6 — Fouls and Penalty Administration</h2>
+            
+            <h3>General Fouls</h3>
+            <p>General fouls include: covering, empty stick check, false start, forcing through, holding, illegal body ball, illegal cradle, illegal draw, illegal stick, pass from out of bounds, play from out of bounds, squeeze the head of the stick, tripping, and warding off.</p>
+
+            <h3>Physical Fouls</h3>
+            <p>Physical fouls include: blocking/illegal pick, charging, cross check, illegal use of the stick, and pushing. <span class="highlight">Physical fouls between the restraining lines result in a green card and one-minute releasable penalty.</span></p>
+
+            <h3>Shooting Space</h3>
+            <p>With any part of one's body, guarding the goal outside or inside the goal circle so as to obstruct the free space to goal, which denies the attack the opportunity to shoot safely. This rule is in effect when the ball is within the critical scoring area and above goal line extended.</p>
+
+            <h3>Three Seconds</h3>
+            <p>While defending within the 8-meter arc, remaining in that area more than three seconds unless one is marking an opponent within a stick's and arm's length.</p>
+
+            <h3>Green Card</h3>
+            <p>A green card is a one-minute releasable penalty. If the opposing team scores during the one-minute penalty, the carded player will be released from the penalty area.</p>
+
+            <h3>Yellow Card</h3>
+            <p>The player receiving the yellow card must leave the field and enter the penalty area for two minutes of elapsed playing time. If the opposing team scores during this time, the carded player will be released, unless serving a non-releasable yellow card penalty.</p>
+
+            <h3>Red Card</h3>
+            <p>The player receiving the red card must leave the field and enter the penalty area for <span class="highlight">five minutes of elapsed playing time</span>. A red card is a non-releasable penalty. Any player or coach who has received a red card will be prohibited from participating in the team's next game.</p>
+
+            <h3>Mandatory Card Fouls</h3>
+            <p>Mandatory card fouls include: dangerous contact, dangerous follow-through, dangerous propelling, dangerous stick in the sphere, illegal body ball in goal circle (red card), misconduct, slash, and suspended player substitutes.</p>
+        </div>
+
+        <div id="rule7" class="rule-section">
+            <h2>Rule 7 — Definition of Terms</h2>
+            
+            <h3>Critical Scoring Area</h3>
+            <p>The critical scoring area is an area located at the end of the field. Its boundaries are approximately 12 meters (13.1 yards) in front of the goal circle to 9 meters (10 yards) behind the goal line extended and 12 meters (13.1 yards) to each side of the goal circle.</p>
+
+            <h3>Embellishment</h3>
+            <p>Any physical action or conduct by a player on the field of play to exaggerate or embellish a foul by the other team in an effort to get the official to increase or escalate the penalty for the foul.</p>
+
+            <h3>Flopping</h3>
+            <p>Any physical action or conduct by a player on the field of play to make it seem like a foul has been committed by their opponent when no foul has been committed (e.g., faking physical contact).</p>
+
+            <h3>Power Play</h3>
+            <p>When one team has a numerical advantage in players due to penalties.</p>
+
+            <h3>Shot on Goal</h3>
+            <p>A shot when either the stick and/or body of the player taking the shot are positioned above goal line extended, and as a result of the shot, the ball makes contact with the goalposts, crossbar, or any part of the goalkeeper while the goalkeeper is within the goal circle, or crosses the goal line.</p>
+        </div>
+
+        <footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ccc; text-align: center; color: #666;">
+            <p>COPYRIGHT, 2023 BY THE NATIONAL COLLEGIATE ATHLETIC ASSOCIATION</p>
+            <p>For complete rules and additional information, visit <a href="https://www.ncaa.org">www.ncaa.org</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+  </div>
+
+  <footer>
+    © 2025 NCAA Women’s Lacrosse Rules — ncaa.org/playingrules
+  </footer>
+</body>
+</html>
