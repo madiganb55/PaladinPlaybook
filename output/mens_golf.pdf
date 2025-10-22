@@ -1,0 +1,2220 @@
+
+
+
+<!DOCTYPE HTML>
+<html   lang="en-US" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <title>Rules and Clarifications</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- google plus-->
+<meta itemprop="name" content="Rules and Clarifications"/>
+<meta itemprop="description" content=""/>
+<meta itemprop="image" content=""/>
+<!-- twitter-->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@USGA">
+<meta name="twitter:title" content="Rules and Clarifications">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="">
+<!-- facebook, linkedin and other-->
+<meta property="og:title" content="Rules and Clarifications"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content=""/>
+
+<meta property="og:description" content="Rules and Clarifications"/>
+<meta property="og:site_name" content="USGA"/>
+
+<!--<meta property="fb:admins" content="Facebook numberic ID" />-->
+<script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+    <script src="/etc/designs/usga/js/jquery-1.11.1.min.js"></script>
+    <!--config-->
+    <link rel="stylesheet" href="/etc/designs/usga/styles/modules.min.css?version=20250829.1"/>
+
+<link rel="shortcut icon" type="image/ico" href="/content/dam/usga/images/favicon.ico"/>
+
+<script src="/etc/designs/usga/js/modules.min.js?version=20250829.1"></script>
+
+<script>
+    $.cloudinary.config({"cloud_name": "usga"});
+    usga.Gigya.init({gigyaApiKey: ""});
+
+    usga.config.galleryScriptUrl = '/etc/designs/usga/js/juicebox.min.js';
+</script>
+
+<script>
+    // set source and token global cookies for clubhouse campaign
+    if (usga) {
+        var expires = 90;
+        if(usga.url.query.source){
+            $.cookie('source', usga.url.query.source, { 'path': '/', 'expires': expires});
+        }
+        if(usga.url.query.token){
+            $.cookie('token', usga.url.query.token, { 'path': '/', 'expires': expires});
+        }
+    }
+</script>
+<script>
+        var globalSettings = {
+            "pageType": 'default',
+            "imgPath": '/etc/designs/usga/hbs/img',
+            "feeds": {
+                "timeline": {
+                    "latestFeedUrl": "/bin/timeline/usga.{filter}.{index}.json",
+                    "departmentFeedUrl": "/bin/timeline/usga/department.{filter}.{index}.json",
+                    "championshipsFeedUrl": "/bin/timeline/usga/championships.{filter}.{index}.json"
+                },
+                "videos": '',
+                "videoPages": '/bin/videopagesbytags.{tagname}.{offset}.{limit}.json',
+                "schedule": '',
+                "smt": ''
+            },
+            "cloudinaryConfig": {
+                "cloudName": 'usga',
+                "apiKey": '981656926156991'
+            },
+            "sidelineGames": {
+                "riskItUrl": "https://play.riskit.io/api/auth/login/uswo/sso",
+                "pick3Url": "https://sidelinepick3.com/sso/uswo/?userId=",
+                "tokenUrl": "https://gripapiservices-women-gtm-pd.usopen.com/api/sidelineGamesToken"
+            },
+            "brightcove": {
+                "accountId": "1918791248001",
+                "policyKey": "BCpkADawqM2PZHuOr2tBZhszCQb6rUSKRgb3AHpj8RzVgpd78bwEbkBHQCNuuYSmaMWCsPgstUu66eiUnHUUQSv8BrvMgq3KLKnHON42BntRzYsLR8Pqmsvpwqm6iD96Dfnc03DU-CfP7bPx",
+                "playerId": "esLOVOSPa"
+            },
+            "pagePaths": {
+                "search": '/content/usga/home-page/custom-search.html',
+                "video": '/content/usga/home-page/video-hub.html'
+            },
+            "jsPublicPath": '/etc/designs/usga/hbs/js/',
+            "messages": {
+                "ieMessage": {"title":"WEBSITE NOT FULLY SUPPORTED IN YOUR BROWSER","text":"<p>Thank you for visiting <b>USGA.org</b>. For the optimal experience we recommend you upgrade to Windows 10 with Microsoft Edge or install one of the proposed browsers, or visit us on your mobile device.</p>\r\n","caption":"Download on: ","browsers":[{"title":"Google Chrome","icon":{"imagePath":"/content/dam/usga/images/browser-icons/chrome.png","alt":"This is the image","gravity":"center","type":"imageCloudinary","identifier":"usga/images/browser-icons/chrome","cropMode":"fill"},"link":{"text":"Download","url":"https://www.google.com/chrome/","target":"new","type":"link"}},{"title":"Mozilla Firefox","icon":{"imagePath":"/content/dam/usga/images/browser-icons/firefox.png","alt":"This is the image","gravity":"center","type":"imageCloudinary","identifier":"usga/images/browser-icons/firefox","cropMode":"fill"},"link":{"text":"Mozilla Firefox","url":"https://www.mozilla.org/en-US/firefox/new/","target":"new","type":"link"}},{"title":"Opera","icon":{"imagePath":"/content/dam/usga/images/browser-icons/open.png","alt":"This is the image","gravity":"center","type":"imageCloudinary","identifier":"usga/images/browser-icons/open","cropMode":"fill"},"link":{"text":"Opera","url":"https://www.opera.com/download","target":"new","type":"link"}}]}
+            },
+            "promotionModal": {"isEnabled":false,"cookieLength":"300","link":{"text":"Promo Title","url":"/usga.org","target":"new","type":"link"},"image":{"imagePath":"/content/dam/us-open/Article-Splash/as-usopentrophy-erin-hills-local-qualifying-story.jpg","alt":"This is the image","gravity":"center","type":"imageCloudinary","identifier":"us-open/Article-Splash/as-usopentrophy-erin-hills-local-qualifying-story","cropMode":"pad"}}
+        };
+    </script>
+
+    <script>
+    ;(function (window) {
+        var hostname = window.document.location.hostname;
+        var isProd = (hostname === 'www.usga.org' || hostname === 'new.usga.org');
+        window.usga = window.usga || {};
+        window.usga.isProd = function () {
+            return isProd;
+        };
+    })(window);
+</script>
+
+<script src="//assets.adobedtm.com/be647daa0868f11f8113c7fb433bafc636024ba2/satelliteLib-83349796437417787abc21e3f4ac547f4e6c55e0.js"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    var digitalData = (typeof digitalData !== 'undefined') ? digitalData : {};
+    //Page level analytics.
+    digitalData.page = {
+        "pageInfo": {
+            "pageName": "Rules and Clarifications",
+            "tags": []
+        },
+        "category": {
+            "primaryCategory": "",
+            "secondaryCategory": "",
+            "pageType": "Not specified"
+        }
+    };
+
+    
+
+    function trackPageEvent(event) {
+        if (_satellite) {
+            _satellite.track(event);
+        } else {
+            setTimeout(function () {
+                _satellite.track(event);
+            }, 2000);
+        }
+    }
+
+    function trackGSRS() {
+        if (gsrsTag && gsrsTag.title) {
+            digitalData.gsrsSection = gsrsTag.title;
+            if (globalSettings.pageType === 'gs-article') {
+                trackPageEvent('gsrs-article-section-set');
+            }
+            if (globalSettings.pageType === 'gs-video') {
+                trackPageEvent('gsrs-video-section-set');
+            }
+        }
+    }
+
+    var tags = digitalData.page.pageInfo.tags;
+    if (tags && Array.isArray(tags)) {
+        var gsrsTag = tags.find(function (tag) {
+            return tag.key && tag.key.indexOf('usga-green-section:section') === 0;
+        });
+
+        trackGSRS();
+    }
+
+    setTimeout(function () {
+        var $hiddenIframe = document.querySelector('iframe[style="display: none; visibility: hidden;"]');
+        if ($hiddenIframe && $hiddenIframe.title === '') {
+            $hiddenIframe.title = 'No content';
+        }
+    }, 3000);
+</script>
+<link rel="stylesheet" href="/etc/designs/usga/hbs/css/all.min.css?version=20250829.1">
+    <script src="/etc/designs/usga/hbs/js/all.242232.js?version=20250829.1" data-main="scripts/app" data-bundles-path="/etc/designs/usga/hbs/js"></script>
+
+</head>
+
+<body>
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK97H2J" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<a href="#skip-to-main-content" class="skip-to-main-content-link">skip to main content</a>
+    <header>
+        <div class="navigationParsys iparsys parsys">
+
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="navigation">
+
+
+
+
+
+
+
+    
+    
+        <div class="m-navigation" id="id-170a82f-navigation">
+    
+
+    <script type="text/stache" can-autorender>
+            <can-import from='components/geo-targeted-interstitial/geo-targeted-interstitial' />
+            <geo-targeted-interstitial></geo-targeted-interstitial>
+        </script>
+    <div id="leaderBoardTicker" class="leader-board liveLeaderBoard_fixed"></div>
+<script>
+    var lbTicker = new usga.LeaderboardTickerControl('#leaderBoardTicker', {
+        tickerUrl: "/bin/data/feeds/ticker.json"
+    });
+</script>
+
+    <div class="s-header" >
+
+        <div class="s-mobile-navigation">
+            <a class="s-logo" aria-label="U S G A logo" href="https://www.usga.org/content/usga/home-page.html"></a>
+
+            <button aria-label="menu" class="s-hamburger-btn js-hamburger-btn" aria-expanded="false">
+                <span class="s-line"></span>
+                <span class="s-line"></span>
+                <span class="s-line"></span>
+            </button>
+        </div>
+
+        <nav class="s-main-navigation js-main-navigation" role="navigation" aria-label="main-navigation">
+
+            <div class="s-overlapping js-overlapping"></div>
+
+            <a class="s-logo js-logo" aria-label="U S G A logo" href="https://www.usga.org/content/usga/home-page.html"></a>
+
+            <button aria-label="close" class="s-hamburger-close js-hamburger-close"></button>
+
+            <div class="s-navigation js-navigation">
+
+                <div class="s-mobile-search">
+                    <form class="s-form-search js-form-search">
+                        <fieldset class="s-form-search__fieldset">
+                            <input type="text" class="s-fieldset__input js-fieldset__input" placeholder="SEARCH">
+                            <input type="submit" class="s-fieldset__submit" value="search">
+                            <svg viewBox="0 0 362.715 362.715" class="s-input-icon">
+                                <path d="M352.464,302.966l-90.374-90.373c-6.689-6.69-15.414-10.097-24.182-10.238c33.904-50.513,28.561-119.733-16.045-164.339
+                                        c-50.688-50.687-133.161-50.687-183.848,0c-50.688,50.687-50.688,133.161,0,183.848c44.606,44.606,113.826,49.95,164.339,16.045
+                                        c0.142,8.767,3.548,17.492,10.238,24.182l90.373,90.374c13.669,13.668,35.829,13.668,49.498,0
+                                        C366.132,338.795,366.132,316.634,352.464,302.966z M193.579,193.579c-35.091,35.091-92.188,35.091-127.279,0
+                                        c-35.091-35.091-35.091-92.188,0-127.279c35.091-35.091,92.188-35.091,127.279,0C228.67,101.39,228.67,158.488,193.579,193.579z"/>
+                            </svg>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="navigationItemsContainer navigation-container responsivegrid"><div class="s-navigation-items-wrapper aem-Grid aem-Grid--12 aem-Grid--default--12  ">
+    
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">championships</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content s-dropdown-content--four-columns" data-layout="four-columns">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                championships
+            </div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://www.uswomensopen.com/" class="s-list-item s-alignment--left" target="_blank" aria-label=" U.S. Women&#x27;s Open Presented by Ally" rel="noopener">
+                        U.S. Women&#x27;s Open Presented by Ally
+                    </a>
+                
+            
+                
+                    <a href="http://www.usopen.com" class="s-list-item s-alignment--left" target="_blank" aria-label=" U.S. Open">
+                        U.S. Open
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/ussenioropen.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Senior Open">
+                        U.S. Senior Open
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usseniorwomensopen.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Senior Women&#x27;s Open">
+                        U.S. Senior Women&#x27;s Open
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usadaptiveopen.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Adaptive Open">
+                        U.S. Adaptive Open
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://championships.usga.org/uswomensamateurfourball.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Women&#x27;s Amateur Four-Ball">
+                        U.S. Women&#x27;s Amateur Four-Ball
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usamateurfourball.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Amateur Four-Ball">
+                        U.S. Amateur Four-Ball
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/curtiscup.html" class="s-list-item s-alignment--left" target="_self" aria-label=" Curtis Cup">
+                        Curtis Cup
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usgirlsjunior.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Girls&#x27; Junior">
+                        U.S. Girls&#x27; Junior
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usjunioramateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Junior Amateur">
+                        U.S. Junior Amateur
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/uswomensamateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Women&#x27;s Amateur">
+                        U.S. Women&#x27;s Amateur
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://championships.usga.org/usamateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Amateur">
+                        U.S. Amateur
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/ussenioramateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Senior Amateur">
+                        U.S. Senior Amateur
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usmidamateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Mid-Amateur">
+                        U.S. Mid-Amateur
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usseniorwomensamateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Senior Women&#x27;s Amateur">
+                        U.S. Senior Women&#x27;s Amateur
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/uswomensmidamateur.html" class="s-list-item s-alignment--left" target="_self" aria-label=" U.S. Women&#x27;s Mid-Amateur">
+                        U.S. Women&#x27;s Mid-Amateur
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/walkercup.html" class="s-list-item s-alignment--left" target="_self" aria-label=" Walker Cup">
+                        Walker Cup
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+        <div class="s-section-title s-section-title--list">
+            more
+        </div>
+    
+
+    
+
+        
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/golf-schedule-scores-tickets.html" class="s-list-item s-alignment--left" target="_self" aria-label="more Schedule &amp; Tickets">
+                        Schedule &amp; Tickets
+                    </a>
+                
+            
+                
+                    <a href="https://champ-admin.usga.org/player#/apply" class="s-list-item s-alignment--left" target="_self" aria-label="more Apply to Play">
+                        Apply to Play
+                    </a>
+                
+            
+                
+                    <a href="https://championships.usga.org/usndp.html" class="s-list-item s-alignment--left" target="_self" aria-label="more U.S. National Development Program">
+                        U.S. National Development Program
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/media/online-media-center/usga-records.html" class="s-list-item s-alignment--left" target="_self" aria-label="more Records &amp; Milestones">
+                        Records &amp; Milestones
+                    </a>
+                
+            
+                
+                    <a href="http://www.wagr.com" class="s-list-item s-alignment--left" target="_blank" aria-label="more WORLD AMATEUR GOLF RANKINGS" rel="noopener">
+                        WORLD AMATEUR GOLF RANKINGS
+                    </a>
+                
+            
+                
+                    <a href="https://usgaexperiences.com?utm_source&#x3D;usga.org&amp;utm_medium&#x3D;partner_referral&amp;utm_campaign&#x3D;overall_tickets_dropdown_backlink" class="s-list-item s-alignment--left" target="_blank" aria-label="more USGA Experience Packages" rel="noopener">
+                        USGA Experience Packages
+                    </a>
+                
+            
+                
+                    <a href="https://hospitality.usga.org/" class="s-list-item s-alignment--left" target="_self" aria-label="more Corporate Hospitality ">
+                        Corporate Hospitality 
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/safeguarding.html" class="s-list-item s-alignment--left" target="_self" aria-label="more Safeguarding">
+                        Safeguarding
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">Video</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content s-dropdown-content--five-columns" data-layout="five-columns">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                Video
+            </div>
+
+            <div class="s-section s-section--list">
+    
+        <div class="s-section-title s-section-title--list">
+            Video
+        </div>
+    
+
+    
+
+        
+            
+                
+                    <a href="https://video.usga.org/" class="s-list-item s-alignment--center" target="_self" aria-label="Video USGA Video Central">
+                        USGA Video Central
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+        
+
+    
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">PLAYING</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content s-dropdown-content--five-columns" data-layout="five-columns">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                PLAYING
+            </div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        <div class="s-inner-item js-inner-item">
+            <button class="s-list-item s-list-item--inner-title js-inner-dropdown-title s-list-item--third-layer">
+
+                
+                    <div class="is-hidden-desktop s-alignment--left">RULES</div>
+                        
+                            <a href="https://www.usga.org/content/usga/home-page/rules-hub.html" target="_self" class="s-section-title s-list-item s-section-title--list is-hidden-mobile s-alignment--left">
+                                RULES  »
+                            </a>
+                        
+                
+
+            </button>
+
+            <div class="s-inner-dropdown">
+                <div class="s-inner-dropdown-content s-inner-dropdown-content--indented">
+                    <button class="s-back-btn js-inner-back-btn">
+                        back
+                    </button>
+
+                    
+                        
+                                <a href="https://www.usga.org/content/usga/home-page/rules-hub.html" target="_self" class="s-section-title is-hidden-desktop s-alignment--left">
+                                    RULES  »
+                                </a>
+                            
+                    
+
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/rules-hub.html" class="s-list-item" target="_self">
+                            Rules Home
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html" class="s-list-item" target="_self">
+                            The Rules of Golf
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/rules-hub/education.html" class="s-list-item" target="_self">
+                            Education
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/rules-hub/amateur-status.html" class="s-list-item" target="_self">
+                            Amateur Status
+                            
+                        </a>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        <div class="s-inner-item js-inner-item">
+            <button class="s-list-item s-list-item--inner-title js-inner-dropdown-title s-list-item--third-layer">
+
+                
+                    <div class="is-hidden-desktop s-alignment--left">Handicapping</div>
+                        
+                            <a href="https://www.usga.org/content/usga/home-page/handicapping.html" target="_self" class="s-section-title s-list-item s-section-title--list is-hidden-mobile s-alignment--left">
+                                Handicapping  »
+                            </a>
+                        
+                
+
+            </button>
+
+            <div class="s-inner-dropdown">
+                <div class="s-inner-dropdown-content s-inner-dropdown-content--indented">
+                    <button class="s-back-btn js-inner-back-btn">
+                        back
+                    </button>
+
+                    
+                        
+                                <a href="https://www.usga.org/content/usga/home-page/handicapping.html" target="_self" class="s-section-title is-hidden-desktop s-alignment--left">
+                                    Handicapping  »
+                                </a>
+                            
+                    
+
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/handicapping.html" class="s-list-item" target="_self">
+                            Handicapping Home
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/handicapping/roh/rules-of-handicapping.html" class="s-list-item" target="_self">
+                            Rules of Handicapping
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/course-handicap-calculator.html" class="s-list-item" target="_self">
+                            Course Handicap™ Calculator
+                            
+                        </a>
+                    
+                        <a href="https://ncrdb.usga.org/NCRDB/" class="s-list-item" target="_blank">
+                            Course Rating and Slope Database™
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/get-handicap.html" class="s-list-item" target="_self">
+                            Get A Handicap Index®
+                            
+                        </a>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        <div class="s-inner-item js-inner-item">
+            <button class="s-list-item s-list-item--inner-title js-inner-dropdown-title s-list-item--third-layer">
+
+                
+                    <div class="is-hidden-desktop s-alignment--left">Equipment</div>
+                        
+                            <a href="https://www.usga.org/content/usga/home-page/equipment-standards.html" target="_self" class="s-section-title s-list-item s-section-title--list is-hidden-mobile s-alignment--left">
+                                Equipment  »
+                            </a>
+                        
+                
+
+            </button>
+
+            <div class="s-inner-dropdown">
+                <div class="s-inner-dropdown-content s-inner-dropdown-content--indented">
+                    <button class="s-back-btn js-inner-back-btn">
+                        back
+                    </button>
+
+                    
+                        
+                                <a href="https://www.usga.org/content/usga/home-page/equipment-standards.html" target="_self" class="s-section-title is-hidden-desktop s-alignment--left">
+                                    Equipment  »
+                                </a>
+                            
+                    
+
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/equipment-standards.html" class="s-list-item" target="_self">
+                            Equipment Home
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/rules/equipment-rules.html#!rule-14606" class="s-list-item" target="_self">
+                            Equipment Rules
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/equipment-standards/conforming-club-ball-lists.html" class="s-list-item" target="_self">
+                            Equipment Database (Club and Ball Lists)
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/equipment-standards/notices-and-announcements-47d84789.html" class="s-list-item" target="_self">
+                            Notices and Announcements
+                            
+                        </a>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        <div class="s-inner-item js-inner-item">
+            <button class="s-list-item s-list-item--inner-title js-inner-dropdown-title s-list-item--third-layer">
+
+                
+                    <div class="is-hidden-desktop s-alignment--left">Community</div>
+                        
+                            <a href="https://www.usga.org/content/usga/home-page/serving-the-game/health-of-the-game/community.html" target="_self" class="s-section-title s-list-item s-section-title--list is-hidden-mobile s-alignment--left">
+                                Community  »
+                            </a>
+                        
+                
+
+            </button>
+
+            <div class="s-inner-dropdown">
+                <div class="s-inner-dropdown-content s-inner-dropdown-content--indented">
+                    <button class="s-back-btn js-inner-back-btn">
+                        back
+                    </button>
+
+                    
+                        
+                                <a href="https://www.usga.org/content/usga/home-page/serving-the-game/health-of-the-game/community.html" target="_self" class="s-section-title is-hidden-desktop s-alignment--left">
+                                    Community  »
+                                </a>
+                            
+                    
+
+                    
+                        <a href="https://www.usga.org/content/usga/home-page/Handicap-ghin/GHIN-Sentry.html" class="s-list-item" target="_self">
+                            GHIN
+                            
+                        </a>
+                    
+                        <a href="http://www.drivechipandputt.com" class="s-list-item" target="_blank" rel="noopener">
+                            Drive, Chip and Putt
+                            
+                        </a>
+                    
+                        <a href="http://www.firsttee.org" class="s-list-item" target="_blank" rel="noopener">
+                            First Tee
+                            
+                        </a>
+                    
+                        <a href="http://www.girlsgolf.org" class="s-list-item" target="_blank" rel="noopener">
+                            LPGA/USGA Girls Golf
+                            
+                        </a>
+                    
+                        <a href="https://www.usga.org/content/dam/usga/pdf/Adaptive-Golf/Adaptive-Golf-Handbook-v10.pdf" class="s-list-item" target="_blank">
+                            Adaptive Golf
+                            
+                        </a>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        <div class="s-inner-item js-inner-item">
+            <button class="s-list-item s-list-item--inner-title js-inner-dropdown-title s-list-item--third-layer">
+
+                
+                    <div class="is-hidden-desktop s-alignment--left">Allied Golf Associations</div>
+                        
+                            <a href="https://www.usga.org/content/usga/home-page/about/allied-golf-associations.html" target="_self" class="s-section-title s-list-item s-section-title--list is-hidden-mobile s-alignment--left">
+                                Allied Golf Associations  »
+                            </a>
+                        
+                
+
+            </button>
+
+            <div class="s-inner-dropdown">
+                <div class="s-inner-dropdown-content s-inner-dropdown-content--indented">
+                    <button class="s-back-btn js-inner-back-btn">
+                        back
+                    </button>
+
+                    
+                        
+                                <a href="https://www.usga.org/content/usga/home-page/about/allied-golf-associations.html" target="_self" class="s-section-title is-hidden-desktop s-alignment--left">
+                                    Allied Golf Associations  »
+                                </a>
+                            
+                    
+
+                    
+                        <a href="http://www.usga.org/content/usga/home-page/about/allied-golf-associations.html" class="s-list-item" target="_self">
+                            Find Your Local AGA
+                            
+                        </a>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">Advancing</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content" data-layout="column-featured">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                Advancing
+            </div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/course-care.html" class="s-list-item s-alignment--left" target="_self" aria-label=" COURSE CARE">
+                        COURSE CARE
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/course-care/turfgrass-and-environmental-research.html" class="s-list-item s-alignment--left" target="_self" aria-label=" USGA Research">
+                        USGA Research
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/course-care/water-resource-center.html" class="s-list-item s-alignment--left" target="_self" aria-label=" Water Resource Center">
+                        Water Resource Center
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/course-care/golfer-experience.html" class="s-list-item s-alignment--left" target="_self" aria-label=" Golfer Experience">
+                        Golfer Experience
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/advancing-the-game/distance-insights.html" class="s-list-item s-alignment--left" target="_self" aria-label=" Distance Insights">
+                        Distance Insights
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/stem-education.html" class="s-list-item s-alignment--left" target="_self" aria-label=" STEM Education">
+                        STEM Education
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--featured">
+    
+        <div class="s-section-title">
+            Learn More
+        </div>
+    
+
+    <div class="s-featured-content">
+
+        
+            <div class="s-text">
+                Since its founding in 1920, the Green Section has led the USGA’s efforts to improve golf course playing conditions and sustainability through research, education, course consulting, technology tools and championship agronomy. The USGA’s investment in Green Section programs is estimated to save U.S. golf courses more than $1.9 billion each year as a result of reduced inputs and improved management practices.
+            </div>
+        
+
+        <div class="s-cards">
+
+            <a href="https://www.usga.org/advancing-the-game/golf-sustainability.html" target="_self" class="s-card">
+                <div class="s-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/article-splash/2023/Davis_grants'"
+        {crop}="'fill'"
+        {gravity}="'face'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+
+                    
+                </div>
+
+                <div class="s-text-box">
+                    Sustainability
+                </div>
+            </a>
+
+            <a href="https://www.usga.org/content/usga/home-page/course-care/green-section-record.html" target="_self" class="s-card">
+                <div class="s-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/course-care/CourseCareLandingPage/ThumbnailImages/GSR-22-Thumbnail'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+
+                    
+                </div>
+
+                <div class="s-text-box">
+                    The USGA Green Section Record
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">Celebrating</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content" data-layout="column-featured">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                Celebrating
+            </div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/usga-golf-museum.html" class="s-list-item s-alignment--left" target="_self" aria-label=" USGA GOLF MUSEUM">
+                        USGA GOLF MUSEUM
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/golf-house-pinehurst.html" class="s-list-item s-alignment--left" target="_self" aria-label=" GOLF HOUSE PINEHURST">
+                        GOLF HOUSE PINEHURST
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/awards-and-honors.html" class="s-list-item s-alignment--left" target="_self" aria-label=" AWARDS &amp; HONORS">
+                        AWARDS &amp; HONORS
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--featured">
+    
+        <div class="s-section-title">
+            Learn More
+        </div>
+    
+
+    <div class="s-featured-content">
+
+        
+            <div class="s-text">
+                The USGA promotes and conserves the true spirit of the game of golf as embodied in its ancient and honorable traditions. It acts in the best interests of the game for the continued enjoyment of those who love and play it.
+            </div>
+        
+
+        <div class="s-cards">
+
+            <a href="https://www.usga.org/content/usga/home-page/videos/2019/12/22/usga-golf-125th-anniversary-video-sizzle-final-6117661777001.html" target="_self" class="s-card">
+                <div class="s-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/article-splash/2020/usga-125-years'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+
+                    
+                </div>
+
+                <div class="s-text-box">
+                    The USGA: Celebrating 125 Years
+                </div>
+            </a>
+
+            <a href="https://www.usga.org/content/usga/home-page/articles/2017/09/breaking-new-ground-videos-highlight-museum-exhibit.html" target="_self" class="s-card">
+                <div class="s-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'us-open/videos/previews/1918791248001_5359042626001_5359018891001-vs'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+
+                    
+                        <div class="s-icon-play"></div>
+                    
+                </div>
+
+                <div class="s-text-box">
+                    Design Philosophy From Female Golf Course Architects
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">GIVING</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content" data-layout="column-two-promos">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                GIVING
+            </div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://support.usga.org/foundation/" class="s-list-item s-alignment--left" target="_self" aria-label=" USGA FOUNDATION HOME">
+                        USGA FOUNDATION HOME
+                    </a>
+                
+            
+                
+                    <a href="https://support.usga.org/membership/" class="s-list-item s-alignment--left" target="_self" aria-label=" USGA MEMBERS HOME">
+                        USGA MEMBERS HOME
+                    </a>
+                
+            
+                
+                    <a href="https://support.usga.org/join/" class="s-list-item s-alignment--left" target="_blank" aria-label=" JOIN THE USGA">
+                        JOIN THE USGA
+                    </a>
+                
+            
+                
+                    <a href="https://support.usga.org/renew-membership/" class="s-list-item s-alignment--left" target="_blank" aria-label=" RENEW">
+                        RENEW
+                    </a>
+                
+            
+                
+                    <a href="https://support.usga.org/donate/" class="s-list-item s-alignment--left" target="_blank" aria-label=" MAKE A DONATION">
+                        MAKE A DONATION
+                    </a>
+                
+            
+                
+                    <a href="https://usga.planmylegacy.org/" class="s-list-item s-alignment--left" target="_self" aria-label=" LEGACY GIVING">
+                        LEGACY GIVING
+                    </a>
+                
+            
+                
+                    <a href="https://www.usga.org/content/usga/home-page/member-clubs/club-membership-overview.html" class="s-list-item s-alignment--left" target="_self" aria-label=" MEMBER CLUBS">
+                        MEMBER CLUBS
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--featured">
+    
+
+    <div class="s-featured-content">
+
+        
+
+        <div class="s-cards">
+
+            <a href="https://foundation.usga.org/page/29540/donate/1" target="_blank" class="s-card s-card--promo">
+                <div class="s-logo-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/USGAFoundation/180395_Foundation-NavigationMenuPromoBox_2212x1474_GIVE'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-logo-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+                </div>
+
+                <div class="s-logo-title">
+                    GIVE NOW
+                </div>
+            </a>
+
+            <a href="/content/usga/home-page/clubhouse/default/2017/members-join.html" target="_self" class="s-card s-card--promo">
+                <div class="s-logo-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/USGAFoundation/180395_Foundation-NavigationMenuPromoBox_2212x1474_RENEW(1)'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-logo-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+                </div>
+
+                <div class="s-logo-title">
+                    RENEW TODAY
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">tickets</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content s-dropdown-content--five-columns" data-layout="five-columns">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                tickets
+            </div>
+
+            <div class="s-section s-section--list">
+    
+        <div class="s-section-title s-section-title--list">
+            U.S. Women&#x27;s Open Presented by Ally
+        </div>
+    
+
+    
+
+        
+            
+                
+                    <a href="https://www.uswomensopen.com/2026/tickets.html" class="s-list-item s-alignment--left" target="_self" aria-label="U.S. Women&#x27;s Open Presented by Ally 2026">
+                        2026
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+        <div class="s-section-title s-section-title--list">
+            U.S.  Open
+        </div>
+    
+
+    
+
+        
+            
+                
+                    <a href="https://www.usopen.com/2026/tickets.html" class="s-list-item s-alignment--left" target="_blank" aria-label="U.S.  Open 2026">
+                        2026
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+        <div class="s-section-title s-section-title--list">
+            U.S. Senior Open
+        </div>
+    
+
+    
+
+        
+            
+                
+                    <a href="https://championships.usga.org/ussenioropen/2026/tickets.html" class="s-list-item s-alignment--left" target="_self" aria-label="U.S. Senior Open 2026">
+                        2026
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+        
+
+    
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <div class="s-nav-item js-nav-item" data-index="">
+
+    <button class="s-nav-title s-nav-title--arrow js-dropdown-title">Shop</button>
+
+    <div class="s-dropdown">
+
+        <div class="s-dropdown-content" data-layout="column-two-promos">
+
+            <button class="s-back-btn js-back-btn">
+                back
+            </button>
+
+            <div class="s-section-title is-hidden-desktop">
+                Shop
+            </div>
+
+            <div class="s-section s-section--list">
+    
+
+    
+
+        
+            
+                
+                    <a href="https://bit.ly/3kOCENu" class="s-list-item s-alignment--left" target="_blank" aria-label=" APPAREL &amp; GIFTS" rel="noopener">
+                        APPAREL &amp; GIFTS
+                    </a>
+                
+            
+                
+                    <a href="https://www.usgacardshop.com/" class="s-list-item s-alignment--left" target="_blank" aria-label=" HOLIDAY CARDS" rel="noopener">
+                        HOLIDAY CARDS
+                    </a>
+                
+            
+                
+                    <a href="https://www.usgapublications.com/" class="s-list-item s-alignment--left" target="_blank" aria-label=" USGA PUBLICATIONS" rel="noopener">
+                        USGA PUBLICATIONS
+                    </a>
+                
+            
+        
+
+    
+</div>
+
+            <div class="s-section s-section--featured">
+    
+
+    <div class="s-featured-content">
+
+        
+
+        <div class="s-cards">
+
+            <a href="https://www.usgashop.com/?_s&#x3D;bm-USGAorg-SHOP-DT-Dropdown-600x336-Image-Spot-10.20.23" target="_blank" class="s-card s-card--logo s-card--logo-ad" rel="noopener">
+                <div class="s-logo-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/promo-images/2025-US-Open-Shop-Dropdown'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'This is the image'"
+        {class-name}="'s-logo-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+                </div>
+
+                <div class="s-logo-title">
+                    Shop Apparel &amp; Gifts
+                </div>
+            </a>
+
+            <a href="https://www.usgacardshop.com/?utm_source&#x3D;+&amp;utm_id&#x3D;USGA.org+Shopping+Nav" target="_blank" class="s-card s-card--logo s-card--logo-ad" rel="noopener">
+                <div class="s-logo-image-box">
+                    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/2025/USGA-Holiday-Card-Drop-Down'"
+        {crop}="'fill'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'USGA Golf-Themed Cards'"
+        {class-name}="'s-logo-image'"
+        {as-background}="''"
+        {visible}="''">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+                </div>
+
+                <div class="s-logo-title">
+                    Shop Golf-Themed Cards
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <style>
+
+@media (max-width: 390px) {
+   #leaderBoardTicker .s-team-selection .ticker-dropdown {
+   letter-spacing: .0225rem;
+   }
+}
+
+</style>
+
+
+    
+
+    
+</div></div>
+
+
+                <!-- include for dev-local-->
+                <div class="navigationItemsContainer navigation-container responsivegrid">
+                    <nav class="s-navigation-items-wrapper js-navigation-items-wrapper aem-Grid aem-Grid--12 aem-Grid--default--12  ">
+                        
+                            <div class="s-nav-item ea-icon">
+                                <a href="https://www.essentialaccessibility.com/usga?utm_source&#x3D;usgahomepage&amp;utm_medium&#x3D;iconlarge&amp;utm_term&#x3D;eachannelpage&amp;utm_content&#x3D;header&amp;utm_campaign&#x3D;usga" class="s-nav-title" target="_self" aria-label="Go to eSSENTIAL ACCESSIBILITY"></a>
+                            </div>
+                        
+                    </nav>
+                </div>
+                <!-- include for dev-local-->
+
+                <div class="s-nav-item s-nav-item-autorisation js-nav-item-autorisation">
+
+                    <div class="s-nav-title s-nav-title--arrow js-autorisation-title">My account</div>
+
+                    <div class="s-dropdown">
+
+                        <div class="s-dropdown-content">
+
+                            <div class="s-back-btn js-autorisation-back">
+                                back
+                            </div>
+
+                            <div class="s-section-title is-hidden-desktop">
+                                My Account
+                            </div>
+
+                            <div class="s-section s-section--list">
+                                <div class="s-list-item js-gigya-btn" data-action="profile">profile</div>
+                                <div class="s-list-item js-gigya-btn" data-action="logout">log out</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="s-nav-item js-nav-item-more s-nav-item--more is-hidden">
+                    <button class="s-nav-title js-more-title">more</button>
+
+                    <div class="s-dropdown">
+                        <div class="s-dropdown-content">
+                            <div class="s-section s-section--list">
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="0">championships</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="1">Video</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="2">PLAYING</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="3">Advancing</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="4">Celebrating</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="5">GIVING</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="6">tickets</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="7">Shop</button>
+                                    
+                                
+                                    
+                                        <button class="s-list-item s-list-item--arrow js-dropdown-title js-more-item is-hidden" data-index="8"></button>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s-additional-items js-additional-items">
+
+                <div class="s-cell s-cell--search">
+
+                    <button aria-label="search" class="s-icon js-search-btn">
+                        <svg viewBox="0 0 362.715 362.715" class="s-icon-search">
+                            <path d="M352.464,302.966l-90.374-90.373c-6.689-6.69-15.414-10.097-24.182-10.238c33.904-50.513,28.561-119.733-16.045-164.339
+                                    c-50.688-50.687-133.161-50.687-183.848,0c-50.688,50.687-50.688,133.161,0,183.848c44.606,44.606,113.826,49.95,164.339,16.045
+                                    c0.142,8.767,3.548,17.492,10.238,24.182l90.373,90.374c13.669,13.668,35.829,13.668,49.498,0
+                                    C366.132,338.795,366.132,316.634,352.464,302.966z M193.579,193.579c-35.091,35.091-92.188,35.091-127.279,0
+                                    c-35.091-35.091-35.091-92.188,0-127.279c35.091-35.091,92.188-35.091,127.279,0C228.67,101.39,228.67,158.488,193.579,193.579z"/>
+                        </svg>
+                    </button>
+
+                    <div class="s-dropdown">
+                        <form class="s-form-search js-form-search">
+                            <fieldset class="s-form-search__fieldset">
+                                <input type="text" class="s-fieldset__input js-fieldset__input" placeholder="SEARCH">
+                                <input type="submit" class="s-fieldset__submit" value="search">
+                                <svg viewBox="0 0 362.715 362.715" class="s-input-icon">
+                                    <path d="M352.464,302.966l-90.374-90.373c-6.689-6.69-15.414-10.097-24.182-10.238c33.904-50.513,28.561-119.733-16.045-164.339
+                                            c-50.688-50.687-133.161-50.687-183.848,0c-50.688,50.687-50.688,133.161,0,183.848c44.606,44.606,113.826,49.95,164.339,16.045
+                                            c0.142,8.767,3.548,17.492,10.238,24.182l90.373,90.374c13.669,13.668,35.829,13.668,49.498,0
+                                            C366.132,338.795,366.132,316.634,352.464,302.966z M193.579,193.579c-35.091,35.091-92.188,35.091-127.279,0
+                                            c-35.091-35.091-35.091-92.188,0-127.279c35.091-35.091,92.188-35.091,127.279,0C228.67,101.39,228.67,158.488,193.579,193.579z"/>
+                                </svg>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="s-cell s-cell--autorisation js-autorisation-cell">
+                    <div>
+                        <button aria-label="log in" class="s-user-logged-in">
+                            <div class="js-welcome-widget"></div>
+                        </button>
+                    </div>
+
+                    <div class="s-user-logged-out">
+                        <button aria-label="log out" class="s-icon">
+                            <svg id="icon-login" viewBox="0 0 16 16" class="s-icon-login">
+                                <path d="M2.57554 11.0642L1.39703 9.8857C1.26685 9.75552 1.26685 9.54447 1.39703 9.41429L6.52684 4.28448C6.56343 4.24789 6.60804 4.22032 6.65713 4.20396L7.13147 4.04584C7.231 4.01267 7.30911 3.93456 7.34229 3.83503L7.5004 3.36068C7.51677 3.31159 7.54434 3.26698 7.58093 3.23039L9.4109 1.40042C9.54108 1.27024 9.75213 1.27024 9.88231 1.40041L11.0608 2.57893C11.191 2.7091 11.191 2.92016 11.0608 3.05033L10.972 3.13917C10.9527 3.15844 10.9354 3.18037 10.9221 3.20414C10.2713 4.36318 11.6336 5.72548 12.7926 5.07468C12.8164 5.06133 12.8383 5.04406 12.8576 5.02478L12.9464 4.93595C13.0766 4.80577 13.2877 4.80577 13.4178 4.93595L14.5964 6.11446C14.7265 6.24464 14.7265 6.45569 14.5964 6.58586L12.7664 8.41584C12.7298 8.45243 12.6852 8.48 12.6361 8.49637L12.1617 8.65448C12.0622 8.68766 11.9841 8.76576 11.9509 8.8653L11.7928 9.33964C11.7764 9.38873 11.7489 9.43334 11.7123 9.46993L6.58248 14.5997C6.4523 14.7299 6.24125 14.7299 6.11107 14.5997L4.93256 13.4212C4.80239 13.2911 4.80239 13.08 4.93256 12.9498L5.02454 12.8578C5.04174 12.8407 5.05742 12.8212 5.07005 12.8004C5.84603 11.5233 4.47343 10.1507 3.19637 10.9267C3.17559 10.9393 3.15612 10.955 3.13892 10.9722L3.04694 11.0642C2.91677 11.1944 2.70571 11.1944 2.57554 11.0642Z" stroke="white" stroke-linejoin="bevel"/>
+                                <path d="M12.2394 8.94289L7.05396 3.75744" stroke="white" stroke-linejoin="round" stroke-dasharray="0.67 1.43"/>
+                            </svg>
+                        </button>
+
+                        <div class="s-dropdown">
+                            <div class="s-title">Tickets Account</div>
+                            <div class="s-text">
+                                Sign in to access your AXS Fan Account to manage your tickets. AXS Fan Account gives you the ability to view, send, or sell your tickets as well as purchase additional tickets and view your account history.
+                            </div>
+                            
+                                
+                            
+                            
+                                
+                                    <a class="s-btn s-btn--profile s-btn--optional" href="https://fanaccount.axs.com/?skin&#x3D;usga" target="_blank" rel="noopener">Manage My Tickets</a>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+    </div>
+</div>
+
+<div class="s-gigya-overlay js-gigya-overlay"></div>
+
+<div class="m-navigation-placeholder"></div>
+
+<script>
+    steal.import('modules/navigation/navigation').then(function (module) {
+        module.Navigation('#id-170a82f-navigation', {
+            pagePath: '/content/usga/home-page/rules/rules-and-clarifications/rules-and-clarifications',
+            fanInfo: {"type":"free_fan_account"},
+            memberInfo: {"type":"member_account"},
+            anonymousInfo: {"type":"anonymous","title":"Tickets Account","displayCopy":"Sign in to access your AXS Fan Account to manage your tickets. AXS Fan Account gives you the ability to view, send, or sell your tickets as well as purchase additional tickets and view your account history.","buttons":[{"text":"Manage My Tickets","url":"https://fanaccount.axs.com/?skin=usga","target":"new","type":"link"}]},
+            alertMessage: ''
+        });
+    });
+</script>
+
+    
+</div>
+
+    
+
+</div>
+
+    
+
+</div>
+</header>
+<main id="skip-to-main-content">
+        
+
+<div class="wrapper">
+    <!-- content part-->
+    <div class="content">
+        <div class="contentPar parsys"><div class="htmlEditor parbase section"><link rel="stylesheet" href="./css/fonts.css">
+<link rel="stylesheet" href="./css/rules.css">
+<link rel="stylesheet" href="./css/rule.css">
+ 
+<div id="rules-of-golf"></div>
+
+<script defer type="text/javascript" src="./js/config.js"></script>
+<script defer type="text/javascript" src="./js/rules.js"></script></div>
+
+</div>
+
+        <div class="inner">
+            <div class="innerPar1 parsys">
+</div>
+
+            <div class="innerIPar1 iparsys parsys"><div class="htmlEditor parbase section"><!-- Start of usgarules Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=13fede59-22b9-4767-82e7-07f9eb068a59"> </script>
+<!-- End of usgarules Zendesk Widget script -->
+
+
+<script type="text/javascript">
+  window.zESettings = {
+    webWidget: {
+      launcher: {
+        label: {
+          '*': 'Ask a Rules Question' 
+        },
+        chatLabel: {
+          '*': 'Rules Live Chat'
+        }
+},
+     contactForm: {
+      ticketForms: [
+        { id: 360000594612}
+      ]
+    }
+ 
+
+    } 
+  };
+</script>
+</div>
+<div class="section"></div><div class="iparys_inherited"></div>
+</div>
+
+        </div>
+        <div class="contentPar2 parsys">
+</div>
+
+        <div class="inner">
+            <div class="innerPar2 parsys">
+</div>
+
+        </div>
+    </div>
+</div>
+
+</main>
+<footer>
+        
+
+
+<div class="footerParsys iparsys parsys">
+
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="footer"><div class="m-footer" id="id-f0647bf">
+        <script type="text/stache" can-autorender>
+            <can-import from="components/modal-ie-warning/modal-ie-warning"/>
+            <modal-ie-warning/>
+        </script>
+        <div class="m-footer__wrap">
+            <div class="public-relations">
+				
+					<section class="public-relations__unit public-relations__unit--partners">
+						<div class="heading">USGA Partners</div>
+						<ul class="s-partners-list" role="list">
+							
+								<li role="listitem" class="s-partners-list__item"><a title="Ally" href="" class="link" id="partner-id-f0647bf-0">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/partners/ally-logo-plum-420x180'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'Ally'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-0', {
+            data:  {"name":"Ally","description":"<p>Ally is honored and excited to join the USGA family as its Official Bank Partner.</p>\r\n<p>Through Ally’s presenting position of the U.S. Women’s Open Presented by Ally and as a Founding Partner of the U.S. National Development Program, Ally and the USGA are working together to grow the game and help make golf a more accessible and equitable space for all. </p>\r\n<p><a href=\"https://www.ally.com/\" target=\"_blank\">Learn more about Ally</a> and its commitment to serving as a financial ally for golfers and golf fans alike. </p>\r\n","image":{"imagePath":"/content/dam/usga/images/partners/ally-logo-plum-420x180.png","alt":"Ally","gravity":"center","type":"imageCloudinary","identifier":"usga/images/partners/ally-logo-plum-420x180","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+								<li role="listitem" class="s-partners-list__item"><a title="American Express" href="" class="link" id="partner-id-f0647bf-1">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/sponsorLogos/amex-no-glare'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'American Express'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-1', {
+            data:  {"name":"American Express","description":"<p>Together, American Express and the USGA have been providing world-class service to golf fans since 2006. By creating interactive U.S. Open experiences both onsite and online, American Express enhances the USGA's effort to make the game more accessible and enjoyable for fans.</p>\r\n<p>For more information on American Express and their support of the game visit <b><a href=\"http://www.americanexpress.com/entertainment\">americanexpress.com/entertainment</a></b>.</p>\r\n","image":{"imagePath":"/content/dam/usga/images/sponsorLogos/amex-no-glare.jpg","alt":"American Express","gravity":"center","type":"imageCloudinary","identifier":"usga/images/sponsorLogos/amex-no-glare","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+								<li role="listitem" class="s-partners-list__item"><a title="Cisco" href="" class="link" id="partner-id-f0647bf-2">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/partners/cisco-footer-25'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'Cisco'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-2', {
+            data:  {"name":"Cisco","description":"<p>As the Official Technology Partner of the USGA and its Championships, Cisco collaborates across numerous areas to create more digital and connected venues to enable better experiences for people attending, watching, covering and following USGA championships.</p>\r\n<p>In addition to championship support, Cisco technology and capabilities play an integral role in strengthening and accelerating the USGA’s innovation initiatives to create a more sustainable and enjoyable game.</p>\r\n<p>For more information on Cisco, visit: <a href=\"http://www.cisco.com\" target=\"_blank\">cisco.com</a></p>\r\n","image":{"imagePath":"/content/dam/usga/images/partners/cisco-footer-25.png","alt":"Cisco","gravity":"center","type":"imageCloudinary","identifier":"usga/images/partners/cisco-footer-25","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+								<li role="listitem" class="s-partners-list__item"><a title="Deloitte" href="" class="link" id="partner-id-f0647bf-3">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'us-open/partners/deloitte_logo_footer'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'Deloitte'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-3', {
+            data:  {"name":"Deloitte","description":"<p>As a strategic partner, Deloitte delivers thought leadership, business knowledge and innovation concepts to help the organization better serve the game and its constituents. Together, Deloitte and the USGA created a transformative strategy that responds to the needs of today’s game, deepens engagement in the golf community, and empowers people to connect in new ways.</p>\r\n<p>In addition to its professional services work with the USGA, Deloitte supports USGA initiatives and championships, including programs that celebrate volunteerism, and promote inclusion and innovation in and beyond the golf community.</p>\r\n<p>For more information on Deloitte and their work with the USGA, visit <b><a href=\"http://www.deloitte.com/us/usga\">deloitte.com/us/usga</a></b>.</p>\r\n","image":{"imagePath":"/content/dam/us-open/partners/deloitte_logo_footer.png","alt":"Deloitte","gravity":"center","type":"imageCloudinary","identifier":"us-open/partners/deloitte_logo_footer","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+								<li role="listitem" class="s-partners-list__item"><a title="Lexus" href="" class="link" id="partner-id-f0647bf-4">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'us-open/partners/lexus_logo_footer'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'Lexus'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-4', {
+            data:  {"name":"Lexus","description":"<p>Lexus is committed to partnering with the USGA to deliver a best-in-class experience for the world's best golfers by providing a fleet of courtesy luxury vehicles for all USGA Championships.</p>\r\n<p>At each U.S. Open, Women's Open and Senior Open, Lexus provides spectators with access to unique experiences ranging from the opportunity to have a picture taken with both the U.S. Open and U.S. Women's Open trophies to autograph signings with legendary Lexus Golf Ambassadors in the Lexus Performance Drive Pavilion.</p>\r\n<p>For more information on Lexus, visit <b><a href=\"https://www.lexus.com/models/GX?cid=aff_usga_footerlogo_2024\" target=\"_blank\" title=\"Lexus\">lexus.com</a>.</b></p>\r\n","image":{"imagePath":"/content/dam/us-open/partners/lexus_logo_footer.png","alt":"Lexus","gravity":"center","type":"imageCloudinary","identifier":"us-open/partners/lexus_logo_footer","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+								<li role="listitem" class="s-partners-list__item"><a title="Sentry" href="" class="link" id="partner-id-f0647bf-5">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'usga/images/logos/sentry-padded-4'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'Sentry'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-5', {
+            data:  {"name":"Sentry","description":"<p>Sentry's relationship with the USGA is rooted in a shared love for the game of golf and aligns with their approach to doing business. The mutual insurer's dedication to helping businesses succeed begins with a conversation and grows into a relationship - often including time well spent, together, on a golf course. With each conversation, Sentry puts more than 115 years of industry knowledge and experience to work for their customers, brokers and agents.</p>\r\n<div> </div>\r\n<div>As the official insurance partner of the USGA, Sentry is committed to broadening the game at all levels. The partnership, centered foremost on advancing the innovative USGA GHIN suite of products used by millions of golfers and thousands of golf clubs, will provide exceptional experiences for golfers across America. </div>\r\n<div> </div>\r\n<div>Learn more about <a href=\"https://www.sentry.com/why-choose-sentry\" target=\"_blank\">how Sentry works with their customers</a> and <a href=\"https://www.sentry.com/golf\" target=\"_blank\">their love for golf</a>.</div>\r\n","image":{"imagePath":"/content/dam/usga/images/logos/sentry-padded-4.jpg","alt":"Sentry","gravity":"center","type":"imageCloudinary","identifier":"usga/images/logos/sentry-padded-4","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+								<li role="listitem" class="s-partners-list__item"><a title="Rolex" href="" class="link" id="partner-id-f0647bf-6">
+    <script type="text/stache" can-autorender>
+    <can-import from='components/image-cloudinary/image-cloudinary' />
+    <image-cloudinary
+        {id}="'us-open/partners/rolex_logo_footer'"
+        {crop}="'fit'"
+        {gravity}="'center'"
+        {width}="''"
+        {height}="''"
+        {alt}="'Rolex'"
+        {class-name}="'link__img'"
+        {as-background}="''"
+        {visible}="'true'">
+    </image-cloudinary>
+</script>
+<script>
+    webpack.import('components/image-cloudinary/image-cloudinary');
+</script>
+
+</a>
+
+<script>
+    steal.import('blocks/usga/partner-link/partner-link').then(function (block) {
+        block.PartnerLink('#partner-id-f0647bf-6', {
+            data:  {"name":"Rolex","description":"<p>Rolex has been a longtime supporter of the USGA and salutes the sportsmanship and great traditions unique to the game. This support includes the <b><a href=\"http://www.usga.org/content/usga/home-page/rules-hub.html\">Rules of Golf</a></b>, where Rolex has partnered with the USGA to ensure golfers understand and appreciate the game.</p>\r\n<p>As the official timekeeper of the USGA and its championships, they also provide clocks throughout host sites for spectator convenience.</p>\r\n<p>For more information on Rolex and their celebration of the game, visit the <b><a href=\"https://www.rolex.com/rolex-and-sports/golf.html\">Rolex and Golf homepage</a></b>.</p>\r\n","image":{"imagePath":"/content/dam/us-open/partners/rolex_logo_footer.png","alt":"Rolex","gravity":"center","type":"imageCloudinary","identifier":"us-open/partners/rolex_logo_footer","cropMode":"fit"}}
+        });
+    });
+</script>
+</li>
+							
+						</ul>
+					</section>
+				
+				
+					<section class="public-relations__unit">
+						<div class="heading">Follow us</div>
+						<ul class="s-social-media" role="list">
+							
+								<li class="s-social-media__item" role="listitem">
+									<a title="Instagram" href="https://www.instagram.com/usga/" class="s-link s-link--instagram" target="_blank" rel="noopener">
+										<svg><use xlink:href="https://www.usga.org/etc/designs/usga/hbs/img/sprites.svg#social-instagram"></use></svg>
+									</a>
+								</li>
+							
+								<li class="s-social-media__item" role="listitem">
+									<a title="Twitter" href="https://twitter.com/usga" class="s-link s-link--twitter" target="_blank" rel="noopener">
+										<svg><use xlink:href="https://www.usga.org/etc/designs/usga/hbs/img/sprites.svg#social-twitter"></use></svg>
+									</a>
+								</li>
+							
+								<li class="s-social-media__item" role="listitem">
+									<a title="Youtube" href="https://www.youtube.com/user/TheUSGA" class="s-link s-link--youtube" target="_blank" rel="noopener">
+										<svg><use xlink:href="https://www.usga.org/etc/designs/usga/hbs/img/sprites.svg#social-youtube"></use></svg>
+									</a>
+								</li>
+							
+								<li class="s-social-media__item" role="listitem">
+									<a title="Facebook" href="https://www.facebook.com/USGA" class="s-link s-link--facebook" target="_blank" rel="noopener">
+										<svg><use xlink:href="https://www.usga.org/etc/designs/usga/hbs/img/sprites.svg#social-facebook"></use></svg>
+									</a>
+								</li>
+							
+								<li class="s-social-media__item" role="listitem">
+									<a title="LinkedIn" href="https://www.linkedin.com/company/united-states-golf-association/" class="s-link s-link--linkedin" target="_blank" rel="noopener">
+										<svg><use xlink:href="https://www.usga.org/etc/designs/usga/hbs/img/sprites.svg#social-linkedin"></use></svg>
+									</a>
+								</li>
+							
+						</ul>
+					</section>
+				
+            </div>
+            
+
+            
+                <hr class="separator" />
+
+                <ul class="s-nav" role="list">
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="about us" href="https://www.usga.org/content/usga/home-page/about/usga-leadership-098d7fde.html" id="" class="s-nav-item__link  " target="_self" aria-label="about us">ABOUT US</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="careers" href="https://www.usga.org/content/usga/home-page/about/careers-home.html" id="" class="s-nav-item__link  " target="_blank" aria-label="careers">CAREERS</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="contact us" href="https://www.usga.org/contact-us/usga-contact-us.html" id="" class="s-nav-item__link  " target="_blank" aria-label="contact us">CONTACT US</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="media" href="https://www.usga.org/content/usga/home-page/media/online-media-center.html" id="" class="s-nav-item__link  " target="_blank" aria-label="media">MEDIA</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="privacy policy" href="https://www.usga.org/content/usga/home-page/privacy-policy.html" id="" class="s-nav-item__link  " target="_blank" aria-label="privacy policy">PRIVACY POLICY</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="about our ads" href="https://www.usga.org/content/usga/home-page/usga-advertisement-information.html" id="" class="s-nav-item__link  " target="_blank" aria-label="about our ads">ABOUT OUR ADS</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="cookie settings" href="#" id="ot-sdk-link" class="s-nav-item__link ot-sdk-show-settings " target="_self" aria-label="cookie settings">Cookie Settings</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="terms of use" href="https://www.usga.org/content/usga/home-page/terms-and-conditions.html" id="" class="s-nav-item__link  " target="_blank" aria-label="terms of use">TERMS OF USE</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="transparency in coverage" href="https://transparency-in-coverage.uhc.com" id="" class="s-nav-item__link  " target="_blank" aria-label="transparency in coverage" rel="noopener">TRANSPARENCY IN COVERAGE</a>
+                        </li>
+                    
+                        <li class="s-nav-item" role="listitem">
+                            <a title="accessibility" href="https://www.usga.org/content/usga/home-page/usga-accessibility-statement.html" id="" class="s-nav-item__link  " target="_self" aria-label="accessibility">Accessibility</a>
+                        </li>
+                    
+                    
+                        <li class="s-nav-item ea-icon" role="listitem">
+                            <a href="https://www.essentialaccessibility.com/usga?utm_source&#x3D;usgahomepage&amp;utm_medium&#x3D;iconlarge&amp;utm_term&#x3D;eachannelpage&amp;utm_content&#x3D;header&amp;utm_campaign&#x3D;usga" class="s-nav-item__link" target="_self" aria-label="Go to eSSENTIAL ACCESSIBILITY"></a>
+                        </li>
+                    
+                </ul>
+            
+
+            <div class="s-copyright">
+                <span class="s-copyright__text">© 2025 United States Golf Association. All Rights Reserved.</span>
+            </div>
+        </div>
+</div>
+
+<script>
+    steal.import('modules/footer/footer').then(function (module) {
+        module.FooterModule('#id-f0647bf', {
+        });
+    });
+</script>
+</div>
+
+    
+
+</div>
+
+    
+
+</div>
+</footer>
+</body>
+
+</html>
