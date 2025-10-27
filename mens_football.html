@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Football Rules - Paladin Playbook</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+    
+    /* Header & Navigation */
+    header {
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .logo-icon {
+      font-size: 2rem;
+    }
+    
+    /* Dropdown Navigation */
+    .nav-dropdown {
+      position: relative;
+    }
+    .dropdown-btn {
+      padding: 0.75rem 1.5rem;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .dropdown-btn:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.5rem;
+      background: white;
+      min-width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    .dropdown-content.show {
+      display: block;
+      animation: fadeIn 0.2s;
+    }
+    .dropdown-item {
+      padding: 1rem 1.5rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .dropdown-item:hover {
+      background: #f5f0ff;
+      color: #4a1e7c;
+    }
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #4a1e7c;
+      border: 2px solid #4a1e7c;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 2rem 0 1rem 0;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: #4a1e7c;
+      color: white;
+    }
+    
+    .sport-header {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .sport-header h2 {
+      margin: 0 0 1rem 0;
+      color: #4a1e7c;
+      font-size: 2rem;
+    }
+    .sport-meta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: #666;
+    }
+    
+    .toc {
+      background-color: #e8f4f8;
+      padding: 1.5rem;
+      border-left: 4px solid #4a1e7c;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+    .toc h3 {
+      margin: 0 0 1rem 0;
+      color: #4a1e7c;
+    }
+    .toc ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    .toc li {
+      margin-bottom: 0.5rem;
+    }
+    .toc a {
+      color: #4a1e7c;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover {
+      color: #6b2d9e;
+      text-decoration: underline;
+    }
+    
+    .section {
+      background-color: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      border-left: 4px solid #4a1e7c;
+    }
+    
+    .section h2 {
+      color: #4a1e7c;
+      border-bottom: 2px solid #4a1e7c;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    
+    .section h3 {
+      color: #6b2d9e;
+      margin-top: 1.5rem;
+    }
+    
+    .section h4 {
+      color: #0066cc;
+      margin-top: 1rem;
+    }
+    
+    .rule-number {
+      color: #4a1e7c;
+      font-weight: bold;
+    }
+    
+    .penalty {
+      background-color: #fff3cd;
+      padding: 1rem;
+      border-left: 4px solid #ffc107;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    
+    .note {
+      background-color: #d1ecf1;
+      padding: 1rem;
+      border-left: 4px solid #17a2b8;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    
+    ul {
+      margin-left: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @media (max-width: 768px) {
+      .sport-header h2 { font-size: 1.5rem; }
+      .section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">⚔️</span>
+        <h1>Paladin Playbook</h1>
+      </div>
+      <div class="nav-dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span>Sports Menu</span>
+          <span>▼</span>
+        </button>
+        <div class="dropdown-content" id="sportDropdown">
+          <a href="index.html" class="dropdown-item">🏠 Home</a>
+          <a href="football.html" class="dropdown-item">🏈 Football</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-btn">
+      ← Back to All Sports
+    </a>
+    
+    <div class="sport-header">
+      <h2>🏈 NCAA Football Rules</h2>
+      <div class="sport-meta">
+        <span><strong>2025 Edition</strong></span>
+        <span>National Collegiate Athletic Association</span>
+      </div>
+    </div>
+
+    <div class="toc">
+      <h3>Quick Navigation</h3>
+      <ul>
+        <li><a href="#points-of-emphasis">Points of Emphasis</a></li>
+        <li><a href="#rule1">Rule 1: The Game, Field, Players and Equipment</a></li>
+        <li><a href="#rule2">Rule 2: Definitions</a></li>
+        <li><a href="#rule3">Rule 3: Periods, Time Factors and Substitutions</a></li>
+        <li><a href="#rule6">Rule 6: Kicks</a></li>
+        <li><a href="#rule8">Rule 8: Scoring</a></li>
+        <li><a href="#rule9">Rule 9: Conduct of Players</a></li>
+        <li><a href="#rule12">Rule 12: Instant Replay</a></li>
+        <li><a href="#appendices">Appendices</a></li>
+      </ul>
+    </div>
+
+    <div id="points-of-emphasis" class="section">
+      <h2>Points of Emphasis</h2>
+      
+      <h3>PROTECTION OF DEFENSELESS PLAYERS / TARGETING</h3>
+      <p>The NCAA Football Rules Committee continues to embrace the targeting rule in order to promote player safety, reduce head contact and eliminate specific targeting actions from the game. The language in 9-1-3 and 9-1-4 stipulates that no player shall target and make forcible contact to the head or neck area of a defenseless player or contact an opponent with the crown (top) of their helmet.</p>
+      
+      <h3>CONCUSSIONS</h3>
+      <p>Coaches and medical personnel should exercise caution in the treatment of a student-athlete who exhibits signs of a concussion. When in question, officials will declare an injury timeout for any player exhibiting signs of a concussion. See Appendix C for detailed information.</p>
+      
+      <h3>PRE-SNAP ACTIONS FOR OFFENSE & DEFENSE/DISCONCERTING SIGNALS/OFFENSIVE ALIGNMENT</h3>
+      <p>The intent of pre-snap rules is to define and govern what is allowed by the offense and defense. Updated language in Rule 7 makes it clear for Team A, that any movement that simulates action at the snap is a foul.</p>
+      
+      <h3>FEIGNING AN INJURY</h3>
+      <p>With the advent of the up-tempo offenses, there is a growing trend of defensive players feigning an injury in an attempt to slow down or break the rhythm of the offense. For the 2025 season, a new rule was approved to address these tactics. If a player presents as injured after the ball is spotted by the officials, that team will be charged a team timeout or a delay of game penalty if all timeouts have been used.</p>
+      
+      <h3>UNSPORTSMANLIKE CONDUCT/TAUNTING</h3>
+      <p>For the 2025 season, it will be a point of emphasis for officials to penalize any taunting action that is directed at an opponent. These actions are a bad look for the game and can lead to unnecessary confrontations between the teams and must be eliminated.</p>
+    </div>
+
+    <div id="rule1" class="section">
+      <h2>RULE 1: The Game, Field, Players and Equipment</h2>
+      
+      <h3>SECTION 1. GENERAL PROVISIONS</h3>
+      
+      <h4>The Game</h4>
+      <p><span class="rule-number">ARTICLE 1</span> a. The game shall be played between two teams of not more than 11 players each, on a rectangular field and with an inflated ball having the shape of a prolate spheroid.</p>
+      <p>b. A team legally may play with fewer than 11 players, but a foul for an illegal formation occurs if the following requirements are not met:</p>
+      <ul>
+        <li>When the ball is free-kicked, at least four Team A players are on each side of the kicker</li>
+        <li>At the snap, at least five players wearing jerseys numbered 50 through 79 are on the offensive scrimmage line and no more than four players are in the backfield</li>
+      </ul>
+      
+      <h4>Goal Lines</h4>
+      <p><span class="rule-number">ARTICLE 2</span> Goal lines, one for each team, shall be established at opposite ends of the field of play, and each team shall be allowed opportunities to advance the ball across the other team's goal line by running, passing or kicking it.</p>
+      
+      <h3>SECTION 2. THE FIELD</h3>
+      
+      <h4>Dimensions and Markings</h4>
+      <p><span class="rule-number">ARTICLE 1</span> The field shall be a rectangular area with dimensions, lines, zones, goals and pylons as indicated in Appendix D.</p>
+      <ul>
+        <li>All field-dimension lines shown must be white and 4 inches in width</li>
+        <li>Twenty-four-inch short yard-line extensions are mandatory</li>
+        <li>A solid white area between the sideline and the coaching line is mandatory</li>
+      </ul>
+      
+      <h3>SECTION 4. PLAYERS AND PLAYING EQUIPMENT</h3>
+      
+      <h4>Mandatory Equipment</h4>
+      <p><span class="rule-number">ARTICLE 3</span> All players must wear the following mandatory equipment:</p>
+      <ul>
+        <li>Helmet</li>
+        <li>Hip pads</li>
+        <li>Jersey</li>
+        <li>Knee pads</li>
+        <li>Mouthpiece</li>
+        <li>Pants</li>
+        <li>Shoulder pads</li>
+        <li>Socks</li>
+        <li>Thigh guards</li>
+      </ul>
+    </div>
+
+    <div id="rule2" class="section">
+      <h2>RULE 2: Definitions</h2>
+      
+      <h3>SECTION 4. CATCH, RECOVERY, POSSESSION</h3>
+      
+      <h4>Possession</h4>
+      <p><span class="rule-number">ARTICLE 1</span> Possession refers to custody of (a) a live ball as described later in this article and (b) a dead ball to be snapped or free-kicked.</p>
+      
+      <h4>Catch, Interception, Recovery</h4>
+      <p><span class="rule-number">ARTICLE 3</span> To catch a ball means that a player:</p>
+      <ul>
+        <li>Secures firm control with the hand(s) or arm(s) of a live ball in flight before the ball touches the ground, and</li>
+        <li>Touches the ground inbounds with any part of the body, and then</li>
+        <li>Maintains control of the ball long enough to enable that player to perform an act common to the game</li>
+      </ul>
+      
+      <h3>SECTION 27. TEAM AND PLAYER DESIGNATIONS</h3>
+      
+      <h4>Defenseless Player</h4>
+      <p><span class="rule-number">ARTICLE 14</span> A defenseless player is one who because of their physical position and focus of concentration is especially vulnerable to injury. Examples include but are not limited to:</p>
+      <ul>
+        <li>A player in the act of or just after throwing a pass</li>
+        <li>A receiver attempting to catch a forward pass</li>
+        <li>A kicker in the act of or just after kicking a ball</li>
+        <li>A kick returner attempting to catch or recover a kick</li>
+        <li>A player on the ground</li>
+        <li>A player obviously out of the play</li>
+        <li>A player who receives a blind-side block</li>
+        <li>A ball carrier already in the grasp of an opponent</li>
+      </ul>
+    </div>
+
+    <div id="rule3" class="section">
+      <h2>RULE 3: Periods, Time Factors and Substitutions</h2>
+      
+      <h3>SECTION 1. START OF EACH PERIOD</h3>
+      
+      <h4>Pregame, First and Third Periods</h4>
+      <p><span class="rule-number">ARTICLE 1</span> d. Each half shall start with a kickoff.</p>
+      <p>e. Three minutes before the scheduled starting time, the referee shall toss a coin at midfield in the presence of not more than four field captains from each team.</p>
+      
+      <h4>Extra Periods</h4>
+      <p><span class="rule-number">ARTICLE 3</span> The NCAA tiebreaker system will be used when a game is tied after four periods.</p>
+      
+      <h3>SECTION 3. TIMEOUTS: STARTING AND STOPPING THE CLOCK</h3>
+      
+      <h4>Two-Minute Timeout</h4>
+      <p><span class="rule-number">ARTICLE 5</span> When the game clock is running and the ball is not live, the Referee shall stop the clock with exactly two minutes remaining in the second and fourth quarters for a Two-Minute Timeout.</p>
+      
+      <h4>Injury Timeout</h4>
+      <p><span class="rule-number">ARTICLE 6</span> In the event of an injured player(s):</p>
+      <ul>
+        <li>An official will declare a timeout and the player(s) must leave the game</li>
+        <li>If a player presents as injured after the ball is spotted by officials, that team will be charged a Team Timeout or a delay penalty if all timeouts have been used</li>
+      </ul>
+    </div>
+
+    <div id="rule6" class="section">
+      <h2>RULE 6: Kicks</h2>
+      
+      <h3>SECTION 1. FREE KICKS</h3>
+      
+      <h4>Free Kick Formation</h4>
+      <p><span class="rule-number">ARTICLE 2</span> A ball from a free kick formation must be kicked legally and from some point on Team A's restraining line.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> Dead ball foul. Illegal kick. Five yards from the succeeding spot [S7 and S19].
+      </div>
+      
+      <h3>SECTION 4. OPPORTUNITY TO CATCH A KICK</h3>
+      
+      <h4>Interference With Opportunity</h4>
+      <p><span class="rule-number">ARTICLE 1</span> If an inbounds player of the receiving team is located where they could catch a free kick or a scrimmage kick that has crossed the neutral zone, and if the player is attempting to do so, they must be given an unimpeded opportunity to catch the kick.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> For foul between the goal lines: Receiving team's ball, first down, 15 yards beyond the spot of the foul [S33].
+      </div>
+    </div>
+
+    <div id="rule8" class="section">
+      <h2>RULE 8: Scoring</h2>
+      
+      <h3>SECTION 1. VALUE OF SCORES</h3>
+      
+      <h4>Scoring Plays</h4>
+      <p><span class="rule-number">ARTICLE 1</span> The point value of scoring plays shall be:</p>
+      <ul>
+        <li>Touchdown — 6 Points</li>
+        <li>Field Goal — 3 Points</li>
+        <li>Safety (points awarded to opponent) — 2 Points</li>
+        <li>Successful Try: Touchdown — 2 Points</li>
+        <li>Successful Try: Field Goal or Safety — 1 Point</li>
+      </ul>
+      
+      <h3>SECTION 2. TOUCHDOWN</h3>
+      
+      <h4>How Scored</h4>
+      <p><span class="rule-number">ARTICLE 1</span> A touchdown shall be scored when:</p>
+      <ul>
+        <li>A ball carrier advancing from the field of play has possession of a live ball when it penetrates the plane of the opponent's goal line</li>
+        <li>A player catches a forward pass in the opponent's end zone</li>
+        <li>A fumble or backward pass is recovered, caught, intercepted or awarded in the opponent's end zone</li>
+      </ul>
+    </div>
+
+    <div id="rule9" class="section">
+      <h2>RULE 9: Conduct of Players and Others Subject to the Rules</h2>
+      
+      <h3>SECTION 1. PERSONAL FOULS</h3>
+      
+      <h4>Targeting and Making Forcible Contact With the Crown of the Helmet</h4>
+      <p><span class="rule-number">ARTICLE 3</span> No player shall target and make forcible contact against an opponent with the crown of their helmet. The crown of the helmet is the top segment of the helmet; namely, the circular area defined by a 6-inch radius from the apex (top) of the helmet.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> 15 yards. Automatic first down for fouls by Team B. Disqualification for the remainder of the game. For fouls in the second half: Disqualification for the remainder of the game and the first half of the next game [S38, S24 and S47].
+      </div>
+      
+      <h4>Targeting and Making Forcible Contact to Head or Neck Area of a Defenseless Player</h4>
+      <p><span class="rule-number">ARTICLE 4</span> No player shall target and make forcible contact to the head or neck area of a defenseless opponent with the helmet, forearm, hand, fist, elbow or shoulder.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> 15 yards. Automatic first down for fouls by Team B. Disqualification requirements same as Article 3.
+      </div>
+      
+      <h3>SECTION 2. UNSPORTSMANLIKE CONDUCT FOULS</h3>
+      
+      <h4>Unsportsmanlike Acts</h4>
+      <p><span class="rule-number">ARTICLE 1</span> There shall be no unsportsmanlike conduct or any act that interferes with orderly game administration. Specifically prohibited acts include:</p>
+      <ul>
+        <li>Abusive, threatening or obscene language or gestures</li>
+        <li>Taunting, baiting or ridiculing an opponent verbally</li>
+        <li>Removing helmet after ball is dead and before in team area</li>
+        <li>Delayed, excessive, prolonged or choreographed acts</li>
+      </ul>
+    </div>
+
+    <div id="rule12" class="section">
+      <h2>RULE 12: Instant Replay</h2>
+      
+      <h3>SECTION 1. PURPOSE AND PHILOSOPHY</h3>
+      
+      <h4>Purpose</h4>
+      <p><span class="rule-number">ARTICLE 1</span> Instant replay is a process whereby video review is used to uphold or overturn certain on-field decisions made by game officials.</p>
+      
+      <h4>Philosophy</h4>
+      <p><span class="rule-number">ARTICLE 2</span> The instant replay process operates under the fundamental assumption that the ruling on the field is correct. The replay official may overturn a ruling if and only if the video evidence convinces the replay official beyond all doubt that the ruling was incorrect.</p>
+      
+      <h3>SECTION 3. REVIEWABLE PLAYS</h3>
+      
+      <h4>Scoring Plays</h4>
+      <p><span class="rule-number">ARTICLE 1</span> Reviewable plays involving a potential score include:</p>
+      <ul>
+        <li>A potential touchdown or safety</li>
+        <li>Field goal attempts if and only if the ball is ruled below or above the crossbar or inside or outside the uprights when it is lower than the top of the uprights</li>
+      </ul>
+    </div>
+
+    <div id="appendices" class="section">
+      <h2>Appendices</h2>
+      
+      <h3>Appendix A: Guidelines for Serious On-Field Injuries</h3>
+      <ol>
+        <li>Players and coaches must go to and remain in the bench area</li>
+        <li>Attempt to keep players a significant distance away from the seriously injured player</li>
+        <li>Do not allow a player to roll an injured player over</li>
+        <li>Do not allow players to assist a teammate who is lying on the field</li>
+      </ol>
+      
+      <h3>Appendix B: Lightning Policy</h3>
+      <p>The NCAA provides detailed guidance on lightning (and other environmental hazards) in the NCAA Sports Medicine Handbook. Please consult the latest version of this handbook, which is available at www.ncaa.org</p>
+      
+      <h3>Appendix C: Concussions</h3>
+      <p>Sport-related concussion is a traumatic brain injury caused by a direct blow to the head, neck or body resulting in an impulsive force being transmitted to the brain. Signs and symptoms may present immediately or evolve over minutes or hours.</p>
+      <div class="note">
+        <strong>IF A CONCUSSION IS SUSPECTED:</strong>
+        <ol>
+          <li>Remove the student-athlete from play</li>
+          <li>Ensure that the student-athlete is evaluated immediately by an appropriate health care professional</li>
+          <li>Allow the student-athlete to return to play only if the primary athletics healthcare provider has determined that the student-athlete did not suffer a concussion</li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('sportDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    // Close dropdown when clicking outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown-btn')) {
+        const dropdown = document.getElementById('sportDropdown');
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Football Rules - Paladin Playbook</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+    
+    /* Header & Navigation */
+    header {
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
+      color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .logo-icon {
+      font-size: 2rem;
+    }
+    
+    /* Dropdown Navigation */
+    .nav-dropdown {
+      position: relative;
+    }
+    .dropdown-btn {
+      padding: 0.75rem 1.5rem;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .dropdown-btn:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.5rem;
+      background: white;
+      min-width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    .dropdown-content.show {
+      display: block;
+      animation: fadeIn 0.2s;
+    }
+    .dropdown-item {
+      padding: 1rem 1.5rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .dropdown-item:hover {
+      background: #f5f0ff;
+      color: #4a1e7c;
+    }
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #4a1e7c;
+      border: 2px solid #4a1e7c;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 2rem 0 1rem 0;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: #4a1e7c;
+      color: white;
+    }
+    
+    .sport-header {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .sport-header h2 {
+      margin: 0 0 1rem 0;
+      color: #4a1e7c;
+      font-size: 2rem;
+    }
+    .sport-meta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: #666;
+    }
+    
+    .toc {
+      background-color: #e8f4f8;
+      padding: 1.5rem;
+      border-left: 4px solid #4a1e7c;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+    .toc h3 {
+      margin: 0 0 1rem 0;
+      color: #4a1e7c;
+    }
+    .toc ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    .toc li {
+      margin-bottom: 0.5rem;
+    }
+    .toc a {
+      color: #4a1e7c;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover {
+      color: #6b2d9e;
+      text-decoration: underline;
+    }
+    
+    .section {
+      background-color: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      border-left: 4px solid #4a1e7c;
+    }
+    
+    .section h2 {
+      color: #4a1e7c;
+      border-bottom: 2px solid #4a1e7c;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    
+    .section h3 {
+      color: #6b2d9e;
+      margin-top: 1.5rem;
+    }
+    
+    .section h4 {
+      color: #0066cc;
+      margin-top: 1rem;
+    }
+    
+    .rule-number {
+      color: #4a1e7c;
+      font-weight: bold;
+    }
+    
+    .penalty {
+      background-color: #fff3cd;
+      padding: 1rem;
+      border-left: 4px solid #ffc107;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    
+    .note {
+      background-color: #d1ecf1;
+      padding: 1rem;
+      border-left: 4px solid #17a2b8;
+      margin: 1rem 0;
+      border-radius: 4px;
+    }
+    
+    ul {
+      margin-left: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @media (max-width: 768px) {
+      .sport-header h2 { font-size: 1.5rem; }
+      .section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">⚔️</span>
+        <h1>Paladin Playbook</h1>
+      </div>
+      <div class="nav-dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span>Sports Menu</span>
+          <span>▼</span>
+        </button>
+        <div class="dropdown-content" id="sportDropdown">
+          <a href="index.html" class="dropdown-item">🏠 Home</a>
+          <a href="football.html" class="dropdown-item">🏈 Football</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-btn">
+      ← Back to All Sports
+    </a>
+    
+    <div class="sport-header">
+      <h2>🏈 NCAA Football Rules</h2>
+      <div class="sport-meta">
+        <span><strong>2025 Edition</strong></span>
+        <span>National Collegiate Athletic Association</span>
+      </div>
+    </div>
+
+    <div class="toc">
+      <h3>Quick Navigation</h3>
+      <ul>
+        <li><a href="#points-of-emphasis">Points of Emphasis</a></li>
+        <li><a href="#rule1">Rule 1: The Game, Field, Players and Equipment</a></li>
+        <li><a href="#rule2">Rule 2: Definitions</a></li>
+        <li><a href="#rule3">Rule 3: Periods, Time Factors and Substitutions</a></li>
+        <li><a href="#rule6">Rule 6: Kicks</a></li>
+        <li><a href="#rule8">Rule 8: Scoring</a></li>
+        <li><a href="#rule9">Rule 9: Conduct of Players</a></li>
+        <li><a href="#rule12">Rule 12: Instant Replay</a></li>
+        <li><a href="#appendices">Appendices</a></li>
+      </ul>
+    </div>
+
+    <div id="points-of-emphasis" class="section">
+      <h2>Points of Emphasis</h2>
+      
+      <h3>PROTECTION OF DEFENSELESS PLAYERS / TARGETING</h3>
+      <p>The NCAA Football Rules Committee continues to embrace the targeting rule in order to promote player safety, reduce head contact and eliminate specific targeting actions from the game. The language in 9-1-3 and 9-1-4 stipulates that no player shall target and make forcible contact to the head or neck area of a defenseless player or contact an opponent with the crown (top) of their helmet.</p>
+      
+      <h3>CONCUSSIONS</h3>
+      <p>Coaches and medical personnel should exercise caution in the treatment of a student-athlete who exhibits signs of a concussion. When in question, officials will declare an injury timeout for any player exhibiting signs of a concussion. See Appendix C for detailed information.</p>
+      
+      <h3>PRE-SNAP ACTIONS FOR OFFENSE & DEFENSE/DISCONCERTING SIGNALS/OFFENSIVE ALIGNMENT</h3>
+      <p>The intent of pre-snap rules is to define and govern what is allowed by the offense and defense. Updated language in Rule 7 makes it clear for Team A, that any movement that simulates action at the snap is a foul.</p>
+      
+      <h3>FEIGNING AN INJURY</h3>
+      <p>With the advent of the up-tempo offenses, there is a growing trend of defensive players feigning an injury in an attempt to slow down or break the rhythm of the offense. For the 2025 season, a new rule was approved to address these tactics. If a player presents as injured after the ball is spotted by the officials, that team will be charged a team timeout or a delay of game penalty if all timeouts have been used.</p>
+      
+      <h3>UNSPORTSMANLIKE CONDUCT/TAUNTING</h3>
+      <p>For the 2025 season, it will be a point of emphasis for officials to penalize any taunting action that is directed at an opponent. These actions are a bad look for the game and can lead to unnecessary confrontations between the teams and must be eliminated.</p>
+    </div>
+
+    <div id="rule1" class="section">
+      <h2>RULE 1: The Game, Field, Players and Equipment</h2>
+      
+      <h3>SECTION 1. GENERAL PROVISIONS</h3>
+      
+      <h4>The Game</h4>
+      <p><span class="rule-number">ARTICLE 1</span> a. The game shall be played between two teams of not more than 11 players each, on a rectangular field and with an inflated ball having the shape of a prolate spheroid.</p>
+      <p>b. A team legally may play with fewer than 11 players, but a foul for an illegal formation occurs if the following requirements are not met:</p>
+      <ul>
+        <li>When the ball is free-kicked, at least four Team A players are on each side of the kicker</li>
+        <li>At the snap, at least five players wearing jerseys numbered 50 through 79 are on the offensive scrimmage line and no more than four players are in the backfield</li>
+      </ul>
+      
+      <h4>Goal Lines</h4>
+      <p><span class="rule-number">ARTICLE 2</span> Goal lines, one for each team, shall be established at opposite ends of the field of play, and each team shall be allowed opportunities to advance the ball across the other team's goal line by running, passing or kicking it.</p>
+      
+      <h3>SECTION 2. THE FIELD</h3>
+      
+      <h4>Dimensions and Markings</h4>
+      <p><span class="rule-number">ARTICLE 1</span> The field shall be a rectangular area with dimensions, lines, zones, goals and pylons as indicated in Appendix D.</p>
+      <ul>
+        <li>All field-dimension lines shown must be white and 4 inches in width</li>
+        <li>Twenty-four-inch short yard-line extensions are mandatory</li>
+        <li>A solid white area between the sideline and the coaching line is mandatory</li>
+      </ul>
+      
+      <h3>SECTION 4. PLAYERS AND PLAYING EQUIPMENT</h3>
+      
+      <h4>Mandatory Equipment</h4>
+      <p><span class="rule-number">ARTICLE 3</span> All players must wear the following mandatory equipment:</p>
+      <ul>
+        <li>Helmet</li>
+        <li>Hip pads</li>
+        <li>Jersey</li>
+        <li>Knee pads</li>
+        <li>Mouthpiece</li>
+        <li>Pants</li>
+        <li>Shoulder pads</li>
+        <li>Socks</li>
+        <li>Thigh guards</li>
+      </ul>
+    </div>
+
+    <div id="rule2" class="section">
+      <h2>RULE 2: Definitions</h2>
+      
+      <h3>SECTION 4. CATCH, RECOVERY, POSSESSION</h3>
+      
+      <h4>Possession</h4>
+      <p><span class="rule-number">ARTICLE 1</span> Possession refers to custody of (a) a live ball as described later in this article and (b) a dead ball to be snapped or free-kicked.</p>
+      
+      <h4>Catch, Interception, Recovery</h4>
+      <p><span class="rule-number">ARTICLE 3</span> To catch a ball means that a player:</p>
+      <ul>
+        <li>Secures firm control with the hand(s) or arm(s) of a live ball in flight before the ball touches the ground, and</li>
+        <li>Touches the ground inbounds with any part of the body, and then</li>
+        <li>Maintains control of the ball long enough to enable that player to perform an act common to the game</li>
+      </ul>
+      
+      <h3>SECTION 27. TEAM AND PLAYER DESIGNATIONS</h3>
+      
+      <h4>Defenseless Player</h4>
+      <p><span class="rule-number">ARTICLE 14</span> A defenseless player is one who because of their physical position and focus of concentration is especially vulnerable to injury. Examples include but are not limited to:</p>
+      <ul>
+        <li>A player in the act of or just after throwing a pass</li>
+        <li>A receiver attempting to catch a forward pass</li>
+        <li>A kicker in the act of or just after kicking a ball</li>
+        <li>A kick returner attempting to catch or recover a kick</li>
+        <li>A player on the ground</li>
+        <li>A player obviously out of the play</li>
+        <li>A player who receives a blind-side block</li>
+        <li>A ball carrier already in the grasp of an opponent</li>
+      </ul>
+    </div>
+
+    <div id="rule3" class="section">
+      <h2>RULE 3: Periods, Time Factors and Substitutions</h2>
+      
+      <h3>SECTION 1. START OF EACH PERIOD</h3>
+      
+      <h4>Pregame, First and Third Periods</h4>
+      <p><span class="rule-number">ARTICLE 1</span> d. Each half shall start with a kickoff.</p>
+      <p>e. Three minutes before the scheduled starting time, the referee shall toss a coin at midfield in the presence of not more than four field captains from each team.</p>
+      
+      <h4>Extra Periods</h4>
+      <p><span class="rule-number">ARTICLE 3</span> The NCAA tiebreaker system will be used when a game is tied after four periods.</p>
+      
+      <h3>SECTION 3. TIMEOUTS: STARTING AND STOPPING THE CLOCK</h3>
+      
+      <h4>Two-Minute Timeout</h4>
+      <p><span class="rule-number">ARTICLE 5</span> When the game clock is running and the ball is not live, the Referee shall stop the clock with exactly two minutes remaining in the second and fourth quarters for a Two-Minute Timeout.</p>
+      
+      <h4>Injury Timeout</h4>
+      <p><span class="rule-number">ARTICLE 6</span> In the event of an injured player(s):</p>
+      <ul>
+        <li>An official will declare a timeout and the player(s) must leave the game</li>
+        <li>If a player presents as injured after the ball is spotted by officials, that team will be charged a Team Timeout or a delay penalty if all timeouts have been used</li>
+      </ul>
+    </div>
+
+    <div id="rule6" class="section">
+      <h2>RULE 6: Kicks</h2>
+      
+      <h3>SECTION 1. FREE KICKS</h3>
+      
+      <h4>Free Kick Formation</h4>
+      <p><span class="rule-number">ARTICLE 2</span> A ball from a free kick formation must be kicked legally and from some point on Team A's restraining line.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> Dead ball foul. Illegal kick. Five yards from the succeeding spot [S7 and S19].
+      </div>
+      
+      <h3>SECTION 4. OPPORTUNITY TO CATCH A KICK</h3>
+      
+      <h4>Interference With Opportunity</h4>
+      <p><span class="rule-number">ARTICLE 1</span> If an inbounds player of the receiving team is located where they could catch a free kick or a scrimmage kick that has crossed the neutral zone, and if the player is attempting to do so, they must be given an unimpeded opportunity to catch the kick.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> For foul between the goal lines: Receiving team's ball, first down, 15 yards beyond the spot of the foul [S33].
+      </div>
+    </div>
+
+    <div id="rule8" class="section">
+      <h2>RULE 8: Scoring</h2>
+      
+      <h3>SECTION 1. VALUE OF SCORES</h3>
+      
+      <h4>Scoring Plays</h4>
+      <p><span class="rule-number">ARTICLE 1</span> The point value of scoring plays shall be:</p>
+      <ul>
+        <li>Touchdown — 6 Points</li>
+        <li>Field Goal — 3 Points</li>
+        <li>Safety (points awarded to opponent) — 2 Points</li>
+        <li>Successful Try: Touchdown — 2 Points</li>
+        <li>Successful Try: Field Goal or Safety — 1 Point</li>
+      </ul>
+      
+      <h3>SECTION 2. TOUCHDOWN</h3>
+      
+      <h4>How Scored</h4>
+      <p><span class="rule-number">ARTICLE 1</span> A touchdown shall be scored when:</p>
+      <ul>
+        <li>A ball carrier advancing from the field of play has possession of a live ball when it penetrates the plane of the opponent's goal line</li>
+        <li>A player catches a forward pass in the opponent's end zone</li>
+        <li>A fumble or backward pass is recovered, caught, intercepted or awarded in the opponent's end zone</li>
+      </ul>
+    </div>
+
+    <div id="rule9" class="section">
+      <h2>RULE 9: Conduct of Players and Others Subject to the Rules</h2>
+      
+      <h3>SECTION 1. PERSONAL FOULS</h3>
+      
+      <h4>Targeting and Making Forcible Contact With the Crown of the Helmet</h4>
+      <p><span class="rule-number">ARTICLE 3</span> No player shall target and make forcible contact against an opponent with the crown of their helmet. The crown of the helmet is the top segment of the helmet; namely, the circular area defined by a 6-inch radius from the apex (top) of the helmet.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> 15 yards. Automatic first down for fouls by Team B. Disqualification for the remainder of the game. For fouls in the second half: Disqualification for the remainder of the game and the first half of the next game [S38, S24 and S47].
+      </div>
+      
+      <h4>Targeting and Making Forcible Contact to Head or Neck Area of a Defenseless Player</h4>
+      <p><span class="rule-number">ARTICLE 4</span> No player shall target and make forcible contact to the head or neck area of a defenseless opponent with the helmet, forearm, hand, fist, elbow or shoulder.</p>
+      <div class="penalty">
+        <strong>PENALTY:</strong> 15 yards. Automatic first down for fouls by Team B. Disqualification requirements same as Article 3.
+      </div>
+      
+      <h3>SECTION 2. UNSPORTSMANLIKE CONDUCT FOULS</h3>
+      
+      <h4>Unsportsmanlike Acts</h4>
+      <p><span class="rule-number">ARTICLE 1</span> There shall be no unsportsmanlike conduct or any act that interferes with orderly game administration. Specifically prohibited acts include:</p>
+      <ul>
+        <li>Abusive, threatening or obscene language or gestures</li>
+        <li>Taunting, baiting or ridiculing an opponent verbally</li>
+        <li>Removing helmet after ball is dead and before in team area</li>
+        <li>Delayed, excessive, prolonged or choreographed acts</li>
+      </ul>
+    </div>
+
+    <div id="rule12" class="section">
+      <h2>RULE 12: Instant Replay</h2>
+      
+      <h3>SECTION 1. PURPOSE AND PHILOSOPHY</h3>
+      
+      <h4>Purpose</h4>
+      <p><span class="rule-number">ARTICLE 1</span> Instant replay is a process whereby video review is used to uphold or overturn certain on-field decisions made by game officials.</p>
+      
+      <h4>Philosophy</h4>
+      <p><span class="rule-number">ARTICLE 2</span> The instant replay process operates under the fundamental assumption that the ruling on the field is correct. The replay official may overturn a ruling if and only if the video evidence convinces the replay official beyond all doubt that the ruling was incorrect.</p>
+      
+      <h3>SECTION 3. REVIEWABLE PLAYS</h3>
+      
+      <h4>Scoring Plays</h4>
+      <p><span class="rule-number">ARTICLE 1</span> Reviewable plays involving a potential score include:</p>
+      <ul>
+        <li>A potential touchdown or safety</li>
+        <li>Field goal attempts if and only if the ball is ruled below or above the crossbar or inside or outside the uprights when it is lower than the top of the uprights</li>
+      </ul>
+    </div>
+
+    <div id="appendices" class="section">
+      <h2>Appendices</h2>
+      
+      <h3>Appendix A: Guidelines for Serious On-Field Injuries</h3>
+      <ol>
+        <li>Players and coaches must go to and remain in the bench area</li>
+        <li>Attempt to keep players a significant distance away from the seriously injured player</li>
+        <li>Do not allow a player to roll an injured player over</li>
+        <li>Do not allow players to assist a teammate who is lying on the field</li>
+      </ol>
+      
+      <h3>Appendix B: Lightning Policy</h3>
+      <p>The NCAA provides detailed guidance on lightning (and other environmental hazards) in the NCAA Sports Medicine Handbook. Please consult the latest version of this handbook, which is available at www.ncaa.org</p>
+      
+      <h3>Appendix C: Concussions</h3>
+      <p>Sport-related concussion is a traumatic brain injury caused by a direct blow to the head, neck or body resulting in an impulsive force being transmitted to the brain. Signs and symptoms may present immediately or evolve over minutes or hours.</p>
+      <div class="note">
+        <strong>IF A CONCUSSION IS SUSPECTED:</strong>
+        <ol>
+          <li>Remove the student-athlete from play</li>
+          <li>Ensure that the student-athlete is evaluated immediately by an appropriate health care professional</li>
+          <li>Allow the student-athlete to return to play only if the primary athletics healthcare provider has determined that the student-athlete did not suffer a concussion</li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('sportDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    // Close dropdown when clicking outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown-btn')) {
+        const dropdown = document.getElementById('sportDropdown');
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

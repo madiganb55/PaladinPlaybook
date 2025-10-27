@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "PaladinPlaybook",
+			"path": "."
+		},
+		{
+			"name": "venv",
+			"path": "../madiganb55.github.io/venv"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PaladinPlaybook"
+	}
+}

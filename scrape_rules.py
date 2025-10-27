@@ -19,7 +19,8 @@ from pathlib import Path
 # Add rulebook URLs for each Furman D1 sport
 SPORTS_RULEBOOKS = {
     "Women's Lacrosse": "https://cdn1.sportngin.com/attachments/document/3c7d-3127216/WLRules2024_2025.pdf",
-    
+    "Men's Football": "https://www.ncaapublications.com/productdownloads/FR25.pdf",
+    "Women's Softball": "https://www.ncaapublications.com/productdownloads/SR27.pdf",
     # Football - check your conference or athletics department for PDF access
     # NCAA Publications page: https://www.ncaapublications.comuire purchase)
     # Men's: https://www.ncaapublications.com/p-4700-2024-25-ncaa-mens-basketball-rules-book.aspx
