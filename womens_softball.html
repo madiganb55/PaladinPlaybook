@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCAA Softball Rules Guide - Basic Concepts</title>
+    <title>Softball - Furman Paladin Playbook</title>
     <style>
         * {
             margin: 0;
@@ -12,144 +12,496 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1a1a1a;
+            background: #f5f5f5;
+        }
+        
+        /* Header & Navigation - Matching Lacrosse Page */
+        header {
+            padding: 1.5rem 1rem;
+            background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        /* Dropdown Navigation */
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .dropdown-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+        
+        .dropdown-btn:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            margin-top: 0.5rem;
+            background: white;
+            min-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .dropdown-content.show {
+            display: block;
+            animation: fadeIn 0.2s;
+        }
+        
+        .dropdown-item {
+            padding: 1rem 1.5rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .dropdown-item:hover {
+            background: #f5f0ff;
+            color: #4a1e7c;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
             padding: 20px;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            color: #4a1e7c;
+            border: 2px solid #4a1e7c;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            transition: all 0.2s;
         }
         
-        header {
-            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+        .back-btn:hover {
+            background: #4a1e7c;
             color: white;
-            padding: 40px;
-            text-align: center;
         }
         
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        
+        /* Content Styling */
         .content {
+            background: white;
             padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+        
+        h1 {
+            color: #4a1e7c;
+            border-bottom: 3px solid #4a1e7c;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #6b2d9e;
+            margin-top: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: #4a1e7c;
+            margin-top: 20px;
         }
         
         .section {
-            margin-bottom: 40px;
-            padding: 30px;
-            background: #f7fafc;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s ease;
+            margin-bottom: 30px;
         }
         
-        .section:hover {
-            transform: translateX(5px);
+        .highlight {
+            background-color: #f5f0ff;
+            padding: 2px 4px;
+            border-radius: 3px;
         }
         
-        .section h2 {
-            color: #2d3748;
-            font-size: 1.8em;
-            margin-bottom: 15px;
+        .key-fact {
+            background: #f5f0ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #4a1e7c;
+        }
+        
+        .toc {
+            background-color: #f5f0ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #4a1e7c;
+            border-radius: 6px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            color: #4a1e7c;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .toc a:hover {
+            color: #6b2d9e;
+            text-decoration: underline;
+        }
+        
+        /* Field Diagram Styles */
+        .field-diagram-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            border: 2px solid #4a1e7c;
+        }
+        
+        .field-svg-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #2d5016;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .field-svg-container svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .player {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .player:hover circle {
+            r: 18;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+        }
+        
+        .player:hover text {
+            font-weight: 700;
+            font-size: 15px;
+        }
+        
+        .team-home circle {
+            fill: #4a1e7c;
+            stroke: white;
+            stroke-width: 2;
+        }
+        
+        .team-away circle {
+            fill: #c41e3a;
+            stroke: white;
+            stroke-width: 2;
+        }
+        
+        .team-home text, .team-away text {
+            fill: white;
+            font-weight: 600;
+            font-size: 12px;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        
+        .field-line {
+            stroke: white;
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        .base {
+            fill: white;
+            stroke: #2d5016;
+            stroke-width: 2;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid #4a1e7c;
+        }
+        
+        .info-panel.active {
+            background: #f5f0ff;
+        }
+        
+        .legend {
             display: flex;
-            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
         
-        .section h2::before {
-            content: "⚾";
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-        
-        .section h3 {
-            color: #4a5568;
-            font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .section ul {
+        ul {
             margin-left: 30px;
             margin-top: 10px;
         }
         
-        .section li {
+        li {
             margin-bottom: 8px;
             padding-left: 10px;
         }
         
-        .highlight {
-            background: #fef5e7;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-            border-left: 4px solid #f39c12;
-        }
-        
-        .field-diagram {
-            background: #2d5016;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        .key-fact {
-            background: #e6f7ff;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-            border-left: 4px solid #1890ff;
-        }
-        
         footer {
-            background: #2d3748;
-            color: white;
             text-align: center;
             padding: 20px;
-            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            
             .content {
                 padding: 20px;
             }
-            
-            .section {
-                padding: 20px;
+            h1 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚔️</span>
+                <h1>Paladin Playbook</h1>
+            </a>
+            <div class="nav-dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    <span>Sports Menu</span>
+                    <span>▼</span>
+                </button>
+                <div class="dropdown-content" id="sportDropdown">
+                    <a href="index.html" class="dropdown-item">🏠 Home</a>
+                    <a href="womens_lacrosse.html" class="dropdown-item">🥍 Women's Lacrosse</a>
+                    <a href="mens_basketball.html" class="dropdown-item">🏀 Men's Basketball</a>
+                    <a href="womens_basketball.html" class="dropdown-item">🏀 Women's Basketball</a>
+                    <a href="mens_soccer.html" class="dropdown-item">⚽ Men's Soccer</a>
+                    <a href="womens_soccer.html" class="dropdown-item">⚽ Women's Soccer</a>
+                    <a href="volleyball.html" class="dropdown-item">🏐 Volleyball</a>
+                    <a href="football.html" class="dropdown-item">🏈 Football</a>
+                    <a href="softball.html" class="dropdown-item">🥎 Softball</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>NCAA Softball Rules Guide</h1>
-            <p>2026 and 2027 Edition - Essential Rules and Concepts</p>
-        </header>
+        <a href="index.html" class="back-btn">← Back to All Sports</a>
         
         <div class="content">
-            <div class="section">
+            <h1>🥎 NCAA Softball Rules 2026–2027</h1>
+            
+            <p><strong>National Collegiate Athletic Association</strong><br>
+            P.O. Box 6222<br>
+            Indianapolis, Indiana 46206-6222<br>
+            317-917-6222<br>
+            <a href="https://www.ncaa.org" style="color: #4a1e7c;">WWW.NCAA.ORG</a></p>
+
+            <!-- Interactive Field Diagram -->
+            <div class="field-diagram-section">
+                <h2 style="color: #4a1e7c; margin-bottom: 1rem;">Interactive Field Diagram</h2>
+                <p style="color: #666; margin-bottom: 1.5rem;">Click on any position to learn about their role</p>
+                <div class="field-svg-container">
+                    <svg viewBox="0 0 1000 950" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Infield dirt -->
+                        <circle cx="500" cy="500" r="300" fill="#8b6f47" opacity="0.3"/>
+                        
+                        <!-- Foul lines -->
+                        <line x1="500" y1="500" x2="200" y2="800" class="field-line" stroke-dasharray="5,5"/>
+                        <line x1="500" y1="500" x2="800" y2="800" class="field-line" stroke-dasharray="5,5"/>
+                        
+                        <!-- Bases -->
+                        <g class="base">
+                            <!-- Home plate -->
+                            <polygon points="500,800 485,815 500,825 515,815" fill="white" stroke="#2d5016" stroke-width="2"/>
+                        </g>
+                        <g class="base">
+                            <!-- First base -->
+                            <rect x="785" y="515" width="30" height="30" fill="white" stroke="#2d5016" stroke-width="2"/>
+                        </g>
+                        <g class="base">
+                            <!-- Second base -->
+                            <rect x="485" y="185" width="30" height="30" fill="white" stroke="#2d5016" stroke-width="2"/>
+                        </g>
+                        <g class="base">
+                            <!-- Third base -->
+                            <rect x="185" y="515" width="30" height="30" fill="white" stroke="#2d5016" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Baseline paths -->
+                        <line x1="515" y1="785" x2="785" y2="515" class="field-line" opacity="0.5" stroke-width="1"/>
+                        <line x1="515" y1="785" x2="215" y2="515" class="field-line" opacity="0.5" stroke-width="1"/>
+                        <line x1="800" y1="530" x2="500" y2="200" class="field-line" opacity="0.5" stroke-width="1"/>
+                        <line x1="200" y1="530" x2="500" y2="200" class="field-line" opacity="0.5" stroke-width="1"/>
+                        
+                        <!-- Pitcher's mound -->
+                        <circle cx="500" cy="600" r="40" fill="#8b6f47" opacity="0.5" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+                        <line x1="500" y1="560" x2="500" y2="640" stroke="white" stroke-width="1" opacity="0.5"/>
+                        
+                        <!-- HOME TEAM (Purple - Furman) -->
+                        <g class="player team-home" data-position="pitcher" data-team="home">
+                            <circle cx="500" cy="600" r="15"/>
+                            <text x="500" y="605">P</text>
+                        </g>
+                        <g class="player team-home" data-position="catcher" data-team="home">
+                            <circle cx="500" cy="750" r="15"/>
+                            <text x="500" y="755">C</text>
+                        </g>
+                        <g class="player team-home" data-position="first-base" data-team="home">
+                            <circle cx="750" cy="530" r="15"/>
+                            <text x="750" y="535">1B</text>
+                        </g>
+                        <g class="player team-home" data-position="second-base" data-team="home">
+                            <circle cx="600" cy="350" r="15"/>
+                            <text x="600" y="355">2B</text>
+                        </g>
+                        <g class="player team-home" data-position="third-base" data-team="home">
+                            <circle cx="250" cy="530" r="15"/>
+                            <text x="250" y="535">3B</text>
+                        </g>
+                        <g class="player team-home" data-position="shortstop" data-team="home">
+                            <circle cx="400" cy="350" r="15"/>
+                            <text x="400" y="355">SS</text>
+                        </g>
+                        <g class="player team-home" data-position="left-field" data-team="home">
+                            <circle cx="250" cy="150" r="15"/>
+                            <text x="250" y="155">LF</text>
+                        </g>
+                        <g class="player team-home" data-position="center-field" data-team="home">
+                            <circle cx="500" cy="100" r="15"/>
+                            <text x="500" y="105">CF</text>
+                        </g>
+                        <g class="player team-home" data-position="right-field" data-team="home">
+                            <circle cx="750" cy="150" r="15"/>
+                            <text x="750" y="155">RF</text>
+                        </g>
+                    </svg>
+                </div>
+                <div class="legend">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 20px; height: 20px; border-radius: 50%; background: #4a1e7c; border: 2px solid white;"></div>
+                        <span>Furman Paladins (Purple)</span>
+                    </div>
+                </div>
+                <div class="info-panel" id="softballInfoPanel">
+                    <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">Welcome to Softball!</h3>
+                    <p style="margin: 0.5rem 0;"><strong>Click on any position</strong> to learn about their role on the field.</p>
+                    <p style="margin: 0.5rem 0;"><strong>Distance Between Bases:</strong> 60 feet</p>
+                    <p style="margin: 0.5rem 0;"><strong>Pitching Distance:</strong> 43 feet</p>
+                    <p style="margin: 0.5rem 0;"><strong>Teams:</strong> 9 players per side (or 10 with Designated Player)</p>
+                </div>
+            </div>
+
+            <div class="toc">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#game-overview">The Game Overview</a></li>
+                    <li><a href="#field-specs">Field Specifications</a></li>
+                    <li><a href="#equipment">Equipment Requirements</a></li>
+                    <li><a href="#positions">Player Positions and Lineups</a></li>
+                    <li><a href="#pitching">Pitching Rules</a></li>
+                    <li><a href="#batting">Batting and Base Running</a></li>
+                    <li><a href="#special-rules">Special Rules and Situations</a></li>
+                    <li><a href="#game-management">Game Management</a></li>
+                    <li><a href="#conduct">Conduct and Safety</a></li>
+                    <li><a href="#changes">Major Changes for 2026-2027</a></li>
+                </ul>
+            </div>
+
+            <div id="game-overview" class="section">
                 <h2>The Game Overview</h2>
                 <p><strong>Softball</strong> is a game made up of two teams of 9-10 players. The visiting team starts on offense (batting), attempting to score runs by touching all bases including home plate. The home team starts on defense (fielding), attempting to prevent runs and get three outs per inning.</p>
                 
@@ -158,11 +510,8 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div id="field-specs" class="section">
                 <h2>Field Specifications</h2>
-                <div class="field-diagram">
-                    <h3>Key Dimensions</h3>
-                </div>
                 <ul>
                     <li><strong>Base Distance:</strong> 60 feet between bases</li>
                     <li><strong>Pitching Distance:</strong> 43 feet from home plate to pitcher's plate</li>
@@ -172,12 +521,12 @@
                     <li><strong>Pitcher's Circle:</strong> 8-foot radius from pitcher's plate</li>
                 </ul>
                 
-                <div class="highlight">
+                <div class="key-fact">
                     <strong>2026/2027 Change:</strong> Double first base is required for Division I in 2026 and all divisions in 2027. The fair portion is white, the foul portion is a contrasting color (typically orange).
                 </div>
             </div>
 
-            <div class="section">
+            <div id="equipment" class="section">
                 <h2>Equipment Requirements</h2>
                 
                 <h3>The Ball</h3>
@@ -205,7 +554,7 @@
                 </ul>
             </div>
 
-            <div class="section">
+            <div id="positions" class="section">
                 <h2>Player Positions and Lineups</h2>
                 
                 <h3>Standard Lineup (9 players)</h3>
@@ -234,7 +583,7 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div id="pitching" class="section">
                 <h2>Pitching Rules</h2>
                 
                 <h3>Legal Pitching Position</h3>
@@ -259,12 +608,12 @@
                     <li>Batter and catcher must be in their boxes within 12 seconds</li>
                 </ul>
                 
-                <div class="highlight">
+                <div class="key-fact">
                     <strong>⚠️ Illegal Pitch:</strong> Results in a ball to the batter (or the offense may take the result of the play if better). Common violations include stepping outside the pitcher's lane, crow-hopping, or failing to follow proper delivery mechanics.
                 </div>
             </div>
 
-            <div class="section">
+            <div id="batting" class="section">
                 <h2>Batting and Base Running</h2>
                 
                 <h3>Strike Zone</h3>
@@ -294,7 +643,7 @@
                 </div>
             </div>
 
-            <div class="section">
+            <div id="special-rules" class="section">
                 <h2>Special Rules and Situations</h2>
                 
                 <h3>Infield Fly Rule</h3>
@@ -313,7 +662,7 @@
                 <p>If used, starting in extra innings (typically 10th), each team begins its turn at bat with the player scheduled to bat ninth placed on second base.</p>
             </div>
 
-            <div class="section">
+            <div id="game-management" class="section">
                 <h2>Game Management</h2>
                 
                 <h3>Time Between Innings</h3>
@@ -333,12 +682,12 @@
                     <li>Reviewable plays include: fair/foul, home runs, catch/no catch, force/tag plays, interference, obstruction, timing plays</li>
                 </ul>
                 
-                <div class="highlight">
+                <div class="key-fact">
                     <strong>2026/2027 Change:</strong> Electronic one-way communication devices now allowed from dugout/coaches' boxes for pitch calling.
                 </div>
             </div>
 
-            <div class="section">
+            <div id="conduct" class="section">
                 <h2>Conduct and Safety</h2>
                 
                 <h3>Ejections</h3>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Cheerleading Rules Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #f5f5f5;
+            padding: 20px 40px;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h3 {
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 8px 15px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            scroll-margin-top: 80px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .definition {
+            background: #f8f9ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .definition strong {
+            color: #667eea;
+        }
+        
+        .rule-item {
+            background: #fff9f0;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #ff9800;
+            border-radius: 5px;
+        }
+        
+        .competition-box {
+            background: #e8f5e9;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #4caf50;
+            border-radius: 5px;
+        }
+
+        .competition-box h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .safety-warning {
+            background: #fff3f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #e53935;
+            border-radius: 5px;
+        }
+        
+        .safety-warning h3 {
+            color: #e53935;
+            margin-top: 0;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .highlight {
+            background: #fff176;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        footer {
+            background: #f5f5f5;
+            padding: 20px 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎉 College Cheerleading Rules Guide</h1>
+            <p>USA Cheer Safety Rules & NCA Competition Guidelines</p>
+        </header>
+
+        <nav>
+            <h3>Quick Navigation</h3>
+            <a href="#definitions">Definitions</a>
+            <a href="#safety">Safety</a>
+            <a href="#stunts">Partner Stunts</a>
+            <a href="#pyramids">Pyramids</a>
+            <a href="#tosses">Tosses</a>
+            <a href="#tumbling">Tumbling</a>
+            <a href="#surfaces">Surfaces</a>
+            <a href="#competition">Competition Rules</a>
+            <a href="#divisions">Divisions</a>
+            <a href="#deductions">Deductions</a>
+        </nav>
+        
+        <div class="content">
+            <section class="section" id="definitions">
+                <h2>Key Definitions</h2>
+                
+                <div class="definition">
+                    <strong>Base:</strong> A person in direct contact with the performing surface who supports another person's weight.
+                </div>
+                
+                <div class="definition">
+                    <strong>Top Person:</strong> A person being supported by another while off the performing surface or tossed into the air.
+                </div>
+                
+                <div class="definition">
+                    <strong>Spotter:</strong> A person responsible for assisting or catching the top person in a partner stunt or pyramid. Must focus on the head, neck, and shoulders of the top person and cannot hold objects.
+                </div>
+                
+                <div class="definition">
+                    <strong>Inversion:</strong> A body position where the shoulders are below the waist.
+                </div>
+                
+                <div class="definition">
+                    <strong>Cradle:</strong> A dismount where the top person lands in a face-up, semi-piked position.
+                </div>
+                
+                <div class="definition">
+                    <strong>Pyramid:</strong> A skill where a top person is supported by a middle layer person.
+                </div>
+                
+                <div class="definition">
+                    <strong>Rewind:</strong> A skill where the top person starts with at least one foot on the ground, is tossed into the air, and performs a flip into a stunt, pyramid, or cradle.
+                </div>
+            </section>
+            
+            <section class="section" id="safety">
+                <h2>General Safety Guidelines</h2>
+                
+                <div class="safety-warning">
+                    <h3>⚠️ Essential Safety Requirements</h3>
+                    <ul>
+                        <li>All squads must be under the direction of a qualified coach</li>
+                        <li>All practice sessions must be supervised</li>
+                        <li>Technical skills must NOT be performed on concrete, asphalt, wet, or uneven surfaces</li>
+                        <li>Proper warm-up exercises must precede all activities</li>
+                        <li>Mandatory training in proper spotting techniques</li>
+                        <li>Skills not mastered should only be performed in supervised practice</li>
+                    </ul>
+                </div>
+                
+                <h3>Personal Safety Equipment</h3>
+                <div class="rule-item">
+                    <strong>Prohibited:</strong> All jewelry (navel, tongue, earrings, necklaces). Medical bracelets allowed if taped.
+                </div>
+                <div class="rule-item">
+                    <strong>Required:</strong> Soft-soled athletic shoes. Gymnastics shoes, jazz shoes, and boots are prohibited.
+                </div>
+                <div class="rule-item">
+                    <strong>Nails:</strong> Must be kept short, near the end of the fingers (including artificial nails).
+                </div>
+            </section>
+            
+            <section class="section" id="stunts">
+                <h2>Partner Stunts</h2>
+                
+                <h3>When Spotters Are Required:</h3>
+                <ul>
+                    <li>Released load-ins and transitions with more than 1¼ twists</li>
+                    <li>Dismounts with more than 1¼ twists (spotter must assist on cradle)</li>
+                    <li>One-arm stunts (except basic cupie/awesome or liberty)</li>
+                    <li>Single base release to shoulders</li>
+                    <li>Extended handstand positions</li>
+                    <li>Releases from handstand position on ground</li>
+                </ul>
+                
+                <h3>Rotation Limits:</h3>
+                <div class="rule-item">
+                    Twisting mounts and dismounts greater than <span class="highlight">2¼ rotations are prohibited</span>.
+                </div>
+                
+                <h3>Flipping Rules:</h3>
+                <div class="rule-item">
+                    <strong>Flipping into and out of stunts is allowed with restrictions:</strong>
+                    <ul>
+                        <li>Top person limited to 1¼ flipping rotations and one twisting rotation</li>
+                        <li>Must be caught by original group</li>
+                        <li>Bases limited to ½ turn under the top person</li>
+                        <li>Rewinds require a spotter</li>
+                        <li>Flips from stunts must initiate from prep level or below</li>
+                        <li>Flips to vertical stunts require a spotter</li>
+                        <li>Flips with one rotation or less require two people</li>
+                        <li>Flips with more than one rotation require three people</li>
+                    </ul>
+                </div>
+
+                <h3>Prohibited Skills:</h3>
+                <ul>
+                    <li>Single based split catches</li>
+                    <li>Front, back and side tension drops</li>
+                    <li>Most leg pitch, toe pitch, walk-in, sponge, and straddle catch flips to performing surface</li>
+                </ul>
+            </section>
+            
+            <section class="section" id="pyramids">
+                <h2>Pyramids</h2>
+                
+                <div class="rule-item">
+                    <strong>Height Limit:</strong> Pyramids higher than <span class="highlight">2½ body lengths are prohibited</span>.
+                    <ul>
+                        <li>Chairs, thigh stands, shoulder straddles = 1½ body lengths</li>
+                        <li>Shoulder stands = 2 body lengths</li>
+                        <li>Extended stunts = 2½ body lengths</li>
+                    </ul>
+                </div>
+                
+                <h3>Spotter Requirements:</h3>
+                <ul>
+                    <li>At least two spotters for each person above two persons high</li>
+                    <li>One spotter behind, one in front or at the side</li>
+                    <li>Spotters must be in position as the top person lands in the 2½ high position</li>
+                    <li>Cannot place hands directly under the sole of the foot of a middle layer</li>
+                    <li>Front/side spotter may place one hand under foot or hands of base</li>
+                </ul>
+                
+                <h3>Dismounts from Pyramids:</h3>
+                <div class="rule-item">
+                    <strong>Flipping dismounts allowed:</strong>
+                    <ul>
+                        <li>Front flip and Arabian may land in cradle, horizontal position, or performing surface</li>
+                        <li>Front flip with up to one complete twist may land in two-person cradle only</li>
+                        <li>Must use at least two catchers, one on each side</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section" id="tosses">
+                <h2>Basket Tosses</h2>
+                
+                <div class="rule-item">
+                    <strong>Basic Requirements:</strong>
+                    <ul>
+                        <li>Must be performed from ground level only</li>
+                        <li>Maximum of four bases</li>
+                        <li>Must be cradled by three of the original bases</li>
+                        <li>One catcher must catch in a scoop under the head and shoulders</li>
+                        <li>Top person cannot hold anything except poms</li>
+                    </ul>
+                </div>
+                
+                <h3>Non-Flipping Baskets:</h3>
+                <div class="rule-item">
+                    Limited to <span class="highlight">2¼ twisting rotations</span> and <span class="highlight">three total tricks</span> (e.g., kick double full).
+                </div>
+                
+                <h3>Flipping Baskets - Allowed Skills:</h3>
+                <ul>
+                    <li>Non-twisting backward somersaults (tuck, layout, or pike) with up to one additional non-flipping trick</li>
+                    <li>Non-twisting forward somersaults (arched, tuck, layout, or pike) with no additional tricks</li>
+                    <li>Back Layout Full Twist</li>
+                    <li>Special skills requiring all male side throwers and backspot: Layout Straddle Full, Tuck X Out Full, Layout Kick Full, Layout Double Full</li>
+                </ul>
+                
+                <div class="safety-warning">
+                    <strong>Prohibited:</strong> Front Fulls, Arabians, Pike-open Full Twist, Side Sumis, Kick Double Full Twists, Double Flips and greater.
+                </div>
+            </section>
+            
+            <section class="section" id="tumbling">
+                <h2>Tumbling</h2>
+                
+                <div class="rule-item">
+                    <strong>Prohibited:</strong>
+                    <ul>
+                        <li>Tumbling over, under, or through partner stunts, pyramids, or individuals</li>
+                        <li>Skills exceeding <span class="highlight">one flipping rotation</span></li>
+                        <li>Skills with <span class="highlight">two or more twisting rotations</span></li>
+                        <li>Dive rolls</li>
+                        <li>Airborne drops to prone position (e.g., back flip to pushup position)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section" id="surfaces">
+                <h2>Surface Restrictions</h2>
+                
+                <h3>Skills Requiring Mat, Grass, or Rubberized Track:</h3>
+                <ul>
+                    <li>Basket tosses and similar multi-based tosses</li>
+                    <li>Inversion releases from ground or a skill</li>
+                    <li>Flipping skills into or from stunts, tosses, or pyramids</li>
+                    <li>2½ high pyramids</li>
+                </ul>
+                
+                <h3>Basketball/Volleyball/Indoor Games:</h3>
+                <div class="safety-warning">
+                    <h3>Prohibited During Timeouts (Regardless of Matting):</h3>
+                    <ul>
+                        <li>Basket tosses and similar tosses</li>
+                        <li>One-arm partner stunts (except non-twisting cupies/awesomes)</li>
+                        <li>Flips into or from partner stunts</li>
+                        <li>Full releases to/from inversions</li>
+                        <li>Extended inversions</li>
+                        <li>Twisting dismounts greater than 1¼ rotation</li>
+                        <li>2½ high pyramids</li>
+                        <li>Airborne twisting tumbling skills</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section" id="competition">
+                <h2>NCA Competition Rules</h2>
+
+                <h3>Performance Area</h3>
+                <div class="competition-box">
+                    <h4>Competition Surface</h4>
+                    <ul>
+                        <li>42' deep x 54' wide carpeted mat</li>
+                        <li>Spring floors are prohibited for school-based programs</li>
+                        <li>Props may be placed outside the competition area but cannot be thrown</li>
+                    </ul>
+                </div>
+
+                <h3>Routine Requirements</h3>
+                <div class="rule-item">
+                    <strong>Time and Team Size:</strong>
+                    <ul>
+                        <li>Maximum time: <span class="highlight">2 minutes 15 seconds (135 seconds)</span></li>
+                        <li>Team size: 10-20 participants (plus one mascot)</li>
+                        <li>5 point deduction per person over/under limits</li>
+                        <li>Mascot may NOT participate in technical skills or spot</li>
+                    </ul>
+                </div>
+
+                <div class="rule-item">
+                    <strong>Performance Guidelines:</strong>
+                    <ul>
+                        <li>Music allowed for all or part of routine</li>
+                        <li>No organized formal entrances with stunts/tumbling</li>
+                        <li>Timing begins with first note of music or movement</li>
+                        <li>All performers must have at least one foot on surface when routine starts</li>
+                        <li>Allowed props: flags, banners, megaphones, pom pons, signs</li>
+                    </ul>
+                </div>
+
+                <h3>Collegiate Image & Uniform Requirements</h3>
+                <div class="safety-warning">
+                    <h3>Female Uniform Standards:</h3>
+                    <ul>
+                        <li>No "bra top" style - material must fall 1 inch below bra line</li>
+                        <li>No extremely low-cut necklines or excessively bare/backless tops</li>
+                        <li>Must have straps over shoulder or around neck (no tube tops)</li>
+                        <li>Must cover briefs when feet shoulder-width apart</li>
+                        <li>Skirts must fall 1.5 inches below boy-short briefs or 2 inches below standard briefs</li>
+                        <li>No ultra-low-rise waistbands (no lower than 2 inches below navel)</li>
+                    </ul>
+                </div>
+
+                <div class="safety-warning">
+                    <h3>Male Uniform Standards:</h3>
+                    <ul>
+                        <li>Full torso length covering shoulders to waist</li>
+                        <li>Short or long sleeves covering at least midway between shoulder and elbow</li>
+                        <li>Pants must cover waist to feet</li>
+                        <li>Shorts must fall no higher than mid-thigh</li>
+                    </ul>
+                </div>
+
+                <div class="rule-item">
+                    <strong>Hair Bow Policy:</strong> Hair bows may only be worn behind the top center of the head and must be small to medium in size. Violations in finals can result in a 1.0 Collegiate Image deduction.
+                </div>
+            </section>
+
+            <section class="section" id="divisions">
+                <h2>College Cheer Divisions</h2>
+
+                <h3>Division Classifications</h3>
+                <table>
+                    <tr>
+                        <th>Division</th>
+                        <th>Classification</th>
+                    </tr>
+                    <tr>
+                        <td>Division IA</td>
+                        <td>FBS Football Schools</td>
+                    </tr>
+                    <tr>
+                        <td>Division I</td>
+                        <td>FCS Football Schools or Division I Basketball (no football)</td>
+                    </tr>
+                    <tr>
+                        <td>Division II</td>
+                        <td>Division II Athletics</td>
+                    </tr>
+                    <tr>
+                        <td>Division III</td>
+                        <td>Division III Athletics</td>
+                    </tr>
+                    <tr>
+                        <td>Junior College</td>
+                        <td>Junior College Programs</td>
+                    </tr>
+                    <tr>
+                        <td>NAIA</td>
+                        <td>NAIA Programs</td>
+                    </tr>
+                </table>
+
+                <h3>Team Composition</h3>
+                <div class="competition-box">
+                    <h4>Large Coed (Maximum Males):</h4>
+                    <ul>
+                        <li>10-11 total: 7 max males</li>
+                        <li>12-13 total: 8 max males</li>
+                        <li>14-15 total: 9 max males</li>
+                        <li>16-17 total: 10 max males</li>
+                        <li>18-19 total: 11 max males</li>
+                        <li>20 total: 12 max males</li>
+                    </ul>
+                    <h4>Small Coed:</h4>
+                    <p>1-4 male participants</p>
+                    <h4>All Girl:</h4>
+                    <p>No male participants</p>
+                </div>
+
+                <h3>Intermediate Division Restrictions</h3>
+                <div class="safety-warning">
+                    <h3>⚠️ Intermediate Level Restrictions</h3>
+                    <strong>Stunts/Pyramids:</strong>
+                    <ul>
+                        <li>Release inversions allowed but may not exceed prep level or ½ twist</li>
+                        <li>Free flipping mounts/dismounts not allowed</li>
+                        <li>Release full twists to extended position prohibited</li>
+                        <li>Twisting dismounts limited to 1¼ twist</li>
+                        <li>Pyramids sustained over 2 persons high prohibited</li>
+                        <li>Twisting stunts limited to 1¼ rotation (no 1½ ups or double ups)</li>
+                    </ul>
+                    <strong>Tosses:</strong>
+                    <ul>
+                        <li>Release flips from basket/sponge tosses prohibited</li>
+                        <li>Twisting dismounts may not exceed 2 rotations</li>
+                    </ul>
+                    <strong>Tumbling:</strong>
+                    <ul>
+                        <li>Standing back tucks or other flips prohibited</li>
+                        <li>Airborne flips out of running tumbling permitted (tucks, layouts, whips)</li>
+                        <li>Twisting flips prohibited (includes aerials and onodis)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section" id="deductions">
+                <h2>Deductions & Violations</h2>
+
+                <h3>Point Deduction System</h3>
+                <table>
+                    <tr>
+                        <th>Infraction</th>
+                        <th>Deduction</th>
+                    </tr>
+                    <tr>
+                        <td>Athlete Fall (hand/knee down in tumbling)</td>
+                        <td>0.25</td>
+                    </tr>
+                    <tr>
+                        <td>Building Bobble (control mistakes, no fall)</td>
+                        <td>0.25</td>
+                    </tr>
+                    <tr>
+                        <td>Building Fall (drop to cradle/load position)</td>
+                        <td>0.75</td>
+                    </tr>
+                    <tr>
+                        <td>Major Building Fall (top person to surface)</td>
+                        <td>1.25</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum per stunt/pyramid</td>
+                        <td>1.75</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum for pyramid (total)</td>
+                        <td>3.5</td>
+                    </tr>
+                </table>
+
+                <h3>Safety & Rule Violations</h3>
+                <div class="rule-item">
+                    <ul>
+                        <li><strong>Building skills out of level:</strong> 1.0 deduction</li>
+                        <li><strong>Tumbling skills out of level:</strong> 0.5 deduction</li>
+                        <li><strong>Boundary violation:</strong> 0.25 per occurrence (both feet or upper torso outside boundary)</li>
+                        <li><strong>Leaving performance surface:</strong> 1.0 penalty</li>
+                        <li><strong>Inappropriate choreography:</strong> 1.0 per violation</li>
+                    </ul>
+                </div>
+
+                <h3>Time Violations</h3>
+                <div class="rule-item">
+                    <ul>
+                        <li><strong>1+ seconds over:</strong> 0.25 deduction</li>
+                        <li><strong>6+ seconds over:</strong> 1.0 deduction</li>
+                    </ul>
+                    <p><em>Note: 3-second buffer for human error. Deductions only assessed if time clearly exceeds limit.</em></p>
+                </div>
+
+                <h3>Major Violations</h3>
+                <div class="safety-warning">
+                    <ul>
+                        <li><strong>Unsportsmanlike conduct:</strong> 2.0 deduction and potential removal/disqualification</li>
+                        <li><strong>Division violations (crossover):</strong> 5.0 deduction per illegal participant (max 10.0)</li>
+                        <li><strong>Team size violations:</strong> 5.0 deduction per person over/under limits</li>
+                    </ul>
+                </div>
+
+                <h3>Music & Choreography</h3>
+                <div class="rule-item">
+                    Deductions given for:
+                    <ul>
+                        <li>Swear words or connotations of sexual acts</li>
+                        <li>Drug references</li>
+                        <li>Mention of specific body parts</li>
+                        <li>Violent acts or behavior</li>
+                        <li>Vulgar or suggestive choreography (hip thrusting, inappropriate touching/positioning)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Eligibility & Qualification</h2>
+
+                <h3>Eligibility Requirements</h3>
+                <div class="competition-box">
+                    <h4>Academic Requirements:</h4>
+                    <ul>
+                        <li>Must be full-time student or enrolled in minimum 9 credit hours</li>
+                        <li>Graduating seniors/grad students may enroll in fewer hours if working to graduate</li>
+                        <li>Must be current member of the team represented</li>
+                    </ul>
+                    <h4>Competition Limits:</h4>
+                    <ul>
+                        <li>May only represent ONE school in ONE National Championship per academic year</li>
+                        <li>Maximum of FIVE (5) National Championships total (cheer, dance, JC, 4-year)</li>
+                        <li>Junior College: Maximum THREE (3) Championships during college career</li>
+                        <li>Coach must be currently USA Cheer certified</li>
+                    </ul>
+                </div>
+
+                <h3>How to Qualify</h3>
+                <div class="competition-box">
+                    <h4>Camp Qualification:</h4>
+                    <p>Attend NCA/NDA Collegiate Summer Camp with minimum 8 team members and earn a bid through participation, conduct, and camp achievements.</p>
+                    <h4>Video Qualification:</h4>
+                    <p>Submit video by January 19 showing:</p>
+                    <ul>
+                        <li><strong>Stunts:</strong> At least 3 complete stunts with dismounts</li>
+                        <li><strong>Tumbling:</strong> At least 2 standing skills and 2 synchronized running passes</li>
+                        <li><strong>Tosses:</strong> At least 3 complete tosses from mount through cradle</li>
+                        <li><strong>Pyramids:</strong> At least 3 complete pyramids from mount through dismount</li>
+                        <li>Maximum 2 minutes total</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p><strong>Important:</strong> These rules are general in nature and not intended to cover all circumstances. All cheerleading skills should be carefully reviewed and supervised by a qualified coach.</p>
+            <p>For the most recent safety rules: <strong>usacheer.org</strong> | For NCA competition info: <strong>nca.varsity.com</strong></p>
+            <p><em>Rules current as of 2024-25 season. Always verify latest updates with official sources.</em></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -3,311 +3,667 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NCAA Women’s Lacrosse Rules 2024–2025</title>
+  <title>Women's Lacrosse - Furman Paladin Playbook</title>
   <style>
+    * { box-sizing: border-box; }
     body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       margin: 0;
-      font-family: Georgia, serif;
-      background-color: #f5f5f5;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #f5f5f5;
     }
+    
+    /* Header & Navigation - Matching Home Page */
     header {
-      background-color: #004080;
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
       color: white;
-      padding: 15px 0;
-      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav a {
-      color: white;
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       text-decoration: none;
-      margin: 0 15px;
+      color: white;
+    }
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .logo-icon {
+      font-size: 2rem;
+    }
+    
+    /* Dropdown Navigation */
+    .nav-dropdown {
+      position: relative;
+    }
+    .dropdown-btn {
+      padding: 0.75rem 1.5rem;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
       font-weight: 500;
-      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
     }
-    nav a:hover {
-      color: #ffd700;
+    .dropdown-btn:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
     }
-    .content {
-      max-width: 1000px;
-      margin: 40px auto;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.5rem;
       background: white;
-      padding: 20px 40px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      min-width: 250px;
       border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      max-height: 400px;
+      overflow-y: auto;
     }
+    .dropdown-content.show {
+      display: block;
+      animation: fadeIn 0.2s;
+    }
+    .dropdown-item {
+      padding: 1rem 1.5rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .dropdown-item:hover {
+      background: #f5f0ff;
+      color: #4a1e7c;
+    }
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Back Button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #4a1e7c;
+      border: 2px solid #4a1e7c;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 2rem 0 1rem 0;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: #4a1e7c;
+      color: white;
+    }
+
+    /* Content Styling */
+    .content {
+      background: white;
+      padding: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    
+    h1 {
+      color: #4a1e7c;
+      border-bottom: 3px solid #4a1e7c;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    
+    h2 {
+      color: #6b2d9e;
+      margin-top: 30px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    
+    h3 {
+      color: #4a1e7c;
+      margin-top: 20px;
+    }
+    
+    .rule-section {
+      margin-bottom: 30px;
+    }
+    
+    .highlight {
+      background-color: #f5f0ff;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    
+    .toc {
+      background-color: #f5f0ff;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #4a1e7c;
+      border-radius: 6px;
+    }
+    
+    .toc h2 {
+      margin-top: 0;
+      border: none;
+    }
+    
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .toc li {
+      margin: 8px 0;
+    }
+    
+    .toc a {
+      color: #4a1e7c;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .toc a:hover {
+      color: #6b2d9e;
+      text-decoration: underline;
+    }
+    
+    .major-change {
+      background-color: #f5f0ff;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #6b2d9e;
+      border-radius: 4px;
+    }
+
+    /* Field Diagram Styles */
+    .field-diagram-section {
+      background: #f8f9fa;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      border: 2px solid #4a1e7c;
+    }
+    
+    .field-svg-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #2d7a4d;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .field-svg-container svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .player {
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .player:hover circle {
+      r: 18;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+    }
+    
+    .player:hover text {
+      font-weight: 700;
+      font-size: 15px;
+    }
+    
+    .team-home circle {
+      fill: #4a1e7c;
+      stroke: white;
+      stroke-width: 2;
+    }
+    
+    .team-away circle {
+      fill: #c41e3a;
+      stroke: white;
+      stroke-width: 2;
+    }
+    
+    .team-home text, .team-away text {
+      fill: white;
+      font-weight: 600;
+      font-size: 12px;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+    
+    .field-line {
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+    
+    .field-circle {
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+    
+    .goal {
+      stroke: #ff6b35;
+      stroke-width: 3;
+      fill: none;
+    }
+    
+    .crease {
+      stroke: #ff6b35;
+      stroke-width: 2;
+      fill: rgba(255, 107, 53, 0.1);
+    }
+    
+    .restraining-line {
+      stroke: white;
+      stroke-width: 2;
+      stroke-dasharray: 10, 5;
+      fill: none;
+    }
+    
+    .info-panel {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-left: 4px solid #4a1e7c;
+    }
+    
+    .info-panel.active {
+      background: #f5f0ff;
+    }
+    
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       color: #666;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="soccer.html">Soccer</a>
-      <a href="basketball.html">Men’s Basketball</a>
-      <a href="lacrosse.html">Women’s Lacrosse</a>
-    </nav>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚔️</span>
+        <h1>Paladin Playbook</h1>
+      </a>
+      <div class="nav-dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span>Sports Menu</span>
+          <span>▼</span>
+        </button>
+        <div class="dropdown-content" id="sportDropdown">
+          <a href="index.html" class="dropdown-item">🏠 Home</a>
+          <a href="womens_lacrosse.html" class="dropdown-item">🥍 Women's Lacrosse</a>
+          <a href="mens_basketball.html" class="dropdown-item">🏀 Men's Basketball</a>
+          <a href="womens_basketball.html" class="dropdown-item">🏀 Women's Basketball</a>
+          <a href="mens_soccer.html" class="dropdown-item">⚽ Men's Soccer</a>
+          <a href="womens_soccer.html" class="dropdown-item">⚽ Women's Soccer</a>
+          <a href="volleyball.html" class="dropdown-item">🏐 Volleyball</a>
+          <a href="football.html" class="dropdown-item">🏈 Football</a>
+          <a href="softball.html" class="dropdown-item">🥎 Softball</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <div class="content">
-    <!-- Embed the full content from ncaa-wlax-rules.html here -->
-     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCAA Women's Lacrosse Rules 2024-2025</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #003366;
-            border-bottom: 3px solid #003366;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #004080;
-            margin-top: 30px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #0059b3;
-            margin-top: 20px;
-        }
-        .rule-section {
-            margin-bottom: 30px;
-        }
-        .highlight {
-            background-color: #ffffcc;
-            padding: 2px 4px;
-        }
-        .toc {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #003366;
-        }
-        .toc h2 {
-            margin-top: 0;
-            border: none;
-        }
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .toc li {
-            margin: 8px 0;
-        }
-        .toc a {
-            color: #003366;
-            text-decoration: none;
-        }
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        .major-change {
-            background-color: #e6f3ff;
-            padding: 10px;
-            margin: 10px 0;
-            border-left: 4px solid #0059b3;
-        }
-    </style>
-    <script>
+  <div class="container">
+    <a href="index.html" class="back-btn">← Back to All Sports</a>
+    
+    <div class="content">
+      <h1>🥍 NCAA Women's Lacrosse Rules 2024–2025</h1>
+      
+      <p><strong>National Collegiate Athletic Association</strong><br>
+      P.O. Box 6222<br>
+      Indianapolis, Indiana 46206-6222<br>
+      317-917-6222<br>
+      <a href="https://www.ncaa.org" style="color: #4a1e7c;">WWW.NCAA.ORG</a></p>
 
-        function addGraphic(){
-            fieldDiagram = `
-                <div class="field-diagram-section">
-                    <h2 style="color: #4a1e7c; margin-bottom: 1rem;">🥍 Interactive Field Diagram</h2>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Click on any position to learn about their role</p>
-                    ${getLacrosseFieldSVG()}
-                    <div class="legend" style="display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; border-radius: 50%; background: #4a1e7c; border: 2px solid white;"></div>
-                        <span>Home Team (Purple)</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; border-radius: 50%; background: #c41e3a; border: 2px solid white;"></div>
-                        <span>Away Team (Red)</span>
-                    </div>
-                    </div>
-                    <div class="info-panel" id="lacrosseInfoPanel" style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem; margin-top: 1rem; border-left: 4px solid #4a1e7c;">
-                    <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">Welcome to Women's Lacrosse!</h3>
-                    <p style="margin: 0.5rem 0;"><strong>Click on any position</strong> to learn about their role on the field.</p>
-                    <p style="margin: 0.5rem 0;"><strong>Field Dimensions:</strong> 110-120 yards long × 60-70 yards wide</p>
-                    <p style="margin: 0.5rem 0;"><strong>Teams:</strong> 12 players per side (11 field players + 1 goalie)</p>
-                    </div>
-                </div>
-                `;
+      <!-- Interactive Field Diagram -->
+      <div class="field-diagram-section">
+        <h2 style="color: #4a1e7c; margin-bottom: 1rem;">Interactive Field Diagram</h2>
+        <p style="color: #666; margin-bottom: 1.5rem;">Click on any position to learn about their role</p>
+        <div class="field-svg-container">
+          <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Field outline -->
+            <rect x="50" y="50" width="900" height="500" class="field-line" rx="10"/>
             
+            <!-- Center line -->
+            <line x1="500" y1="50" x2="500" y2="550" class="field-line"/>
             
-            container.innerHTML = fieldDiagram + sport.sections.map(rule => `
-                <div class="rule-card">
-                <h3>${escapeHtml(rule.title)}</h3>
-                <div class="rule-meta">
-                    ${rule.start_page ? `📄 Page ${rule.start_page}` : ''}
-                </div>
-                <div class="rule-content">${escapeHtml(rule.content)}</div>
-                </div>
-            `).join('');
-        }
+            <!-- Center circle -->
+            <circle cx="500" cy="300" r="60" class="field-circle"/>
+            
+            <!-- Restraining lines -->
+            <line x1="250" y1="50" x2="250" y2="550" class="restraining-line"/>
+            <line x1="750" y1="50" x2="750" y2="550" class="restraining-line"/>
+            
+            <!-- 12m fan (left side) -->
+            <path d="M 150 300 Q 150 220, 200 220 Q 240 220, 240 300 Q 240 380, 200 380 Q 150 380, 150 300" 
+                  class="field-circle" opacity="0.6"/>
+            
+            <!-- 8m arc (left side) -->
+            <circle cx="150" cy="300" r="50" class="field-circle" opacity="0.6"/>
+            
+            <!-- Goal crease (left side) -->
+            <circle cx="150" cy="300" r="35" class="crease"/>
+            
+            <!-- Goal (left side) -->
+            <rect x="140" y="290" width="4" height="20" class="goal"/>
+            <line x1="140" y1="290" x2="140" y2="310" class="goal" stroke-width="4"/>
+            
+            <!-- 12m fan (right side) -->
+            <path d="M 850 300 Q 850 220, 800 220 Q 760 220, 760 300 Q 760 380, 800 380 Q 850 380, 850 300" 
+                  class="field-circle" opacity="0.6"/>
+            
+            <!-- 8m arc (right side) -->
+            <circle cx="850" cy="300" r="50" class="field-circle" opacity="0.6"/>
+            
+            <!-- Goal crease (right side) -->
+            <circle cx="850" cy="300" r="35" class="crease"/>
+            
+            <!-- Goal (right side) -->
+            <rect x="856" y="290" width="4" height="20" class="goal"/>
+            <line x1="860" y1="290" x2="860" y2="310" class="goal" stroke-width="4"/>
+            
+            <!-- HOME TEAM (Purple - Furman) -->
+            <g class="player team-home" data-position="goalie" data-team="home">
+              <circle cx="150" cy="300" r="15"/>
+              <text x="150" y="305">G</text>
+            </g>
+            <g class="player team-home" data-position="point" data-team="home">
+              <circle cx="220" cy="300" r="15"/>
+              <text x="220" y="305">P</text>
+            </g>
+            <g class="player team-home" data-position="coverpoint" data-team="home">
+              <circle cx="270" cy="220" r="15"/>
+              <text x="270" y="225">CP</text>
+            </g>
+            <g class="player team-home" data-position="third-man" data-team="home">
+              <circle cx="270" cy="380" r="15"/>
+              <text x="270" y="385">3M</text>
+            </g>
+            <g class="player team-home" data-position="center" data-team="home">
+              <circle cx="420" cy="300" r="15"/>
+              <text x="420" y="305">C</text>
+            </g>
+            <g class="player team-home" data-position="def-wing" data-team="home">
+              <circle cx="380" cy="200" r="15"/>
+              <text x="380" y="205">DW</text>
+            </g>
+            <g class="player team-home" data-position="att-wing" data-team="home">
+              <circle cx="380" cy="400" r="15"/>
+              <text x="380" y="405">AW</text>
+            </g>
+            <g class="player team-home" data-position="first-home" data-team="home">
+              <circle cx="730" cy="300" r="15"/>
+              <text x="730" y="305">1H</text>
+            </g>
+            <g class="player team-home" data-position="second-home" data-team="home">
+              <circle cx="680" cy="250" r="15"/>
+              <text x="680" y="255">2H</text>
+            </g>
+            <g class="player team-home" data-position="third-home" data-team="home">
+              <circle cx="680" cy="350" r="15"/>
+              <text x="680" y="355">3H</text>
+            </g>
+            
+            <!-- AWAY TEAM (Red) -->
+            <g class="player team-away" data-position="goalie" data-team="away">
+              <circle cx="850" cy="300" r="15"/>
+              <text x="850" y="305">G</text>
+            </g>
+            <g class="player team-away" data-position="point" data-team="away">
+              <circle cx="780" cy="300" r="15"/>
+              <text x="780" y="305">P</text>
+            </g>
+            <g class="player team-away" data-position="coverpoint" data-team="away">
+              <circle cx="730" cy="380" r="15"/>
+              <text x="730" y="385">CP</text>
+            </g>
+            <g class="player team-away" data-position="third-man" data-team="away">
+              <circle cx="730" cy="220" r="15"/>
+              <text x="730" y="225">3M</text>
+            </g>
+            <g class="player team-away" data-position="center" data-team="away">
+              <circle cx="580" cy="300" r="15"/>
+              <text x="580" y="305">C</text>
+            </g>
+            <g class="player team-away" data-position="def-wing" data-team="away">
+              <circle cx="620" cy="400" r="15"/>
+              <text x="620" y="405">DW</text>
+            </g>
+            <g class="player team-away" data-position="att-wing" data-team="away">
+              <circle cx="620" cy="200" r="15"/>
+              <text x="620" y="205">AW</text>
+            </g>
+            <g class="player team-away" data-position="first-home" data-team="away">
+              <circle cx="270" cy="300" r="15"/>
+              <text x="270" y="305">1H</text>
+            </g>
+            <g class="player team-away" data-position="second-home" data-team="away">
+              <circle cx="320" cy="350" r="15"/>
+              <text x="320" y="355">2H</text>
+            </g>
+            <g class="player team-away" data-position="third-home" data-team="away">
+              <circle cx="320" cy="250" r="15"/>
+              <text x="320" y="255">3H</text>
+            </g>
+          </svg>
+        </div>
+        <div class="legend">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #4a1e7c; border: 2px solid white;"></div>
+            <span>Furman Paladins (Purple)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #c41e3a; border: 2px solid white;"></div>
+            <span>Opponents (Red)</span>
+          </div>
+        </div>
+        <div class="info-panel" id="lacrosseInfoPanel">
+          <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">Welcome to Women's Lacrosse!</h3>
+          <p style="margin: 0.5rem 0;"><strong>Click on any position</strong> to learn about their role on the field.</p>
+          <p style="margin: 0.5rem 0;"><strong>Field Dimensions:</strong> 110-120 yards long × 60-70 yards wide</p>
+          <p style="margin: 0.5rem 0;"><strong>Teams:</strong> 12 players per side (11 field players + 1 goalie)</p>
+        </div>
+      </div>
 
-         
-    </script>
-</head>
-<body>
-    <div class="container" onload="addGraphic">
-        <h1>2024 and 2025 NCAA Women's Lacrosse Rules</h1>
+      <div class="toc">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#major-changes">Major Rules Changes for 2024 and 2025</a></li>
+          <li><a href="#points-emphasis">Points of Emphasis</a></li>
+          <li><a href="#rule1">Rule 1 — The Playing Area and Goals</a></li>
+          <li><a href="#rule2">Rule 2 — Equipment and Uniforms</a></li>
+          <li><a href="#rule3">Rule 3 — Game Personnel</a></li>
+          <li><a href="#rule4">Rule 4 — Time Factors and Scoring</a></li>
+          <li><a href="#rule5">Rule 5 — Play of the Game</a></li>
+          <li><a href="#rule6">Rule 6 — Fouls and Penalty Administration</a></li>
+          <li><a href="#rule7">Rule 7 — Definition of Terms</a></li>
+        </ul>
+      </div>
+
+      <div id="major-changes" class="rule-section">
+        <h2>Major Rules Changes for 2024 and 2025</h2>
         
-        <p><strong>National Collegiate Athletic Association</strong><br>
-        P.O. Box 6222<br>
-        Indianapolis, Indiana 46206-6222<br>
-        317-917-6222<br>
-        WWW.NCAA.ORG</p>
-
-        <div class="toc">
-            <h2>Contents</h2>
-            <ul>
-                <li><a href="#major-changes">Major Rules Changes for 2024 and 2025</a></li>
-                <li><a href="#points-emphasis">Points of Emphasis</a></li>
-                <li><a href="#rule1">Rule 1 — The Playing Area and Goals</a></li>
-                <li><a href="#rule2">Rule 2 — Equipment and Uniforms</a></li>
-                <li><a href="#rule3">Rule 3 — Game Personnel</a></li>
-                <li><a href="#rule4">Rule 4 — Time Factors and Scoring</a></li>
-                <li><a href="#rule5">Rule 5 — Play of the Game</a></li>
-                <li><a href="#rule6">Rule 6 — Fouls and Penalty Administration</a></li>
-                <li><a href="#rule7">Rule 7 — Definition of Terms</a></li>
-            </ul>
+        <div class="major-change">
+          <h3>Rule 2-13: Improper/Broken Equipment</h3>
+          <p>Modified the title of the section, changed the language from illegal equipment to improper/broken equipment, eliminated the requirement for reinspection, and clarified that bent/broken shafts are prohibited from being used for the remainder of the game.</p>
         </div>
 
-        <div id="major-changes" class="rule-section">
-            <h2>Major Rules Changes for 2024 and 2025</h2>
-            
-            <div class="major-change">
-                <h3>Rule 2-13: Improper/Broken Equipment</h3>
-                <p>Modified the title of the section, changed the language from illegal equipment to improper/broken equipment, eliminated the requirement for reinspection, and clarified that bent/broken shafts are prohibited from being used for the remainder of the game.</p>
-            </div>
-
-            <div class="major-change">
-                <h3>Rule 2-19: Footwear/Cleats</h3>
-                <p>Moved footwear/cleats from Uniforms to Equipment. Permits players to wear shoes with soles containing aluminum, leather, rubber, nylon or plastic cleats, studs or bars, as long as officials do not consider them dangerous.</p>
-            </div>
-
-            <div class="major-change">
-                <h3>Rule 5-4: Draw Administration</h3>
-                <p>During the administration of the draw, requires officials to position the drawers' sticks in an upright position when placing the ball.</p>
-            </div>
-
-            <div class="major-change">
-                <h3>Rule 5-23: Retention of Possession During Power Play</h3>
-                <p>If a team with a numerical advantage due to penalties retains possession at the expiration of a quarter, overtime half or period, the team will be awarded possession at the start of the subsequent quarter, overtime half or period.</p>
-            </div>
-
-            <div class="major-change">
-                <h3>Rule 6-3: Increased Physical Foul Penalties</h3>
-                <p>Increased the penalty between the restraining lines for blocking/illegal pick, charging, cross checks, illegal use of the stick, and pushing to a one-minute releasable penalty.</p>
-            </div>
-
-            <div class="major-change">
-                <h3>Rule 6-11, 6-12: Embellishment and Flopping</h3>
-                <p>Added new fouls for Embellishment and Flopping which will result in the issuance of a green card.</p>
-            </div>
-
-            <div class="major-change">
-                <h3>Rule 6-27, 6-33, 6-38: Red Card Penalty Time</h3>
-                <p><span class="highlight">Increased the penalty time for a red card from two minutes to five minutes.</span></p>
-            </div>
+        <div class="major-change">
+          <h3>Rule 2-19: Footwear/Cleats</h3>
+          <p>Moved footwear/cleats from Uniforms to Equipment. Permits players to wear shoes with soles containing aluminum, leather, rubber, nylon or plastic cleats, studs or bars, as long as officials do not consider them dangerous.</p>
         </div>
 
-        <div id="points-emphasis" class="rule-section">
-            <h2>Points of Emphasis</h2>
-            
-            <h3>The Draw</h3>
-            <p>The committee asks officials to focus on the following during the administration of the draw:</p>
-            <ul>
-                <li>Placement of the ball in the top 1/3 of the sticks at the widest point and with the sticks in an upright position</li>
-                <li>Awareness of any advantage/disadvantage that may be in effect due to the placement of the ball between the sticks</li>
-                <li>Issuance of a green card to players who persistently place their finger/thumb on the throat, sidewall, pocket, or other part of the head of the stick</li>
-                <li>Identification of any movement after the official's verbal command, "Ready"</li>
-            </ul>
-
-            <h3>Picks</h3>
-            <p>The committee encourages officials to permit legal picks and call illegal picks consistently. For a pick to be legal, the picker shall stay within their vertical plane with a stance not wider than shoulder width apart and shall not lean into the path of an opponent or extend their hips into that path even though their feet are stationary.</p>
-
-            <h3>Three Seconds</h3>
-            <p>The committee encourages officials to focus on the change from a stick's length to a stick and arm's length in their evaluation of three seconds.</p>
+        <div class="major-change">
+          <h3>Rule 5-4: Draw Administration</h3>
+          <p>During the administration of the draw, requires officials to position the drawers' sticks in an upright position when placing the ball.</p>
         </div>
 
-        <div id="rule1" class="rule-section">
-            <h2>Rule 1 — The Playing Area and Goals</h2>
-            
-            <h3>Field Dimensions</h3>
-            <p>The playing area shall be rectangular and marked with a solid lined boundary. Optimal field dimensions shall be 60 meters (65 yards) in width and 110 meters (120 yards) in total length, with goals 92 meters (100 yards) apart.</p>
-
-            <h3>Restraining Line</h3>
-            <p>The restraining line, a solid line 27 meters (30 yards) upfield from each goal line, shall extend across the width of the field.</p>
-
-            <h3>8-Meter Arc and 12-Meter Fan</h3>
-            <p>An arc and fan shall be marked 8 meters (26'4") and 12 meters (39'4"), respectively, from the goal circles.</p>
-
-            <h3>The Goals</h3>
-            <p>Each goal consists of two posts or pipes perpendicular to the ground, constructed of metal, 1.83 meters (6') high and 1.83 meters (6') apart, joined at the top by a crossbar 1.83 meters (6') from the ground.</p>
+        <div class="major-change">
+          <h3>Rule 5-23: Retention of Possession During Power Play</h3>
+          <p>If a team with a numerical advantage due to penalties retains possession at the expiration of a quarter, overtime half or period, the team will be awarded possession at the start of the subsequent quarter, overtime half or period.</p>
         </div>
 
-        <div id="rule2" class="rule-section">
-            <h2>Rule 2 — Equipment and Uniforms</h2>
-            
-            <h3>Field Stick</h3>
-            <p>The field stick must be made of composite, metal alloy (shaft only), rubber, wood, gut, leather, fiberglass, nylon, plastic and any other synthetic material. The stick shall not have sharp or protruding edges, or parts, and shall not be dangerous to players in any way.</p>
-            <p>The stick's overall length shall be a minimum of 35½" and a maximum of 43¼".</p>
-
-            <h3>Eye Protection</h3>
-            <p>All field players must wear eye protection properly. Eye protection must meet the most current ASTM Specification Standard for eye protectors for women's lacrosse.</p>
-
-            <h3>Mouthpiece</h3>
-            <p>All players must properly wear a professionally manufactured intra-oral mouthpiece that fully covers the upper jaw teeth.</p>
-
-            <h3>Uniform Requirements</h3>
-            <p>All field players' uniform shirts shall be the same color, design, trim and cut. All players must wear numbers, differing from others on the team, on the front and back of the uniform shirt. Numbers on the back must be a minimum of 8 inches tall; numbers on the front must be a minimum of 6 inches tall.</p>
+        <div class="major-change">
+          <h3>Rule 6-3: Increased Physical Foul Penalties</h3>
+          <p>Increased the penalty between the restraining lines for blocking/illegal pick, charging, cross checks, illegal use of the stick, and pushing to a one-minute releasable penalty.</p>
         </div>
 
-        <div id="rule3" class="rule-section">
-            <h2>Rule 3 — Game Personnel</h2>
-            
-            <h3>The Teams</h3>
-            <p>A game is played between two teams. Twelve players constitute a full team, one member of whom acts as the speaking captain.</p>
-
-            <h3>The Coach</h3>
-            <p>Each head coach and the officials must meet at the scorer's/timer's table with 10 minutes showing on the pregame clock. At the meeting, each coach will verbally certify to the officials that all equipment is legal under these rules.</p>
-
-            <h3>The Officials</h3>
-            <p>It is highly recommended that three officials be used to officiate the game. A minimum of two officials must be used. The officials' jurisdiction extends from 30 minutes before the game begins until the officials approve the NCAA Carding/Score Verification Form and leave the playing venue.</p>
+        <div class="major-change">
+          <h3>Rule 6-11, 6-12: Embellishment and Flopping</h3>
+          <p>Added new fouls for Embellishment and Flopping which will result in the issuance of a green card.</p>
         </div>
 
-        <div id="rule4" class="rule-section">
-            <h2>Rule 4 — Time Factors and Scoring</h2>
-            
-            <h3>Duration of Play</h3>
-            <p>The regulation playing time is four 15-minute quarters with two-minute breaks between the first and second quarters and between the third and fourth quarters. Halftime will be 10 minutes.</p>
+        <div class="major-change">
+          <h3>Rule 6-27, 6-33, 6-38: Red Card Penalty Time</h3>
+          <p><span class="highlight">Increased the penalty time for a red card from two minutes to five minutes.</span></p>
+        </div>
+      </div>
 
-            <h3>Team Timeouts</h3>
-            <p>Each team shall be permitted three timeouts during regulation playing time that do not carry over into overtime. During the entire duration of overtime, each team is permitted one timeout.</p>
+      <div id="points-emphasis" class="rule-section">
+        <h2>Points of Emphasis</h2>
+        
+        <h3>The Draw</h3>
+        <p>The committee asks officials to focus on the following during the administration of the draw:</p>
+        <ul>
+          <li>Placement of the ball in the top 1/3 of the sticks at the widest point and with the sticks in an upright position</li>
+          <li>Awareness of any advantage/disadvantage that may be in effect due to the placement of the ball between the sticks</li>
+          <li>Issuance of a green card to players who persistently place their finger/thumb on the throat, sidewall, pocket, or other part of the head of the stick</li>
+          <li>Identification of any movement after the official's verbal command, "Ready"</li>
+        </ul>
 
-            <h3>Overtime Procedures</h3>
-            <p>When the score is tied at the end of regular playing time, both teams will have a five-minute rest. One six-minute period of sudden-victory overtime will be played. The team that scores the first goal wins the game.</p>
+        <h3>Picks</h3>
+        <p>The committee encourages officials to permit legal picks and call illegal picks consistently. For a pick to be legal, the picker shall stay within their vertical plane with a stance not wider than shoulder width apart and shall not lean into the path of an opponent or extend their hips into that path even though their feet are stationary.</p>
+
+        <h3>Three Seconds</h3>
+        <p>The committee encourages officials to focus on the change from a stick's length to a stick and arm's length in their evaluation of three seconds.</p>
+      </div>
+
+      <div id="rule1" class="rule-section">
+        <h2>Rule 1 — The Playing Area and Goals</h2>
+        
+        <h3>Field Dimensions</h3>
+        <p>The playing area shall be rectangular and marked with a solid lined boundary. Optimal field dimensions shall be 60 meters (65 yards) in width and 110 meters (120 yards) in total length, with goals 92 meters (100 yards) apart.</p>
+
+        <h3>Restraining Line</h3>
+        <p>The restraining line, a solid line 27 meters (30 yards) upfield from each goal line, shall extend across the width of the field.</p>
+
+        <h3>8-Meter Arc and 12-Meter Fan</h3>
+        <p>An arc and fan shall be marked 8 meters (26'4") and 12 meters (39'4"), respectively, from the goal circles.</p>
+
+        <h3>The Goals</h3>
+        <p>Each goal consists of two posts or pipes perpendicular to the ground, constructed of metal, 1.83 meters (6') high and 1.83 meters (6') apart, joined at the top by a crossbar 1.83 meters (6') from the ground.</p>
+      </div>
+
+      <div id="rule2" class="rule-section">
+        <h2>Rule 2 — Equipment and Uniforms</h2>
+        
+        <h3>Field Stick</h3>
+        <p>The field stick must be made of composite, metal alloy (shaft only), rubber, wood, gut, leather, fiberglass, nylon, plastic and any other synthetic material. The stick shall not have sharp or protruding edges, or parts, and shall not be dangerous to players in any way.</p>
+        <p>The stick's overall length shall be a minimum of 35½" and a maximum of 43¼".</p>
+
+        <h3>Eye Protection</h3>
+        <p>All field players must wear eye protection properly. Eye protection must meet the most current ASTM Specification Standard for eye protectors for women's lacrosse.</p>
+
+        <h3>Mouthpiece</h3>
+        <p>All players must properly wear a professionally manufactured intra-oral mouthpiece that fully covers the upper jaw teeth.</p>
+
+        <h3>Uniform Requirements</h3>
+        <p>All field players' uniform shirts shall be the same color, design, trim and cut. All players must wear numbers, differing from others on the team, on the front and back of the uniform shirt. Numbers on the back must be a minimum of 8 inches tall; numbers on the front must be a minimum of 6 inches tall.</p>
+      </div>
+
+      <div id="rule3" class="rule-section">
+        <h2>Rule 3 — Game Personnel</h2>
+        
+        <h3>The Teams</h3>
+        <p>A game is played between two teams. Twelve players constitute a full team, one member of whom acts as the speaking captain.</p>
+
+        <h3>The Coach</h3>
+        <p>Each head coach and the officials must meet at the scorer's/timer's table with 10 minutes showing on the pregame clock. At the meeting, each coach will verbally certify to the officials that all equipment is legal under these rules.</p>
+
+        <h3>The Officials</h3>
+        <p>It is highly recommended that three officials be used to officiate the game. A minimum of two officials must be used. The officials' jurisdiction extends from 30 minutes before the game begins until the officials approve the NCAA Carding/Score Verification Form and leave the playing venue.</p>
+      </div>
+
+      <div id="rule4" class="rule-section">
+        <h2>Rule 4 — Time Factors and Scoring</h2>
+        
+        <h3>Duration of Play</h3>
+        <p>The regulation playing time is four 15-minute quarters with two-minute breaks between the first and second quarters and between the third and fourth quarters. Halftime will be 10 minutes.</p>
+
+        <h3>Team Timeouts</h3>
+        <p>Each team shall be permitted three timeouts during regulation playing time that do not carry over into overtime. During the entire duration of overtime, each team is permitted one timeout.</p>
+
+        <h3>Overtime Procedures</h3>
+        <p>When the score is tied  at the end of regular playing time, both teams will have a five-minute rest. One six-minute period of sudden-victory overtime will be played. The team that scores the first goal wins the game.</p>
 
             <h3>Scoring</h3>
             <p>The team scoring the greater number of goals is the winner. A goal is scored by the whole ball passing completely over the goal line, between the posts, and under the crossbar from in front, having been shot or propelled by the legal stick of a player of the attacking team.</p>

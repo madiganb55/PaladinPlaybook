@@ -127,6 +127,220 @@
       max-width: 600px;
       margin: 0 auto;
     }
+ 
+    /* Calendar Styles */
+    .calendar-section {
+      background: white;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .calendar-header h2 {
+      color: #4a1e7c;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .calendar-nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .calendar-nav button {
+      padding: 0.5rem 1rem;
+      background: #4a1e7c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .calendar-nav button:hover {
+      background: #6b2d9e;
+    }
+    .calendar-nav span {
+      font-weight: 600;
+      color: #4a1e7c;
+      min-width: 150px;
+      text-align: center;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1px;
+      background: #e0e0e0;
+      border: 1px solid #e0e0e0;
+    }
+    .calendar-day-header {
+      background: #4a1e7c;
+      color: white;
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .calendar-day {
+      background: white;
+      min-height: 100px;
+      padding: 0.5rem;
+      position: relative;
+    }
+    .calendar-day.other-month {
+      background: #f5f5f5;
+      color: #999;
+    }
+    .calendar-day.today {
+      background: #f5f0ff;
+      border: 2px solid #4a1e7c;
+    }
+    .day-number {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.25rem;
+    }
+    .calendar-day.other-month .day-number {
+      color: #999;
+    }
+    .event-item {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      margin: 0.25rem 0;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .event-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+    .event-home {
+      background: #e8f5e9;
+      border-left: 3px solid #4caf50;
+      color: #2e7d32;
+    }
+    .event-away {
+      background: #fff3e0;
+      border-left: 3px solid #ff9800;
+      color: #e65100;
+    }
+    .event-neutral {
+      background: #e3f2fd;
+      border-left: 3px solid #2196f3;
+      color: #1565c0;
+    }
+    .event-win {
+      background: #c8e6c9;
+      border-left: 3px solid #388e3c;
+    }
+    .event-loss {
+      background: #ffcdd2;
+      border-left: 3px solid #d32f2f;
+    }
+    .event-cancelled {
+      background: #f5f5f5;
+      border-left: 3px solid #757575;
+      color: #616161;
+      text-decoration: line-through;
+    }
+
+    /* Event Details Modal */
+    .event-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 2000;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .event-modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .event-modal-content {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      animation: modalSlideIn 0.3s;
+    }
+    .event-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 1.5rem;
+    }
+    .event-modal-header h3 {
+      margin: 0;
+      color: #4a1e7c;
+      font-size: 1.5rem;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #999;
+      padding: 0;
+      line-height: 1;
+    }
+    .modal-close:hover {
+      color: #333;
+    }
+    .event-detail-row {
+      margin: 1rem 0;
+      padding: 0.75rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+    }
+    .event-detail-row strong {
+      color: #4a1e7c;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .event-score {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 1.5rem 0;
+      color: #4a1e7c;
+    }
+    .event-score.win {
+      color: #388e3c;
+    }
+    .event-score.loss {
+      color: #d32f2f;
+    }
+
+    @keyframes modalSlideIn {
+      from { 
+        opacity: 0; 
+        transform: translateY(-20px);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0);
+      }
+    }
+    
     
     /* Sports Grid */
     .sports-grid {
@@ -366,16 +580,39 @@
         <h2>     PALADIN PLAYBOOK      </h2>
         <p>Quick reference guide to NCAA rules for all Furman Division I sports. Select a sport below to view essential rules and gameplay basics.</p>
       </div>
-      
+      <!-- Athletics Calendar -->
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <h2>📅 Upcoming Games & Events</h2>
+          <div class="calendar-nav">
+            <button onclick="previousMonth()">‹ Prev</button>
+            <span id="currentMonthYear"></span>
+            <button onclick="nextMonth()">Next ›</button>
+          </div>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
       <div class="sports-grid" id="sportsGrid"></div>
     </div>
 
     <!-- Sport Detail View -->
     <div id="sportView" class="sport-detail"></div>
+    <!-- Event Details Modal -->
+    <div class="event-modal" id="eventModal" onclick="closeModal(event)">
+      <div class="event-modal-content" onclick="event.stopPropagation()">
+        <div class="event-modal-header">
+          <h3 id="modalTitle"></h3>
+          <button class="modal-close" onclick="closeModal()">&times;</button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
   </main>
 
   <script>
     let allData = null;
+    let athleticsData = [];
+    let currentDate = new Date();
     let currentView = 'home';
     
     const sportIcons = {
@@ -390,7 +627,10 @@
       "Men's Golf": "⛳",
       "Women's Golf": "⛳",
       "Football": "🏈",
-      "Softball": "🥎"
+      "Softball": "🥎",
+      "Women's Cross Country and Track": "🏃‍♀️",
+      "Men's Cross Country and Track": "🏃‍♂️",
+      "Women's Cheer": "📣",
     };
     
     const sportDescriptions = {
@@ -405,7 +645,10 @@
       "Men's Golf": "Individual stroke play competition",
       "Women's Golf": "Individual stroke play competition",
       "Football": "NCAA Division I football rules and regulations",
-      "Softball": "Fast pitch game with bat"
+      "Softball": "Fast pitch game with bat",
+      "Women's Cross Country and Track": "Indoor and outdoor running events",
+      "Men's Cross Country and Track": "Indoor and outdoor running events",
+      "Women's Cheer": "Competitive cheerleading rules and guidelines",
     };
 
     function escapeHtml(s) {
@@ -816,11 +1059,281 @@
         initializeLacrosseField();
       }
     }
+    // Calendar Functions
+    async function loadAthleticsData() {
+  try {
+    const resp = await fetch('https://furmannowscrapers.fly.dev/FUNow/api/athleticsGet');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    
+    var data = await resp.json();
+    console.log('Raw API data:', data); // Debug line to see what we're getting
+    console.log('Data type:', typeof data); // Check if it's an array
+    console.log('Is array?', Array.isArray(data)); // Confirm it's an array
+    data = data["results"]
+    // Check if data is actually an array
+    if (!Array.isArray(data)) {
+      console.error('API did not return an array:', data);
+      throw new Error('Invalid data format from API');
+    }
+    
+    athleticsData = data.map(event => {
+      // Handle the date parsing more robustly
+      let eventDate;
+      if (event.eventdate) {
+        eventDate = new Date(event.eventdate);
+      } else if (event.date) {
+        eventDate = new Date(event.date);
+      } else {
+        console.warn('Event missing date:', event);
+        return null;
+      }
+      
+      return {
+        date: eventDate,
+        eventdate: event.eventdate || event.date,
+        time: event.time || event.start || 'TBA',
+        sportTitle: event.sportTitle || event.sport || 'Unknown Sport',
+        sportShort: event.sportShort || event.sportAbbrev || '',
+        opponent: event.opponent || 'TBA',
+        location_indicator: event.location_indicator || event.locIndicator || '',
+        location: event.location || '',
+        conference: event.conference || false,
+        noplayText: event.noplayText || '',
+        resultStatus: event.resultStatus || '',
+        resultUs: event.resultUs || event.resultFurScore || '',
+        resultThem: event.resultThem || event.resultOppScore || '',
+        postscore_info: event.postscore_info || event.postscoreInfo || '',
+        url: event.url || event.sportURL || ''
+      };
+    }).filter(event => event !== null); // Remove any null entries
+    
+    console.log('Processed athletics data:', athleticsData); // Debug line
+    console.log('Number of events:', athleticsData.length);
+    renderCalendar();
+  } catch (err) {
+    console.error('Error loading athletics data:', err);
+    // Show error message to user
+    document.getElementById('calendarGrid').innerHTML = `
+      <div style="grid-column: 1/-1; padding: 2rem; text-align: center; color: #d32f2f;">
+        <p><strong>Unable to load athletics calendar</strong></p>
+        <p>Please try refreshing the page.</p>
+        <p style="font-size: 0.9em; color: #666;">Error: ${err.message}</p>
+        <p style="font-size: 0.9em; color: #666;">Check the browser console (F12) for more details.</p>
+      </div>
+    `;
+  }
+}
+
+    function previousMonth() {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      renderCalendar();
+    }
+
+    function nextMonth() {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      renderCalendar();
+    }
+
+    function renderCalendar() {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      
+      // Update month/year display
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                        'July', 'August', 'September', 'October', 'November', 'December'];
+      document.getElementById('currentMonthYear').textContent = `${monthNames[month]} ${year}`;
+      
+      // Get first day of month and number of days
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startingDayOfWeek = firstDay.getDay();
+      
+      // Get previous month's last days
+      const prevMonthLastDay = new Date(year, month, 0).getDate();
+      
+      // Build calendar grid
+      let calendarHTML = `
+        <div class="calendar-day-header">Sun</div>
+        <div class="calendar-day-header">Mon</div>
+        <div class="calendar-day-header">Tue</div>
+        <div class="calendar-day-header">Wed</div>
+        <div class="calendar-day-header">Thu</div>
+        <div class="calendar-day-header">Fri</div>
+        <div class="calendar-day-header">Sat</div>
+      `;
+      
+      // Previous month days
+      for (let i = startingDayOfWeek - 1; i >= 0; i--) {
+        const day = prevMonthLastDay - i;
+        calendarHTML += `<div class="calendar-day other-month"><div class="day-number">${day}</div></div>`;
+      }
+      
+      // Current month days
+      const today = new Date();
+      for (let day = 1; day <= daysInMonth; day++) {
+        const currentDayDate = new Date(year, month, day);
+        const isToday = today.getDate() === day && 
+                      today.getMonth() === month && 
+                      today.getFullYear() === year;
+        
+        // Find events for this day
+        const dayEvents = athleticsData.filter(event => {
+          const eventDate = event.date;
+          return eventDate.getDate() === day &&
+                eventDate.getMonth() === month &&
+                eventDate.getFullYear() === year;
+        });
+        
+        let eventsHTML = '';
+        dayEvents.forEach(event => {
+          const eventClass = getEventClass(event);
+          const eventIcon = sportIcons[event.sportTitle] || '🏆';
+          eventsHTML += `
+            <div class="event-item ${eventClass}" onclick='showEventDetails(${JSON.stringify(event).replace(/'/g, "&apos;")})'>
+              ${eventIcon} ${escapeHtml(event.opponent)}
+            </div>
+          `;
+        });
+        
+        calendarHTML += `
+          <div class="calendar-day ${isToday ? 'today' : ''}">
+            <div class="day-number">${day}</div>
+            ${eventsHTML}
+          </div>
+        `;
+      }
+      
+      // Next month days to fill grid
+      const totalCells = Math.ceil((startingDayOfWeek + daysInMonth) / 7) * 7;
+      const remainingCells = totalCells - (startingDayOfWeek + daysInMonth);
+      for (let day = 1; day <= remainingCells; day++) {
+        calendarHTML += `<div class="calendar-day other-month"><div class="day-number">${day}</div></div>`;
+      }
+      
+      document.getElementById('calendarGrid').innerHTML = calendarHTML;
+    }
+
+    function getEventClass(event) {
+      let classes = [];
+      
+      // Location indicator
+      if (event.location_indicator === 'H') {
+        classes.push('event-home');
+      } else if (event.location_indicator === 'A') {
+        classes.push('event-away');
+      } else {
+        classes.push('event-neutral');
+      }
+      
+      // Result status
+      if (event.noplayText && (event.noplayText.includes('Cancel') || event.noplayText.includes('Postpon'))) {
+        classes.push('event-cancelled');
+      } else if (event.resultStatus === 'W') {
+        classes.push('event-win');
+      } else if (event.resultStatus === 'L') {
+        classes.push('event-loss');
+      }
+      
+      return classes.join(' ');
+    }
+
+    function showEventDetails(event) {
+      const modal = document.getElementById('eventModal');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+      
+      title.textContent = event.sportTitle;
+      
+      const eventDate = new Date(event.eventdate);
+      const dateStr = eventDate.toLocaleDateString('en-US', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+      
+      let bodyHTML = `
+        <div class="event-detail-row">
+          <strong>📅 Date & Time</strong>
+          ${dateStr}<br>
+          ${event.time || 'TBA'}
+        </div>
+        
+        <div class="event-detail-row">
+          <strong>🏟️ Opponent</strong>
+          ${escapeHtml(event.opponent)}
+        </div>
+        
+        <div class="event-detail-row">
+          <strong>📍 Location</strong>
+          ${event.location_indicator === 'H' ? '🏠 Home' : 
+            event.location_indicator === 'A' ? '✈️ Away' : '🌐 Neutral'}<br>
+          ${event.location ? escapeHtml(event.location) : 'Timmons Arena / Paladin Stadium'}
+        </div>
+      `;
+      
+      if (event.conference) {
+        bodyHTML += `
+          <div class="event-detail-row">
+            <strong>🏆 Conference Game</strong>
+            Yes
+          </div>
+        `;
+      }
+      
+      if (event.noplayText) {
+        bodyHTML += `
+          <div class="event-detail-row" style="background: #ffebee;">
+            <strong>⚠️ Status</strong>
+            ${escapeHtml(event.noplayText)}
+          </div>
+        `;
+      } else if (event.resultStatus) {
+        const resultClass = event.resultStatus === 'W' ? 'win' : event.resultStatus === 'L' ? 'loss' : '';
+        const resultText = event.resultStatus === 'W' ? 'WIN' : event.resultStatus === 'L' ? 'LOSS' : 'TIE';
+        
+        bodyHTML += `
+          <div class="event-score ${resultClass}">
+            ${resultText}<br>
+            Furman ${event.resultUs || '0'} - ${event.resultThem || '0'} ${escapeHtml(event.opponent)}
+          </div>
+        `;
+        
+        if (event.postscore_info) {
+          bodyHTML += `
+            <div class="event-detail-row">
+              <strong>ℹ️ Details</strong>
+              ${escapeHtml(event.postscore_info)}
+            </div>
+          `;
+        }
+        
+        if (event.url && event.url !== 'null') {
+          bodyHTML += `
+            <div class="event-detail-row">
+              <a href="${escapeHtml(event.url)}" target="_blank" style="color: #4a1e7c; text-decoration: none; font-weight: 600;">
+                📰 View Game Recap →
+              </a>
+            </div>
+          `;
+        }
+      }
+      
+      body.innerHTML = bodyHTML;
+      modal.classList.add('show');
+    }
+
+    function closeModal(event) {
+      if (!event || event.target.id === 'eventModal' || event.target.classList.contains('modal-close')) {
+        document.getElementById('eventModal').classList.remove('show');
+      }
+    }
 
     async function loadRules() {
       try {
-        const resp = await fetch('../output/rules.json');
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          const resp = await fetch('../output/rules.json');
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         
         allData = await resp.json();
         
@@ -830,6 +1343,7 @@
         
         renderDropdown(allData.sports);
         renderSportsGrid(allData.sports);
+        await loadAthleticsData();
         
       } catch (err) {
         document.getElementById('homeView').innerHTML = `

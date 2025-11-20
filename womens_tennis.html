@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITA College Tennis Rules Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-bottom: 3px solid #667eea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        main {
+            padding: 40px 30px;
+        }
+        
+        section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        h3 {
+            color: #2a5298;
+            font-size: 1.5em;
+            margin: 25px 0 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .rule-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .rule-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .rule-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .key-change {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        .important {
+            background: #f8d7da;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #dc3545;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            main {
+                padding: 20px 15px;
+            }
+            
+            section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎾 ITA College Tennis Rules Guide</h1>
+            <p>Essential Rules and Concepts for 2025-26 Season</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#format">Match Format</a></li>
+                <li><a href="#scoring">Scoring</a></li>
+                <li><a href="#calls">Making Calls</a></li>
+                <li><a href="#conduct">Code of Conduct</a></li>
+                <li><a href="#coaching">Coaching</a></li>
+                <li><a href="#timeouts">Timeouts</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="format">
+                <h2>Dual Match Format</h2>
+                
+                <div class="highlight-box">
+                    <h3>Standard Format (Division I, II, III, NAIA)</h3>
+                    <p><strong>7 Team Points Total:</strong></p>
+                    <ul>
+                        <li>Three doubles matches (worth 1 combined point)</li>
+                        <li>Six singles matches (each worth 1 point)</li>
+                        <li>First team to 4 points wins</li>
+                    </ul>
+                </div>
+                
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <h4>Doubles Format</h4>
+                        <p>6-game set with no-ad scoring</p>
+                        <p>7-point tiebreak at 6-all</p>
+                        <p><strong>No warm-up</strong></p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Singles Format</h4>
+                        <p>Best of 3 sets with no-ad scoring</p>
+                        <p>7-point tiebreak at 6-all</p>
+                        <p><strong>No warm-up</strong></p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Shortened Format</h4>
+                        <p>Once match is decided:</p>
+                        <p>Remaining matches in 2nd set play 10-point tiebreak for 3rd set</p>
+                        <p>Already in 3rd set play to completion</p>
+                    </div>
+                </div>
+                
+                <div class="key-change">
+                    <h4>🆕 Division III Change (2025-26)</h4>
+                    <p>Division III now uses the same 7-point dual match format with "play-play" as default (all doubles matches played to completion unless coaches agree otherwise).</p>
+                </div>
+            </section>
+            
+            <section id="scoring">
+                <h2>Scoring System</h2>
+                
+                <h3>No-Ad Scoring</h3>
+                <p>All divisions use <strong>no-ad scoring</strong> for both singles and doubles:</p>
+                <ul>
+                    <li>At deuce (40-40), the next point wins the game</li>
+                    <li>Receiver chooses which side to receive from</li>
+                    <li>Once chosen, the receiver cannot change sides if the point is replayed</li>
+                </ul>
+                
+                <h3>Service Lets</h3>
+                <div class="important">
+                    <strong>IMPORTANT:</strong> There are NO service lets in ITA tennis. If the serve hits the net and lands in the proper service box, the ball is in play.
+                </div>
+                
+                <h3>Time Between Points</h3>
+                <table>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time Allowed</th>
+                    </tr>
+                    <tr>
+                        <td>Between points</td>
+                        <td>25 seconds (both server and receiver)</td>
+                    </tr>
+                    <tr>
+                        <td>Changeover</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>Set break</td>
+                        <td>120 seconds (2 minutes)</td>
+                    </tr>
+                    <tr>
+                        <td>Between doubles and singles</td>
+                        <td>5 minutes</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="calls">
+                <h2>Making Calls</h2>
+                
+                <h3>Player Responsibilities</h3>
+                <p>Players have primary responsibility for making line calls on their side of the net.</p>
+                
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <h4>Benefit of Doubt</h4>
+                        <p>When in doubt, the call goes to the opponent. The ball is good unless you clearly see space between the ball and the line.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Immediate Calls</h4>
+                        <p>Out calls must be made immediately - before the opponent hits the return or before it goes out of play.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Unsighted Balls</h4>
+                        <p>There are NO "unsighted" calls. If you don't see the ball, call it good.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Correcting Errors</h4>
+                        <p>If you realize you made a mistake, reverse your call. The point goes to your opponent (never replayed).</p>
+                    </div>
+                </div>
+                
+                <h3>Doubles Calls</h3>
+                <div class="highlight-box">
+                    <p><strong>Partner Disagreement:</strong> If doubles partners disagree on a call, the ball is good. The point goes to the opponents (never replayed).</p>
+                </div>
+                
+                <h3>Overrules by Officials</h3>
+                <table>
+                    <tr>
+                        <th>Number of Overrules</th>
+                        <th>Penalty</th>
+                    </tr>
+                    <tr>
+                        <td>1st overrule</td>
+                        <td>Loss of point</td>
+                    </tr>
+                    <tr>
+                        <td>2nd overrule</td>
+                        <td>Loss of point + Code Violation (Point Penalty)</td>
+                    </tr>
+                    <tr>
+                        <td>3rd overrule</td>
+                        <td>Loss of point + Code Violation (Game Penalty)</td>
+                    </tr>
+                    <tr>
+                        <td>4th overrule</td>
+                        <td>Loss of point + DEFAULT</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="conduct">
+                <h2>Code of Conduct</h2>
+                
+                <h3>Point Penalty System</h3>
+                <p>Inappropriate conduct is penalized progressively:</p>
+                
+                <table>
+                    <tr>
+                        <th>Offense</th>
+                        <th>Penalty</th>
+                    </tr>
+                    <tr>
+                        <td>1st Code Violation</td>
+                        <td>Point Penalty</td>
+                    </tr>
+                    <tr>
+                        <td>2nd Code Violation</td>
+                        <td>Game Penalty</td>
+                    </tr>
+                    <tr>
+                        <td>3rd Code Violation</td>
+                        <td>DEFAULT</td>
+                    </tr>
+                </table>
+                
+                <div class="important">
+                    <strong>NOTE:</strong> There is NO warning in the ITA Point Penalty System. The first offense results in a point penalty.
+                </div>
+                
+                <h3>Violations Include:</h3>
+                <ul>
+                    <li>Visible or audible obscenity/profanity</li>
+                    <li>Racquet abuse</li>
+                    <li>Ball abuse</li>
+                    <li>Verbal or physical abuse of official or player</li>
+                    <li>Unsportsmanlike conduct</li>
+                    <li>Time delays</li>
+                    <li>Being overruled excessively</li>
+                </ul>
+                
+                <h3>Immediate Default Offenses</h3>
+                <div class="important">
+                    <p><strong>The following result in IMMEDIATE DEFAULT:</strong></p>
+                    <ul>
+                        <li>Hostile profanity directed at opponent, coach, official, or spectator</li>
+                        <li>Ethnic, religious, racial, or homophobic slurs</li>
+                        <li>Physical contact with opponent, coach, spectator, or official</li>
+                        <li>Ball or racquet thrown in anger that strikes someone</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="coaching">
+                <h2>Coaching Rules</h2>
+                
+                <h3>Who Can Coach</h3>
+                <ul>
+                    <li>Head coach and up to 2 other designated people</li>
+                    <li>Designated coaches (associate, assistant, volunteer)</li>
+                    <li>Designated Player Assistants (DPAs) - players not competing in that segment</li>
+                    <li>Maximum of 3 coaches/DPAs at one time</li>
+                </ul>
+                
+                <h3>When Coaching is Allowed</h3>
+                <div class="highlight-box">
+                    <p><strong>Coaching is only allowed when the ball is NOT in play</strong></p>
+                    <p>Coaches who interfere with play (making calls, giving instructions during points) cause their player to lose the point.</p>
+                </div>
+                
+                <h3>Where Coaches Can Coach</h3>
+                <p>Coaches may coach from their team's end of the court. During points, coaches may:</p>
+                <ul>
+                    <li>Sit on player bench or stand at net post</li>
+                    <li>Stand on their side between net post and service line</li>
+                    <li>Stand on empty adjacent court on their side (no closer than doubles sideline)</li>
+                    <li>Stand on empty adjacent court on opponent's side (no closer than mid-court line)</li>
+                </ul>
+                
+                <h3>Electronic Devices</h3>
+                <ul>
+                    <li>Only coaches may use devices for texting/data</li>
+                    <li>NO voice features allowed</li>
+                    <li>NO video replay or player analysis during match</li>
+                    <li>Players cannot use electronic devices at all</li>
+                    <li>Smartwatches allowed for health/wellness only</li>
+                </ul>
+            </section>
+            
+            <section id="timeouts">
+                <h2>Timeouts and Breaks</h2>
+                
+                <h3>Medical Timeout</h3>
+                <div class="highlight-box">
+                    <p><strong>One medical timeout per match (5 minutes max)</strong></p>
+                    <ul>
+                        <li>Player is assessed 1 point for taking a medical timeout</li>
+                        <li>Treatment on changeovers/set breaks doesn't count as MTO</li>
+                        <li>Player needing additional MTO must retire</li>
+                    </ul>
+                </div>
+                
+                <h3>Bathroom Breaks</h3>
+                <table>
+                    <tr>
+                        <th>When</th>
+                        <th>Time Allowed</th>
+                    </tr>
+                    <tr>
+                        <td>One bathroom break per match</td>
+                        <td>Up to 5 minutes (at set break only)</td>
+                    </tr>
+                    <tr>
+                        <td>During changeover/set break</td>
+                        <td>Within the 90 sec/2 min allowed</td>
+                    </tr>
+                    <tr>
+                        <td>Other times</td>
+                        <td>Uses medical timeout</td>
+                    </tr>
+                </table>
+                
+                <h3>Concussion Timeout</h3>
+                <div class="important">
+                    <p><strong>Separate from medical timeout</strong></p>
+                    <ul>
+                        <li>15 minutes max for evaluation</li>
+                        <li>No point penalty assessed</li>
+                        <li>Must be cleared by qualified medical personnel</li>
+                    </ul>
+                </div>
+                
+                <h3>Extreme Heat Rule</h3>
+                <p>If temperature is 90°F or higher at match start, players are offered a 10-minute rest between 2nd and 3rd sets.</p>
+            </section>
+            
+            <section>
+                <h2>Key Lineup Rules</h2>
+                
+                <h3>Order of Ability</h3>
+                <div class="important">
+                    <p><strong>Players MUST compete in order of ability:</strong></p>
+                    <ul>
+                        <li>Best player at #1, second best at #2, etc.</li>
+                        <li>Players clearly stronger cannot be moved down</li>
+                        <li>Players of equal ability may alternate adjacent positions</li>
+                    </ul>
+                </div>
+                
+                <h3>Lineup Changes</h3>
+                <p><strong>Between back-to-back matches:</strong> Players can move up only ONE position from previous match</p>
+                <p><strong>During a match:</strong> Substitutions allowed within 2 minutes after doubles point is completed</p>
+                
+                <h3>Minimum Requirements</h3>
+                <ul>
+                    <li>Four physically able players</li>
+                    <li>One institutional coaching staff member</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Quick Reference</h2>
+                
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <h4>Match Start</h4>
+                        <p>• Lineups exchanged 1 hour before</p>
+                        <p>• No warm-up for doubles or singles</p>
+                        <p>• 5 minutes between doubles and singles</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Officials Required</h4>
+                        <p>• Division I: 2 certified officials required</p>
+                        <p>• Other divisions: 1 recommended</p>
+                        <p>• Must have current ITA certification</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Spectator Areas</h4>
+                        <p>• Bench players must stay in designated "allowable area"</p>
+                        <p>• Cheering must be positive</p>
+                        <p>• No noise during points</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <h4>Tennis Balls</h4>
+                        <p>• Official ball: Dunlop Grand Prix Extra Duty</p>
+                        <p>• Division I: New balls each set</p>
+                        <p>• Other divisions: Change after 2nd set</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

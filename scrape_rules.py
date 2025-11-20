@@ -19,14 +19,16 @@ from pathlib import Path
 # Add rulebook URLs for each Furman D1 sport
 SPORTS_RULEBOOKS = {
     "Women's Lacrosse": "https://cdn1.sportngin.com/attachments/document/3c7d-3127216/WLRules2024_2025.pdf",
-    "Men's Football": "https://www.ncaapublications.com/productdownloads/FR25.pdf",
-    "Women's Softball": "https://www.ncaapublications.com/productdownloads/SR27.pdf",
+    "Men's Football": "https://media.hometeamsonline.com/photos/football/PLAYERSFOOTBALLASSOC/2024-NCAA-Football-Rulebook.pdf",
+    "Women's Softball": "https://ncaaorg.s3.amazonaws.com/championships/sports/softball/rules/PRWSB_RulesBook.pdf",
+    "Women's CrossCountryandTrack": "https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/rules/PRXTF_RulesBook.pdf",
+    "Men's CrossCountryandTrack": "https://ncaaorg.s3.amazonaws.com/championships/sports/crosstrack/rules/PRXTF_RulesBook.pdf",
     # Football - check your conference or athletics department for PDF access
     # NCAA Publications page: https://www.ncaapublications.comuire purchase)
     # Men's: https://www.ncaapublications.com/p-4700-2024-25-ncaa-mens-basketball-rules-book.aspx
     # Women's: https://www.ncaapublications.com/p-4699-2024-25-ncaa-womens-basketball-rules-book.aspx
     "Men's Basketball": "https://cdn1.sportngin.com/attachments/document/e0d1-2810991/2023-2024_Mens_BBall_Rules_Book.pdf",
-    "Women's Basketball": "https://ncaaorg.s3.amazonaws.com/championships/sports/basketball/d1/2024-25WBB_OfficialPlayingRules.pdf",
+    "Women's Basketball": "https://cdn1.sportngin.com/attachments/document/b906-2810917/2023-2024_Womens_BBall_Rules_Book.pdf",
     
     
     
@@ -35,7 +37,7 @@ SPORTS_RULEBOOKS = {
     "Women's Soccer": "https://cdn1.sportngin.com/attachments/document/18d0-3216650/2024-2025_Rule_Book.pdf",
     
     # Volleyball - https://www.ncaapublications.com/p-4691-2024-and-2025-womens-volleyball-rules-book.aspx
-    "Volleyball": "https://www.ncaapublications.com/productdownloads/VBR24.pdf",
+    "Volleyball": "https://ncaaorg.s3.amazonaws.com/championships/sports/volleyball/rules/women/2024PRWVB_2024and2025RulesChanges.pdf",
     
     # Golf - USGA Rules apply, but NCAA has modifications
     "Men's Golf": "https://www.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html#!ruletype=pe&section=rule&rulenum=1",
@@ -44,6 +46,7 @@ SPORTS_RULEBOOKS = {
     # Tennis - USTA Rules apply with NCAA modifications
     "Men's Tennis": "https://ncaaorg.s3.amazonaws.com/championships/sports/tennis/rules/2022-23PRXTE_ITARulesBook.pdf",
     "Women's Tennis": "https://ncaaorg.s3.amazonaws.com/championships/sports/tennis/rules/2022-23PRXTE_ITARulesBook.pdf",
+    "Women's Cheer": "https://usacheer.org/wp-content/uploads/2024/06/2024-25-USA-Cheer-College-Rules-Final.pdf"
 
 }
 

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAA Track & Cross Country - Basic Rules Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background: #2d3748;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #667eea;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .xc-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .event-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .event-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .event-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .event-table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏃 NCAA Track & Cross Country</h1>
+            <p>Essential Rules and Concepts Guide (2025-2026)</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#track-events">Track Events</a></li>
+                <li><a href="#starting">Starting</a></li>
+                <li><a href="#lanes">Lane Rules</a></li>
+                <li><a href="#hurdles">Hurdles</a></li>
+                <li><a href="#relays">Relays</a></li>
+                <li><a href="#cross-country">Cross Country</a></li>
+                <li><a href="#violations">Violations</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <section id="track-events">
+                <h2>Track Event Categories</h2>
+                
+                <h3>Indoor Track Events</h3>
+                <ul>
+                    <li><strong>Sprints:</strong> 55/60 Meters, 200 Meters, 400 Meters</li>
+                    <li><strong>Hurdles:</strong> 55/60 Hurdles (Men: 1.067m / Women: 0.840m)</li>
+                    <li><strong>Middle Distance:</strong> 800 Meters, Mile, 1500 Meters</li>
+                    <li><strong>Distance:</strong> 3000 Meters, 5000 Meters</li>
+                    <li><strong>Relays:</strong> 4×400 Relay, Distance Medley Relay (1200-400-800-1600)</li>
+                </ul>
+                
+                <h3>Outdoor Track Events</h3>
+                <ul>
+                    <li><strong>Sprints:</strong> 100 Meters, 200 Meters, 400 Meters</li>
+                    <li><strong>Hurdles:</strong> 100/110 Hurdles, 400 Hurdles</li>
+                    <li><strong>Middle Distance:</strong> 800 Meters, 1500 Meters</li>
+                    <li><strong>Distance:</strong> 3000 Steeplechase, 5000 Meters, 10,000 Meters</li>
+                    <li><strong>Relays:</strong> 4×100 Relay, 4×400 Relay</li>
+                </ul>
+            </section>
+
+            <section id="starting">
+                <h2>Starting Procedures</h2>
+                
+                <div class="highlight-box">
+                    <h4>The Starter Has Complete Control</h4>
+                    <p>The starter has entire control of competitors when on their marks and during the start. Their decisions regarding false starts are final.</p>
+                </div>
+                
+                <h3>Starting Commands</h3>
+                
+                <h4>For Races 500 Meters or Shorter:</h4>
+                <ol>
+                    <li><strong>"On your marks"</strong> - Runners take position (crouched or standing), no part of body touches on or beyond starting line</li>
+                    <li><strong>"Set"</strong> - All competitors assume full and final set position and remain motionless</li>
+                    <li><strong>Gun fires</strong> - Race begins</li>
+                </ol>
+                
+                <h4>For Races Longer than 500 Meters:</h4>
+                <ol>
+                    <li>Runners take position not more than 3 meters behind starting line</li>
+                    <li><strong>"On your marks"</strong> - Runners advance to starting line</li>
+                    <li>When all competitors are steady and motionless (without hands touching ground), gun fires</li>
+                </ol>
+                
+                <h3>False Starts</h3>
+                <div class="warning-box">
+                    <h4>⚠️ Zero Tolerance Rule</h4>
+                    <p><strong>Any competitor who false starts is immediately disqualified.</strong></p>
+                    <p>A false start occurs when a competitor commences starting motion after assuming set position but before the gun fires.</p>
+                    <p><strong>Exception:</strong> In Combined Events, first false start is a warning; second false start results in disqualification.</p>
+                </div>
+            </section>
+
+            <section id="lanes">
+                <h2>Lane Rules and Violations</h2>
+                
+                <h3>Running in Lanes</h3>
+                <p>In races run entirely in lanes (100m, 200m, 400m, hurdles, relay legs in lanes):</p>
+                <ul>
+                    <li>Competitors must stay within their assigned lane from start to finish</li>
+                    <li>May run outside lane on straightaway without advantage if no other runner is obstructed</li>
+                </ul>
+                
+                <h4>Lane Violations - Disqualification Results From:</h4>
+                <ul>
+                    <li>Stepping on or over the lane line to the left with more than one step on any curve throughout the race</li>
+                    <li>Not starting and finishing within assigned lane</li>
+                    <li>Flagrantly impeding another runner</li>
+                </ul>
+                
+                <h3>Running Without Lanes</h3>
+                <p>In distance races (800m and longer) where runners break to the inside:</p>
+                <ul>
+                    <li>Runners may pass on either right or left side</li>
+                    <li>May cut in front of another runner with one full stride clearance</li>
+                    <li>Cannot use body or arm action to impede another runner</li>
+                    <li>Cannot veer to impede a challenging runner</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>Important: Curb Rule</h4>
+                    <p>Stepping on or over the curb with more than one step anywhere on any curve throughout the race results in disqualification (unless pushed by another runner).</p>
+                </div>
+            </section>
+
+            <section id="hurdles">
+                <h2>Hurdle Rules</h2>
+                
+                <h3>Hurdle Heights</h3>
+                <table class="event-table">
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Men's Height</th>
+                            <th>Women's Height</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>55/60 Hurdles (Indoor)</td>
+                            <td>1.067m (42")</td>
+                            <td>0.840m (33")</td>
+                        </tr>
+                        <tr>
+                            <td>100/110 Hurdles (Outdoor)</td>
+                            <td>1.067m (42")</td>
+                            <td>0.840m (33")</td>
+                        </tr>
+                        <tr>
+                            <td>400 Hurdles (Outdoor)</td>
+                            <td>0.914m (36")</td>
+                            <td>0.762m (30")</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Hurdling Violations - Disqualification Results From:</h3>
+                <ul>
+                    <li>Advancing or trailing a leg or foot outside the hurdle width and below the top plane of the hurdle</li>
+                    <li>Not hurdling each hurdle within the competitor's lane</li>
+                    <li>Deliberately knocking down any hurdle</li>
+                    <li>Deliberately knocking down any hurdle by hand</li>
+                </ul>
+                
+                <p><strong>Note:</strong> Accidentally knocking down a hurdle while properly clearing it is NOT a violation.</p>
+            </section>
+
+            <section id="relays">
+                <h2>Relay Rules</h2>
+                
+                <h3>Basic Relay Requirements</h3>
+                <ul>
+                    <li>Four unique competitors of the same gender constitute a relay team</li>
+                    <li>Each runner (except shuttle relays) must carry a baton</li>
+                    <li>Baton must be 28-30 cm long, 12-13 cm circumference, minimum 50 grams</li>
+                </ul>
+                
+                <h3>Exchange Zones</h3>
+                <h4>Sprint Relays (4×100, 4×200):</h4>
+                <ul>
+                    <li><strong>30-meter exchange zone</strong></li>
+                    <li>Outgoing runners may place two markers on track as reference (not in exchange zone)</li>
+                    <li>Markers cannot be longer than lane width or wider than 2 inches</li>
+                </ul>
+                
+                <h4>Distance Relays (4×400, 4×800, etc.):</h4>
+                <ul>
+                    <li><strong>20-meter exchange zone</strong></li>
+                    <li>No markers allowed on track</li>
+                    <li>Outgoing runners must line up in same relative position as incoming teammates</li>
+                </ul>
+                
+                <h3>Relay Violations - Disqualification Results From:</h3>
+                <ul>
+                    <li>Baton passed outside the exchange zone</li>
+                    <li>Last runner finishes without baton</li>
+                    <li>Using gloves, tape, or adhesive on hands to enhance baton contact</li>
+                    <li>Transporting baton in manner other than in the hand while running</li>
+                    <li>Team member running more than one leg</li>
+                    <li>Any team member is disqualified during the race</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>Dropped Baton Rule</h4>
+                    <p><strong>Inside zone:</strong> Either runner may retrieve it.</p>
+                    <p><strong>Outside zone:</strong> Only the person who dropped it may retrieve it (may leave lane if no other runner impeded).</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Timing and Finish</h2>
+                
+                <h3>Placement at Finish</h3>
+                <p>Runners are placed in order by when any part of their <strong>torso</strong> crosses the perpendicular plane of the finish line.</p>
+                <p><strong>Torso defined as:</strong> Any part of body other than head, neck, arms, legs, hands, or feet.</p>
+                
+                <h3>Timing Requirements</h3>
+                <ul>
+                    <li><strong>Fully Automatic Timing (FAT)</strong> is required for all NCAA competitions</li>
+                    <li>Times recorded to 1/100th of a second (next slower 1/100th)</li>
+                    <li>Photo finish images must be available for review</li>
+                    <li>Backup timing system required</li>
+                </ul>
+                
+                <h3>Tiebreaking</h3>
+                <p>For determining place or advancement, ties are broken by reading photo finish to 1/1000th of a second accuracy (within same race only).</p>
+            </section>
+
+            <section>
+                <h2>Advancement and Qualifying</h2>
+                
+                <h3>Heat Formation</h3>
+                <ul>
+                    <li>Maximum of two rounds of competition before finals (for time qualifiers)</li>
+                    <li>Heats formed by seeding based on entry performance marks</li>
+                    <li>Top competitors seeded throughout heats to ensure competitive balance</li>
+                </ul>
+                
+                <h3>Qualifying Methods</h3>
+                <p>Competitors advance to next round based on:</p>
+                <ol>
+                    <li><strong>Place:</strong> First X finishers from each heat automatically advance</li>
+                    <li><strong>Time:</strong> Next fastest times across all heats fill remaining spots</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h4>Tie for Last Qualifying Position</h4>
+                    <p>If lanes/positions available: All tying runners advance</p>
+                    <p>If not enough lanes: Determined by runoff (or draw by lot if designated before meet)</p>
+                </div>
+                
+                <h3>Finals</h3>
+                <ul>
+                    <li>Outdoor sprints/hurdles in lanes: Maximum 8-9 competitors (based on available lanes)</li>
+                    <li>Indoor events: Based on venue lane availability</li>
+                    <li>Distance races: 9-24 competitors depending on event</li>
+                </ul>
+            </section>
+
+            <section id="cross-country">
+                <h2>🌲 Cross Country Rules</h2>
+                
+                <div class="xc-box">
+                    <h4>Cross Country Overview</h4>
+                    <p>Cross country is run on natural terrain (fields, woods, grasslands) with courses designed for safety and fair competition.</p>
+                </div>
+                
+                <h3>Course Requirements</h3>
+                
+                <h4>Course Lengths:</h4>
+                <ul>
+                    <li><strong>Men:</strong> At least 4000 meters (typically 8K or 10K)</li>
+                    <li><strong>Women:</strong> At least 3000 meters (typically 5K or 6K)</li>
+                </ul>
+                
+                <h4>Course Layout Standards:</h4>
+                <ul>
+                    <li>Course must be at least 4 meters wide throughout</li>
+                    <li>First turn at least 200 meters (preferably 400 meters) from start</li>
+                    <li>Last 100 meters must be straight and at least 4 meters wide</li>
+                    <li>Entire course clearly marked with continuous boundary markers</li>
+                    <li>Must have kilometer/mile markings throughout</li>
+                    <li>Avoid dangerous ascents/descents, deep ditches, and obstacles</li>
+                    <li>Minimize continuous road traversing</li>
+                </ul>
+                
+                <h3>Starting Procedures (Cross Country)</h3>
+                
+                <h4>Starting Line:</h4>
+                <ul>
+                    <li>Arc-shaped to ensure all runners equidistant from first turn</li>
+                    <li>Wide enough to provide 50cm space per front-line runner</li>
+                    <li>Boxes/positions numbered left to right facing course</li>
+                    <li>Teams assigned to center boxes by random draw</li>
+                </ul>
+                
+                <h4>Starting Commands:</h4>
+                <ol>
+                    <li><strong>One whistle blast</strong> - "Runners to the line"
+                        <ul>
+                            <li>Starter holds arms straight out with pistol in one hand, flag in other</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Runners set"</strong> - Pistol and flag raised slowly overhead
+                        <ul>
+                            <li>All runners must be steady</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gun fires</strong> - Simultaneous pistol firing and flag pulling down</li>
+                </ol>
+                
+                <h3>Recall Point</h3>
+                <p>Race may be recalled for unfair start if incident occurs <strong>within 100 meters</strong> of start line and clearly associated with the start.</p>
+                
+                <h3>Cross Country Team Scoring</h3>
+                
+                <h4>Team Composition:</h4>
+                <ul>
+                    <li>Minimum of 5 runners required to score</li>
+                    <li>Maximum of 12 runners allowed per team (or as agreed)</li>
+                    <li>Only first 7 runners on team count for scoring</li>
+                </ul>
+                
+                <h4>Scoring System:</h4>
+                <ol>
+                    <li>First 5 finishers on each team score points based on finish position</li>
+                    <li>Lower total score wins</li>
+                    <li>6th and 7th runners are "displacers" - push opponents' scores higher</li>
+                    <li>Only runners from complete teams (5+ finishers) receive scoring places</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <h4>Scoring Example</h4>
+                    <p>If Team A finishes: 1st, 3rd, 5th, 10th, 15th = 34 points</p>
+                    <p>If Team B finishes: 2nd, 4th, 6th, 8th, 12th = 32 points</p>
+                    <p><strong>Team B wins</strong> (lower score)</p>
+                </div>
+                
+                <h4>Breaking Team Ties:</h4>
+                <p>Compare place finish of 5 scoring members in order - team with majority of winning comparisons wins.</p>
+                
+                <h3>Cross Country Legal Running</h3>
+                <ul>
+                    <li>Runners may pass on either right or left side</li>
+                    <li>May cut in front with one full stride clearance</li>
+                    <li>Cannot impede another runner's progress</li>
+                    <li>Cannot leave course and return to continue race</li>
+                    <li>Must complete prescribed course as marked</li>
+                </ul>
+                
+                <h3>Cross Country Violations</h3>
+                <p>Disqualification results from:</p>
+                <ul>
+                    <li>False start</li>
+                    <li>Impeding another runner</li>
+                    <li>Cutting in front without proper clearance</li>
+                    <li>Voluntarily leaving course then returning</li>
+                    <li>Not completing prescribed course</li>
+                    <li>Forcing way between two runners with contact</li>
+                    <li>Receiving assistance during race</li>
+                    <li>Using wireless electronic device during competition</li>
+                </ul>
+                
+                <h3>Cross Country Finish Procedures</h3>
+                <ul>
+                    <li>Finish line 4-10 meters wide, perpendicular to course</li>
+                    <li>Finish chute recommended for accurate placing</li>
+                    <li>All starters recorded; finishers given overall place</li>
+                    <li>DNF (Did Not Finish) recorded for non-finishers</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Uniforms and Equipment</h2>
+                
+                <h3>Uniform Requirements</h3>
+                <ul>
+                    <li>Must wear official school-issued team uniform (top and bottom)</li>
+                    <li>All team members must wear same color/combination on competition day</li>
+                    <li>Top must cover full torso and meet/hang below waistband</li>
+                    <li>Manufacturer logo limited to 2¼ square inches</li>
+                </ul>
+                
+                <h3>Shoe Requirements (CRITICAL NEW RULES)</h3>
+                <div class="warning-box">
+                    <h4>⚠️ 2025-2026 Shoe Regulations</h4>
+                    <p><strong>All shoes must be on the World Athletics approved list</strong></p>
+                    
+                    <p><strong>Track Events - Maximum sole thickness:</strong></p>
+                    <ul>
+                        <li>Track events under 800m: 20mm</li>
+                        <li>Track events 800m and above: 20mm</li>
+                        <li>Maximum 11 spikes per shoe</li>
+                        <li>Spike length: 9mm (12mm for high jump)</li>
+                    </ul>
+                    
+                    <p><strong>Cross Country - Shoe regulations:</strong></p>
+                    <ul>
+                        <li>Spiked shoes: Maximum sole thickness 20mm</li>
+                        <li>Non-spiked shoes: Maximum sole thickness 40mm</li>
+                        <li>Maximum 6 spike positions per shoe</li>
+                        <li>Spike length: Maximum 25mm</li>
+                        <li>Spike diameter: 4mm maximum</li>
+                    </ul>
+                    
+                    <p><strong>Non-compliance results in immediate disqualification</strong></p>
+                </div>
+                
+                <h3>Starting Blocks (Track Only)</h3>
+                <ul>
+                    <li>May be used for races 500 meters or shorter</li>
+                    <li>Must be rigid construction without artificial starting aids</li>
+                    <li>Must be set within assigned lane without overlapping starting line</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Protests and Appeals</h2>
+                
+                <h3>Protest (Written)</h3>
+                <ul>
+                    <li>Must be made in writing immediately</li>
+                    <li>Not later than 15 minutes after results deemed official and time-stamped</li>
+                    <li>Referee reviews all evidence including official video</li>
+                    <li>Referee's decision communicated to affected coaches</li>
+                </ul>
+                
+                <h3>Appeal</h3>
+                <ul>
+                    <li>Only available if Jury of Appeals appointed before meet</li>
+                    <li>Must be submitted in writing within 30 minutes of referee's decision</li>
+                    <li>Jury of Appeals decision is final</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>Correctable Error</h4>
+                    <p>Within 72 hours after meet completion, results can be corrected without protest if administrative errors detected (incorrect calculation, timing errors, placing errors based on factual evidence).</p>
+                </div>
+            </section>
+
+            <section id="violations">
+                <h2>Common Violations Summary</h2>
+                
+                <h3>Track Events - Actions Resulting in Disqualification:</h3>
+                <ul>
+                    <li>False start (any movement after "set" before gun)</li>
+                    <li>Stepping on/over lane line to left with more than one step on curve</li>
+                    <li>Stepping on/over curb with more than one step on curve</li>
+                    <li>Not finishing in assigned lane (for in-lane races)</li>
+                    <li>Impeding another runner</li>
+                    <li>Cutting in front of runner without proper clearance</li>
+                    <li>Leaving track and returning to race</li>
+                    <li>Receiving assistance from coach/teammate during race</li>
+                    <li>Hurdle violations (trail leg outside width, running around hurdle, etc.)</li>
+                    <li>Relay: passing baton outside zone, finishing without baton</li>
+                    <li>Wearing non-compliant shoes or uniform</li>
+                    <li>Unsporting conduct</li>
+                </ul>
+                
+                <h3>Cross Country - Actions Resulting in Disqualification:</h3>
+                <ul>
+                    <li>False start</li>
+                    <li>Impeding another runner</li>
+                    <li>Cutting in front without proper clearance</li>
+                    <li>Voluntarily leaving course and returning</li>
+                    <li>Not completing prescribed course</li>
+                    <li>Forcing way between runners with contact</li>
+                    <li>Using wireless electronic device during race</li>
+                    <li>Wearing non-compliant shoes or uniform</li>
+                    <li>Unsporting conduct</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Key Definitions</h2>
+                
+                <dl style="margin-left: 20px;">
+                    <dt style="font-weight: bold; margin-top: 15px;">Fully Automatic Timing (FAT)</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Timing using technology such as digital slit-cameras, started automatically by starting device</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">Heat</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Single segment of competitors competing head-to-head for purpose of advancing to subsequent round</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">Section</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Single segment of competitors competing for final placement and scoring (timed section final)</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">Break Line</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Arc across track where competitors may leave lanes/alleys (800m, relay exchanges)</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">Staggers</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Measurements used to ensure all competitors run same distance when starting in lanes around curves</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">Impede/Impeding</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Preventing or obstructing progress of competitor along their established course</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">Torso</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Any part of body other than head, neck, arms, legs, hands, or feet (used for finish placement)</dd>
+                    
+                    <dt style="font-weight: bold; margin-top: 15px;">DNF (Did Not Finish)</dt>
+                    <dd style="margin-left: 20px; margin-bottom: 10px;">Runner who started but did not complete the race</dd>
+                </dl>
