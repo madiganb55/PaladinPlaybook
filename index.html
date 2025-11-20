@@ -1332,7 +1332,7 @@
 
     async function loadRules() {
       try {
-          const resp = await fetch('../output/rules.json');
+          const resp = await fetch('output/rules.json');
           if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         
         allData = await resp.json();

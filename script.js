@@ -1,5 +1,5 @@
 async function loadRules(){
-  const resp = await fetch('../output/rules.json');
+  const resp = await fetch('output/rules.json');
   const data = await resp.json();
   const rules = data.sections || [];
   const container = document.getElementById('rules');
