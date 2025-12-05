@@ -3,232 +3,652 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NCAA Soccer Rules 2024–2025</title>
+  <title>Women's Soccer - Furman Paladin Playbook</title>
   <style>
+    * { box-sizing: border-box; }
     body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       margin: 0;
-      font-family: Georgia, serif;
-      background-color: #f5f5f5;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #f5f5f5;
     }
+    
+    /* Header & Navigation - Matching Home Page */
     header {
-      background-color: #003366;
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
       color: white;
-      padding: 15px 0;
-      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav a {
-      color: white;
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       text-decoration: none;
-      margin: 0 15px;
+      color: white;
+    }
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .logo-icon {
+      font-size: 2rem;
+    }
+    
+    /* Dropdown Navigation */
+    .nav-dropdown {
+      position: relative;
+    }
+    .dropdown-btn {
+      padding: 0.75rem 1.5rem;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
       font-weight: 500;
-      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
     }
-    nav a:hover {
-      color: #ffd700;
+    .dropdown-btn:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
     }
-    .content {
-      max-width: 1000px;
-      margin: 40px auto;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.5rem;
       background: white;
-      padding: 20px 40px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      min-width: 250px;
       border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      max-height: 400px;
+      overflow-y: auto;
     }
+    .dropdown-content.show {
+      display: block;
+      animation: fadeIn 0.2s;
+    }
+    .dropdown-item {
+      padding: 1rem 1.5rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .dropdown-item:hover {
+      background: #f5f0ff;
+      color: #4a1e7c;
+    }
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Back Button */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #4a1e7c;
+      border: 2px solid #4a1e7c;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 2rem 0 1rem 0;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: #4a1e7c;
+      color: white;
+    }
+
+    /* Content Styling */
+    .content {
+      background: white;
+      padding: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h1 {
+      color: #4a1e7c;
+      border-bottom: 3px solid #4a1e7c;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #6b2d9e;
+      margin-top: 30px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    h3 {
+      color: #4a1e7c;
+      margin-top: 20px;
+    }
+    .rule-number {
+      font-weight: bold;
+      color: #4a1e7c;
+    }
+    .penalty {
+      background-color: #f5f0ff;
+      border-left: 4px solid #6b2d9e;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .note {
+      background-color: #f5f0ff;
+      border-left: 4px solid #4a1e7c;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .toc {
+      background-color: #f5f0ff;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .toc ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .toc li {
+      margin: 5px 0;
+    }
+    .toc a {
+      color: #4a1e7c;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover {
+      color: #6b2d9e;
+      text-decoration: underline;
+    }
+
+    /* Field Diagram Styles */
+    .field-diagram-section {
+      background: #f8f9fa;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      border: 2px solid #4a1e7c;
+    }
+    
+    .field-svg-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #2d7a4d;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .field-svg-container svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .player {
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .player:hover circle {
+      r: 18;
+      filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+    }
+    
+    .player:hover text {
+      font-weight: 700;
+      font-size: 15px;
+    }
+    
+    .team-home circle {
+      fill: #4a1e7c;
+      stroke: white;
+      stroke-width: 2;
+    }
+    
+    .team-away circle {
+      fill: #c41e3a;
+      stroke: white;
+      stroke-width: 2;
+    }
+    
+    .team-home text, .team-away text {
+      fill: white;
+      font-weight: 600;
+      font-size: 12px;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+    
+    .field-line {
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+    
+    .field-circle {
+      stroke: white;
+      stroke-width: 2;
+      fill: none;
+    }
+    
+    .goal {
+      stroke: #ffd700;
+      stroke-width: 3;
+      fill: none;
+    }
+    
+    .penalty-area {
+      stroke: white;
+      stroke-width: 2;
+      fill: rgba(255, 255, 255, 0.05);
+    }
+    
+    .goal-area {
+      stroke: white;
+      stroke-width: 2;
+      fill: rgba(255, 255, 255, 0.08);
+    }
+    
+    .info-panel {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-left: 4px solid #4a1e7c;
+    }
+    
+    .info-panel.active {
+      background: #f5f0ff;
+    }
+    
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       color: #666;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="soccer.html">Soccer</a>
-      <a href="basketball.html">Men’s Basketball</a>
-      <a href="lacrosse.html">Women’s Lacrosse</a>
-    </nav>
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚔️</span>
+        <h1>Paladin Playbook</h1>
+      </a>
+      <div class="nav-dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span>Sports Menu</span>
+          <span>▼</span>
+        </button>
+        <div class="dropdown-content" id="sportDropdown">
+          <a href="index.html" class="dropdown-item">🏠 Home</a>
+          <a href="womens_lacrosse.html" class="dropdown-item">🥍 Women's Lacrosse</a>
+          <a href="mens_basketball.html" class="dropdown-item">🏀 Men's Basketball</a>
+          <a href="womens_basketball.html" class="dropdown-item">🏀 Women's Basketball</a>
+          <a href="mens_soccer.html" class="dropdown-item">⚽ Men's Soccer</a>
+          <a href="womens_soccer.html" class="dropdown-item">⚽ Women's Soccer</a>
+          <a href="volleyball.html" class="dropdown-item">🏐 Volleyball</a>
+          <a href="football.html" class="dropdown-item">🏈 Football</a>
+          <a href="softball.html" class="dropdown-item">🥎 Softball</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <div class="content">
-    <!-- Embed the entire content of soccer-rules-2024-25.html here -->
-    <!-- Replace this comment with the HTML from soccer-rules-2024-25.html -->
-     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2024-2025 NCAA Men's and Women's Soccer Rules</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #003366;
-            border-bottom: 3px solid #003366;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #004080;
-            margin-top: 30px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #0059b3;
-            margin-top: 20px;
-        }
-        .rule-number {
-            font-weight: bold;
-            color: #003366;
-        }
-        .penalty {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .note {
-            background-color: #d1ecf1;
-            border-left: 4px solid #17a2b8;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .toc {
-            background-color: #f8f9fa;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #dee2e6;
-        }
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .toc li {
-            margin: 5px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>2024 and 2025 NCAA MEN'S AND WOMEN'S SOCCER RULES</h1>
+  <div class="container">
+    <a href="index.html" class="back-btn">← Back to All Sports</a>
+    
+    <div class="content">
+      <h1>⚽ NCAA Women's Soccer Rules 2024–2025</h1>
         
-        <div class="note">
-            <strong>Published by:</strong> National Collegiate Athletic Association<br>
-            <strong>Date:</strong> June 2024<br>
-            <strong>Copyright:</strong> © 1974-2024 NCAA. All rights reserved.
+      <div class="note">
+        <strong>Published by:</strong> National Collegiate Athletic Association<br>
+        <strong>Date:</strong> June 2024<br>
+        <strong>Copyright:</strong> © 1974-2024 NCAA. All rights reserved.
+      </div>
+
+      <!-- Interactive Field Diagram -->
+      <div class="field-diagram-section">
+        <h2 style="color: #4a1e7c; margin-bottom: 1rem;">Interactive Field Diagram</h2>
+        <p style="color: #666; margin-bottom: 1.5rem;">Click on any position to learn about their role (4-3-3 Formation)</p>
+        <div class="field-svg-container">
+          <svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Field outline -->
+            <rect x="50" y="50" width="700" height="1100" class="field-line" rx="5"/>
+            
+            <!-- Center line -->
+            <line x1="50" y1="600" x2="750" y2="600" class="field-line"/>
+            
+            <!-- Center circle -->
+            <circle cx="400" cy="600" r="80" class="field-circle"/>
+            <circle cx="400" cy="600" r="3" fill="white"/>
+            
+            <!-- Top penalty area (18-yard box) -->
+            <rect x="200" y="50" width="400" height="150" class="penalty-area"/>
+            
+            <!-- Top goal area (6-yard box) -->
+            <rect x="300" y="50" width="200" height="50" class="goal-area"/>
+            
+            <!-- Top penalty spot -->
+            <circle cx="400" cy="140" r="3" fill="white"/>
+            
+            <!-- Top penalty arc -->
+            <path d="M 320 200 A 80 80 0 0 1 480 200" class="field-circle"/>
+            
+            <!-- Top goal -->
+            <line x1="350" y1="50" x2="450" y2="50" class="goal"/>
+            <line x1="350" y1="45" x2="350" y2="50" class="goal"/>
+            <line x1="450" y1="45" x2="450" y2="50" class="goal"/>
+            
+            <!-- Bottom penalty area (18-yard box) -->
+            <rect x="200" y="1000" width="400" height="150" class="penalty-area"/>
+            
+            <!-- Bottom goal area (6-yard box) -->
+            <rect x="300" y="1100" width="200" height="50" class="goal-area"/>
+            
+            <!-- Bottom penalty spot -->
+            <circle cx="400" cy="1060" r="3" fill="white"/>
+            
+            <!-- Bottom penalty arc -->
+            <path d="M 320 1000 A 80 80 0 0 0 480 1000" class="field-circle"/>
+            
+            <!-- Bottom goal -->
+            <line x1="350" y1="1150" x2="450" y2="1150" class="goal"/>
+            <line x1="350" y1="1150" x2="350" y2="1155" class="goal"/>
+            <line x1="450" y1="1150" x2="450" y2="1155" class="goal"/>
+            
+            <!-- Corner arcs -->
+            <path d="M 50 70 A 20 20 0 0 1 70 50" class="field-circle"/>
+            <path d="M 730 50 A 20 20 0 0 1 750 70" class="field-circle"/>
+            <path d="M 750 1130 A 20 20 0 0 1 730 1150" class="field-circle"/>
+            <path d="M 70 1150 A 20 20 0 0 1 50 1130" class="field-circle"/>
+            
+            <!-- HOME TEAM (Purple - Furman) - 4-3-3 Formation -->
+            <!-- Goalkeeper -->
+            <g class="player team-home" data-position="goalkeeper" data-team="home">
+              <circle cx="400" cy="1110" r="15"/>
+              <text x="400" y="1115">GK</text>
+            </g>
+            
+            <!-- Defenders -->
+            <g class="player team-home" data-position="right-back" data-team="home">
+              <circle cx="550" cy="970" r="15"/>
+              <text x="550" y="975">RB</text>
+            </g>
+            <g class="player team-home" data-position="center-back-right" data-team="home">
+              <circle cx="450" cy="970" r="15"/>
+              <text x="450" y="975">CB</text>
+            </g>
+            <g class="player team-home" data-position="center-back-left" data-team="home">
+              <circle cx="350" cy="970" r="15"/>
+              <text x="350" y="975">CB</text>
+            </g>
+            <g class="player team-home" data-position="left-back" data-team="home">
+              <circle cx="250" cy="970" r="15"/>
+              <text x="250" y="975">LB</text>
+            </g>
+            
+            <!-- Midfielders -->
+            <g class="player team-home" data-position="defensive-mid" data-team="home">
+              <circle cx="400" cy="800" r="15"/>
+              <text x="400" y="805">CDM</text>
+            </g>
+            <g class="player team-home" data-position="center-mid-right" data-team="home">
+              <circle cx="500" cy="730" r="15"/>
+              <text x="500" y="735">CM</text>
+            </g>
+            <g class="player team-home" data-position="center-mid-left" data-team="home">
+              <circle cx="300" cy="730" r="15"/>
+              <text x="300" y="735">CM</text>
+            </g>
+            
+            <!-- Forwards -->
+            <g class="player team-home" data-position="right-wing" data-team="home">
+              <circle cx="550" cy="550" r="15"/>
+              <text x="550" y="555">RW</text>
+            </g>
+            <g class="player team-home" data-position="striker" data-team="home">
+              <circle cx="400" cy="500" r="15"/>
+              <text x="400" y="505">ST</text>
+            </g>
+            <g class="player team-home" data-position="left-wing" data-team="home">
+              <circle cx="250" cy="550" r="15"/>
+              <text x="250" y="555">LW</text>
+            </g>
+            
+            <!-- AWAY TEAM (Red) - 4-3-3 Formation -->
+            <!-- Goalkeeper -->
+            <g class="player team-away" data-position="goalkeeper" data-team="away">
+              <circle cx="400" cy="90" r="15"/>
+              <text x="400" y="95">GK</text>
+            </g>
+            
+            <!-- Defenders -->
+            <g class="player team-away" data-position="left-back" data-team="away">
+              <circle cx="550" cy="230" r="15"/>
+              <text x="550" y="235">LB</text>
+            </g>
+            <g class="player team-away" data-position="center-back-left" data-team="away">
+              <circle cx="450" cy="230" r="15"/>
+              <text x="450" y="235">CB</text>
+            </g>
+            <g class="player team-away" data-position="center-back-right" data-team="away">
+              <circle cx="350" cy="230" r="15"/>
+              <text x="350" y="235">CB</text>
+            </g>
+            <g class="player team-away" data-position="right-back" data-team="away">
+              <circle cx="250" cy="230" r="15"/>
+              <text x="250" y="235">RB</text>
+            </g>
+            
+            <!-- Midfielders -->
+            <g class="player team-away" data-position="defensive-mid" data-team="away">
+              <circle cx="400" cy="400" r="15"/>
+              <text x="400" y="405">CDM</text>
+            </g>
+            <g class="player team-away" data-position="center-mid-left" data-team="away">
+              <circle cx="500" cy="470" r="15"/>
+              <text x="500" y="475">CM</text>
+            </g>
+            <g class="player team-away" data-position="center-mid-right" data-team="away">
+              <circle cx="300" cy="470" r="15"/>
+              <text x="300" y="475">CM</text>
+            </g>
+            
+            <!-- Forwards -->
+            <g class="player team-away" data-position="left-wing" data-team="away">
+              <circle cx="550" cy="650" r="15"/>
+              <text x="550" y="655">LW</text>
+            </g>
+            <g class="player team-away" data-position="striker" data-team="away">
+              <circle cx="400" cy="700" r="15"/>
+              <text x="400" y="705">ST</text>
+            </g>
+            <g class="player team-away" data-position="right-wing" data-team="away">
+              <circle cx="250" cy="650" r="15"/>
+              <text x="250" y="655">RW</text>
+            </g>
+          </svg>
         </div>
-
-        <div class="toc">
-            <h2>Contents</h2>
-            <ul>
-                <li><a href="#committee">NCAA Men's and Women's Soccer Rules Committee</a></li>
-                <li><a href="#changes">Major Rules Changes for 2024 and 2025</a></li>
-                <li><a href="#sportsmanship">Statement of Sportsmanship</a></li>
-                <li><a href="#rule1">Rule 1—The Field of Play</a></li>
-                <li><a href="#rule2">Rule 2—The Ball</a></li>
-                <li><a href="#rule3">Rule 3—Players and Substitutes</a></li>
-                <li><a href="#rule4">Rule 4—Players' Equipment</a></li>
-                <li><a href="#rule5">Rule 5—The Referee</a></li>
-                <li><a href="#rule6">Rule 6—Other Officials and Their Duties</a></li>
-                <li><a href="#rule7">Rule 7—Duration of the Game</a></li>
-                <li><a href="#rule8">Rule 8—Start of Play</a></li>
-                <li><a href="#rule9">Rule 9—Ball In and Out of Play</a></li>
-                <li><a href="#rule10">Rule 10—Scoring</a></li>
-                <li><a href="#rule11">Rule 11—Offside</a></li>
-            </ul>
+        <div class="legend">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #4a1e7c; border: 2px solid white;"></div>
+            <span>Furman Paladins (Purple)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="width: 20px; height: 20px; border-radius: 50%; background: #c41e3a; border: 2px solid white;"></div>
+            <span>Opponents (Red)</span>
+          </div>
         </div>
+        <div class="info-panel" id="soccerInfoPanel">
+          <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">Welcome to Women's Soccer!</h3>
+          <p style="margin: 0.5rem 0;"><strong>Click on any position</strong> to learn about their role on the field.</p>
+          <p style="margin: 0.5rem 0;"><strong>Formation:</strong> 4-3-3 (4 Defenders, 3 Midfielders, 3 Forwards)</p>
+          <p style="margin: 0.5rem 0;"><strong>Field Dimensions:</strong> 115-120 yards long × 70-75 yards wide</p>
+          <p style="margin: 0.5rem 0;"><strong>Teams:</strong> 11 players per side</p>
+        </div>
+      </div>
 
-        <h2 id="changes">Major Rules Changes for 2024 and 2025</h2>
-        
-        <h3>Ball Pressure (Rule 2.1.3)</h3>
-        <p>Eliminates the ball pressure psi specifications and requires ball pressure to conform to the manufacturer's recommendations printed on the ball.</p>
-
-        <h3>Game Roster (Rules 3.2.1 and 6.3.4)</h3>
-        <p>Requires the game roster, with starting players designated, to be given to the opposing coach, referee and scorekeeper not later than 15 minutes before game time.</p>
-
-        <h3>Stopping the Clock (Rules 3.8.8 and 6.3.5.4)</h3>
-        <p>Requires the clock to be stopped on all substitutions if the game is tied or if the leading team makes a substitution in the final 15 minutes of regulation play and all of overtime.</p>
-
-        <h3>Video Review (Rules 5.7.3.7, 5.7.3.8, 5.7.3.9 and 5.7.3.10)</h3>
-        <p>Expands video review to include:</p>
+      <div class="toc">
+        <h2>Contents</h2>
         <ul>
-            <li>All potential penalty kick situations</li>
-            <li>All straight red card situations (an ejection for two yellow cards is not reviewable)</li>
-            <li>Denial of obvious goal-scoring opportunities situations</li>
-            <li>Any potential offside violation in goal-scoring situations</li>
+          <li><a href="#committee">NCAA Men's and Women's Soccer Rules Committee</a></li>
+          <li><a href="#changes">Major Rules Changes for 2024 and 2025</a></li>
+          <li><a href="#sportsmanship">Statement of Sportsmanship</a></li>
+          <li><a href="#rule1">Rule 1—The Field of Play</a></li>
+          <li><a href="#rule2">Rule 2—The Ball</a></li>
+          <li><a href="#rule3">Rule 3—Players and Substitutes</a></li>
+          <li><a href="#rule4">Rule 4—Players' Equipment</a></li>
+          <li><a href="#rule5">Rule 5—The Referee</a></li>
+          <li><a href="#rule6">Rule 6—Other Officials and Their Duties</a></li>
+          <li><a href="#rule7">Rule 7—Duration of the Game</a></li>
+          <li><a href="#rule8">Rule 8—Start of Play</a></li>
+          <li><a href="#rule9">Rule 9—Ball In and Out of Play</a></li>
+          <li><a href="#rule10">Rule 10—Scoring</a></li>
+          <li><a href="#rule11">Rule 11—Offside</a></li>
         </ul>
+      </div>
 
-        <h3>Postseason Overtime (7.2.1)</h3>
-        <p>Reinstates sudden victory (golden goal) during postseason overtime.</p>
+      <h2 id="changes">Major Rules Changes for 2024 and 2025</h2>
+      
+      <h3>Ball Pressure (Rule 2.1.3)</h3>
+      <p>Eliminates the ball pressure psi specifications and requires ball pressure to conform to the manufacturer's recommendations printed on the ball.</p>
 
-        <div class="note">
-            <strong>Division I Men's Only Changes:</strong>
-            <ul>
-                <li><strong>Substitutions (Rule 3.4.3):</strong> Allows teams six moments to make substitutions in a game</li>
-                <li><strong>Substitutions (Rule 3.4.3):</strong> Allows substitutions to occur during any stoppage of play</li>
-                <li><strong>Substitutions (Rule 3.5.1 Exception):</strong> Eliminates reentry in the second half for field players</li>
-            </ul>
-        </div>
+      <h3>Game Roster (Rules 3.2.1 and 6.3.4)</h3>
+      <p>Requires the game roster, with starting players designated, to be given to the opposing coach, referee and scorekeeper not later than 15 minutes before game time.</p>
 
-        <h2 id="sportsmanship">Statement of Sportsmanship</h2>
-        <p>The NCAA promotes good sportsmanship by student-athletes, coaches and spectators. We request your cooperation by supporting the participants and officials in a positive manner. Profanity, racial or sexist comments, or other intimidating actions directed at officials, student-athletes, coaches or team representatives will not be tolerated and are grounds for removal from the site of competition.</p>
+      <h3>Stopping the Clock (Rules 3.8.8 and 6.3.5.4)</h3>
+      <p>Requires the clock to be stopped on all substitutions if the game is tied or if the leading team makes a substitution in the final 15 minutes of regulation play and all of overtime.</p>
 
-        <h2 id="rule1">RULE 1: The Field of Play</h2>
-        
-        <h3>1.1 DIMENSIONS</h3>
-        <p><span class="rule-number">1.1.1</span> The field of play shall be rectangular, with a length of 115-120 yards and a width of 70-75 yards. The optimum size is 120 yards by 75 yards.</p>
-        
-        <p><span class="rule-number">1.1.2</span> If the field dimensions are smaller than recommended, it is the responsibility of the home team to notify the visiting team prior to the date of the game regarding the actual playing dimensions.</p>
-        
-        <p><span class="rule-number">1.1.3</span> A team is not required to play on a field that is not in compliance with the rules. However, the teams can agree to play the game by mutual consent.</p>
-        
-        <div class="penalty">
-            <strong>PENALTY:</strong> The game shall not begin and the referee shall file a report with the governing sports authority.
-        </div>
+      <h3>Video Review (Rules 5.7.3.7, 5.7.3.8, 5.7.3.9 and 5.7.3.10)</h3>
+      <p>Expands video review to include:</p>
+      <ul>
+        <li>All potential penalty kick situations</li>
+        <li>All straight red card situations (an ejection for two yellow cards is not reviewable)</li>
+        <li>Denial of obvious goal-scoring opportunities situations</li>
+        <li>Any potential offside violation in goal-scoring situations</li>
+      </ul>
 
-        <h3>1.2 BOUNDARY LINES</h3>
-        <p>The field shall be marked with distinctive lines, in accordance with the Plan of Field diagram, the longer boundary lines being called the touchlines and the shorter the end lines. The end lines shall meet at the corners and shall extend from touchline to touchline. The goal lines shall be that part of the end line that extends completely across the area between the goal posts.</p>
+      <h3>Postseason Overtime (7.2.1)</h3>
+      <p>Reinstates sudden victory (golden goal) during postseason overtime.</p>
 
-        <h3>1.9 GOALS</h3>
-        <p><span class="rule-number">1.9.1</span> The goals shall be anchored, secured or counterweighted. The goal posts, which shall be superimposed on end lines of the same width and depth, shall consist of two posts, equidistant from the corner flags and 8 yards apart (inside measurement), joined by a horizontal crossbar of similar material, the lower edge of which shall be 8 feet from the ground.</p>
-
-        <h2 id="rule2">RULE 2: The Ball</h2>
-        
-        <h3>2.1 DIMENSIONS</h3>
-        <p><span class="rule-number">2.1.1</span> The circumference of the ball shall not be more than 28 inches nor less than 27 inches.</p>
-        
-        <p><span class="rule-number">2.1.2</span> The weight of the ball at the start of the game shall not be more than 16 ounces nor less than 14 ounces, and the weight shall not exceed 16.75 ounces even when wet and used.</p>
-        
-        <p><span class="rule-number">2.1.3</span> The ball pressure shall conform to the manufacturer's recommendation printed on the ball.</p>
-
-        <h2 id="rule3">RULE 3: Players and Substitutes</h2>
-        
-        <h3>3.1 NUMBER OF PLAYERS</h3>
-        <p>The game shall be played by two teams of 11 players each, one of whom shall be the goalkeeper. A minimum of seven players are required to start and finish a game.</p>
-        
-        <h3>3.2 GAME ROSTER</h3>
-        <p><span class="rule-number">3.2.1</span> Not later than 15 minutes before game time, each team shall submit an official NCAA game roster to the official scorekeeper, referee and opposing coach. The roster shall include:</p>
+      <div class="note">
+        <strong>Division I Men's Only Changes:</strong>
         <ul>
-            <li>Designated starters</li>
-            <li>Names and jersey numbers of all players</li>
-            <li>The name(s) and number(s) of the suspended player(s) and date(s) of the suspension(s)</li>
-            <li>The total number of cautions and ejections of all players, coaches and other bench personnel from the beginning of regular season</li>
+          <li><strong>Substitutions (Rule 3.4.3):</strong> Allows teams six moments to make substitutions in a game</li>
+          <li><strong>Substitutions (Rule 3.4.3):</strong> Allows substitutions to occur during any stoppage of play</li>
+          <li><strong>Substitutions (Rule 3.5.1 Exception):</strong> Eliminates reentry in the second half for field players</li>
         </ul>
+      </div>
 
-        <h3>3.4 WHEN SUBSTITUTES ARE ALLOWED</h3>
-        <p><span class="rule-number">3.4.1</span> Substitutes must have reported to the official scorer or nearest official and remained near the halfway line prior to the ball going out of play in order to substitute on a:</p>
+      <h2 id="sportsmanship">Statement of Sportsmanship</h2>
+      <p>The NCAA promotes good sportsmanship by student-athletes, coaches and spectators. We request your cooperation by supporting the participants and officials in a positive manner. Profanity, racial or sexist comments, or other intimidating actions directed at officials, student-athletes, coaches or team representatives will not be tolerated and are grounds for removal from the site of competition.</p>
+
+      <h2 id="rule1">RULE 1: The Field of Play</h2>
+      
+      <h3>1.1 DIMENSIONS</h3>
+      <p><span class="rule-number">1.1.1</span> The field of play shall be rectangular, with a length of 115-120 yards and a width of 70-75 yards. The optimum size is 120 yards by 75 yards.</p>
+      
+      <p><span class="rule-number">1.1.2</span> If the field dimensions are smaller than recommended, it is the responsibility of the home team to notify the visiting team prior to the date of the game regarding the actual playing dimensions.</p>
+      
+      <p><span class="rule-number">1.1.3</span> A team is not required to play on a field that is not in compliance with the rules. However, the teams can agree to play the game by mutual consent.</p>
+      
+      <div class="penalty">
+        <strong>PENALTY:</strong> The game shall not begin and the referee shall file a report with the governing sports authority.
+      </div>
+
+      <h3>1.2 BOUNDARY LINES</h3>
+      <p>The field shall be marked with distinctive lines, in accordance with the Plan of Field diagram, the longer boundary lines being called the touchlines and the shorter the end lines. The end lines shall meet at the corners and shall extend from touchline to touchline. The goal lines shall be that part of the end line that extends completely across the area between the goal posts.</p>
+
+      <h3>1.9 GOALS</h3>
+      <p><span class="rule-number">1.9.1</span> The goals shall be anchored, secured or counterweighted. The goal posts, which shall be superimposed on end lines of the same width and depth, shall consist of two posts, equidistant from the corner flags and 8 yards apart (inside measurement), joined by a horizontal crossbar of similar material, the lower edge of which shall be 8 feet from the ground.</p>
+
+      <h2 id="rule2">RULE 2: The Ball</h2>
+      
+      <h3>2.1 DIMENSIONS</h3>
+      <p><span class="rule-number">2.1.1</span> The circumference of the ball shall not be more than 28 inches nor less than 27 inches.</p>
+      
+      <p><span class="rule-number">2.1.2</span> The weight of the ball at the start of the game shall not be more than 16 ounces nor less than 14 ounces, and the weight shall not exceed 16.75 ounces even when wet and used.</p>
+      
+      <p><span class="rule-number">2.1.3</span> The ball pressure shall conform to the manufacturer's recommendation printed on the ball.</p>
+
+      <h2 id="rule3">RULE 3: Players and Substitutes</h2>
+      
+      <h3>3.1 NUMBER OF PLAYERS</h3>
+      <p>The game shall be played by two teams of 11 players each, one of whom shall be the goalkeeper. A minimum of seven players are required to start and finish a game.</p>
+      
+      <h3>3.2 GAME ROSTER</h3>
+      <p><span class="rule-number">3.2.1</span> Not later than 15 minutes before game time, each team shall submit an official NCAA game roster to the official scorekeeper, referee and opposing coach. The roster shall include:</p>
+      <ul>
+        <li>Designated starters</li>
+        <li>Names and jersey numbers of all players</li>
+        <li>The name(s) and number(s) of the suspended player(s) and date(s) of the suspension(s)</li>
+        <li>The total number of cautions and ejections of all players, coaches and other bench personnel from the beginning of regular season</li>
+      </ul>
+
+      <h3>3.4 WHEN SUBSTITUTES ARE ALLOWED</h3>
+       <p><span class="rule-number">3.4.1</span> Substitutes must have reported to the official scorer or nearest official and remained near the halfway line prior to the ball going out of play in order to substitute on a:</p>
         <ul>
             <li>Goal kick</li>
             <li>Team's own throw-in (the opposing team also may substitute)</li>

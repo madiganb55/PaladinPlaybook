@@ -516,12 +516,149 @@
             </g>
           </svg>
         </div>
+      </div>
+
+      <script>
+      function initializeLacrosseField() {
+          const positionInfo = {
+            'goalie': {
+              title: 'Goalie (G)',
+              description: 'The last line of defense who protects the goal. Can use any part of their body to stop shots within the crease.',
+              responsibilities: [
+                'Stop shots on goal',
+                'Direct the defense',
+                'Clear the ball after saves',
+                'Can leave crease to play the ball'
+              ]
+            },
+            'point': {
+              title: 'Point (P)',
+              description: 'The center defender who marks the opposing first home (main attacker). Plays directly in front of the goal.',
+              responsibilities: [
+                'Mark the first home attacker',
+                'Protect the 8-meter arc',
+                'Communicate defensive positioning',
+                'Lead the defensive unit'
+              ]
+            },
+            'coverpoint': {
+              title: 'Coverpoint (CP)',
+              description: 'A defender positioned to the side of the goal who marks the second home attacker.',
+              responsibilities: [
+                'Mark the second home',
+                'Provide off-ball defensive support',
+                'Help protect the crease',
+                'Assist in clears and transitions'
+              ]
+            },
+            'third-man': {
+              title: 'Third Man (3M)',
+              description: 'A defender positioned on the opposite side from coverpoint who marks the third home attacker.',
+              responsibilities: [
+                'Mark the third home',
+                'Provide defensive balance',
+                'Support crease defense',
+                'Help initiate the clear'
+              ]
+            },
+            'center': {
+              title: 'Center (C)',
+              description: 'A midfielder who takes the draw and plays both offense and defense. The playmaker of the team.',
+              responsibilities: [
+                'Take the center draw',
+                'Transition between offense and defense',
+                'Distribute the ball',
+                'Control field position'
+              ]
+            },
+            'def-wing': {
+              title: 'Defensive Wing (DW)',
+              description: 'A midfielder who focuses more on defense while still contributing to offense.',
+              responsibilities: [
+                'Mark opposing attack wing',
+                'Provide defensive support',
+                'Help with clears',
+                'Contribute to offensive transitions'
+              ]
+            },
+            'att-wing': {
+              title: 'Attack Wing (AW)',
+              description: 'A midfielder who focuses more on offense while still playing defense.',
+              responsibilities: [
+                'Create offensive opportunities',
+                'Support the attack',
+                'Mark opposing defensive wing',
+                'Fast break opportunities'
+              ]
+            },
+            'first-home': {
+              title: 'First Home (1H)',
+              description: 'The primary goal scorer who plays directly in front of the opposing goal.',
+              responsibilities: [
+                'Lead the attack',
+                'Take high-percentage shots',
+                'Draw defenders',
+                'Initiate offensive sets'
+              ]
+            },
+            'second-home': {
+              title: 'Second Home (2H)',
+              description: 'An attacker who supports the first home and often feeds the ball for assists.',
+              responsibilities: [
+                'Feed assists to shooters',
+                'Score from the wings',
+                'Set up offensive plays',
+                'Provide off-ball movement'
+              ]
+            },
+            'third-home': {
+              title: 'Third Home (3H)',
+              description: 'An attacker who provides support and looks for opportunities to score.',
+              responsibilities: [
+                'Create space for teammates',
+                'Score from perimeter',
+                'Feed and assist',
+                'Balance the attack'
+              ]
+            }
+          };
+
+          document.querySelectorAll('.player').forEach(player => {
+            player.addEventListener('click', function() {
+              const position = this.getAttribute('data-position');
+              const team = this.getAttribute('data-team');
+              const info = positionInfo[position];
+              const infoPanel = document.getElementById('lacrosseInfoPanel');
+              
+              infoPanel.classList.add('active');
+              infoPanel.innerHTML = `
+                <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">${info.title} - ${team === 'home' ? 'Home Team' : 'Away Team'}</h3>
+                <p style="margin: 0.5rem 0;"><strong>Role:</strong> ${info.description}</p>
+                <p style="margin: 0.5rem 0;"><strong>Key Responsibilities:</strong></p>
+                <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                  ${info.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                </ul>
+              `;
+              
+              // Highlight selected player
+              document.querySelectorAll('.player').forEach(p => {
+                p.querySelector('circle').style.opacity = '0.5';
+              });
+              this.querySelector('circle').style.opacity = '1';
+            });
+          });
+        }
+  
+        initializeLacrosseField();
+      </script>
+  
+        <div class="legend">
         <div class="legend">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
             <div style="width: 20px; height: 20px; border-radius: 50%; background: #4a1e7c; border: 2px solid white;"></div>
             <span>Furman Paladins (Purple)</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
+      </div>
             <div style="width: 20px; height: 20px; border-radius: 50%; background: #c41e3a; border: 2px solid white;"></div>
             <span>Opponents (Red)</span>
           </div>
@@ -550,15 +687,7 @@
       </div>
 
       <div id="major-changes" class="rule-section">
-        <h2>Major Rules Changes for 2024 and 2025</h2>
-        
-        <div class="major-change">
-          <h3>Rule 2-13: Improper/Broken Equipment</h3>
-          <p>Modified the title of the section, changed the language from illegal equipment to improper/broken equipment, eliminated the requirement for reinspection, and clarified that bent/broken shafts are prohibited from being used for the remainder of the game.</p>
-        </div>
-
-        <div class="major-change">
-          <h3>Rule 2-19: Footwear/Cleats</h3>
+        <h2>Major Rule 2-19: Footwear/Cleats</h3>
           <p>Moved footwear/cleats from Uniforms to Equipment. Permits players to wear shoes with soles containing aluminum, leather, rubber, nylon or plastic cleats, studs or bars, as long as officials do not consider them dangerous.</p>
         </div>
 

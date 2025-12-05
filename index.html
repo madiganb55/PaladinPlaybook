@@ -1060,6 +1060,17 @@
       }
     }
     // Calendar Functions
+    function getCalendarRange() {
+      const start = new Date(currentDate.getFullYear(), currentDate.getMonth() - 2, 1);
+      const end = new Date(currentDate.getFullYear(), currentDate.getMonth() + 3, 0);
+      return { start, end };
+    }
+
+    function filterEventsInRange(events) {
+      const { start, end } = getCalendarRange();
+      return events.filter(event => event.date >= start && event.date <= end);
+    }
+
     async function loadAthleticsData() {
   try {
     const resp = await fetch('https://furmannowscrapers.fly.dev/FUNow/api/athleticsGet');
