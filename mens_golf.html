@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAA Men's Golf Rules 2023-24 - Furman</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        
+        /* Header & Navigation */
+        header {
+            padding: 1.5rem 1rem;
+            background: linear-gradient(135deg, #4a1e7c 0%, #6b2d9e 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: white;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        /* Dropdown Navigation */
+        .nav-dropdown {
+            position: relative;
+        }
+        .dropdown-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+        .dropdown-btn:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            margin-top: 0.5rem;
+            background: white;
+            min-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            overflow: hidden;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .dropdown-content.show {
+            display: block;
+            animation: fadeIn 0.2s;
+        }
+        .dropdown-item {
+            padding: 1rem 1.5rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .dropdown-item:hover {
+            background: #f5f0ff;
+            color: #4a1e7c;
+        }
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            color: #4a1e7c;
+            border: 2px solid #4a1e7c;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 2rem 0 1rem 0;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: #4a1e7c;
+            color: white;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+        
+        h1 {
+            color: #4a1e7c;
+            border-bottom: 3px solid #4a1e7c;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #6b2d9e;
+            margin-top: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: #4a1e7c;
+            margin-top: 20px;
+        }
+        
+        .rule-section {
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            background-color: #f5f0ff;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+        .new-rule {
+            background-color: #fff3cd;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+        
+        .toc {
+            background-color: #f5f0ff;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #4a1e7c;
+            border-radius: 5px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .toc a {
+            color: #4a1e7c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+            color: #6b2d9e;
+        }
+        
+        .rule-change {
+            background-color: #e8f5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #4caf50;
+            border-radius: 4px;
+        }
+        
+        .rule-change h4 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+
+        .contact-info {
+            background-color: #fff9e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚔️</span>
+                <h1>Paladin Playbook</h1>
+            </a>
+            <div class="nav-dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    <span>Sports Menu</span>
+                    <span>▼</span>
+                </button>
+                <div class="dropdown-content" id="sportDropdown">
+                    <a href="index.html" class="dropdown-item">🏠 Home</a>
+                    <a href="womens_lacrosse.html" class="dropdown-item">🥍 Women's Lacrosse</a>
+                    <a href="mens_basketball.html" class="dropdown-item">🏀 Men's Basketball</a>
+                    <a href="womens_basketball.html" class="dropdown-item">🏀 Women's Basketball</a>
+                    <a href="mens_soccer.html" class="dropdown-item">⚽ Men's Soccer</a>
+                    <a href="womens_soccer.html" class="dropdown-item">⚽ Women's Soccer</a>
+                    <a href="volleyball.html" class="dropdown-item">🏐 Volleyball</a>
+                    <a href="football.html" class="dropdown-item">🏈 Football</a>
+                    <a href="softball.html" class="dropdown-item">🥎 Softball</a>
+                    <a href="mens_golf.html" class="dropdown-item">⛳ Men's Golf</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to All Sports</a>
+        
+        <div class="content">
+            <h1>⛳ NCAA Men's Golf Rules 2023-24</h1>
+            <p><strong>Furman Athletics Men's Golf Page</strong><br>
+            <a href="https://furmanpaladins.com/sports/mens-golf" style="color: #4a1e7c;">www.FurmanGolf.com</a></p>
+            
+            <p><strong>The R&A and USGA</strong><br>
+            St Andrews, Scotland | Liberty Corner, New Jersey<br>
+            <a href="https://www.randa.org" style="color: #4a1e7c;">www.randa.org</a> | <a href="https://www.usga.org" style="color: #4a1e7c;">www.usga.org</a></p>
+
+            <div class="contact-info">
+                <p><strong>NCAA Tournament Operations Staff:</strong></p>
+                <p><strong>Managing Director:</strong> John Baldwin<br>
+                <strong>Email:</strong> jbaldwin@ncaa.org<br>
+                <strong>Phone:</strong> 317-917-6442</p>
+            </div>
+
+            <div class="toc">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#rules-changes">Principal Changes in 2023 Rules</a></li>
+                    <li><a href="#ncaa-format">NCAA Championship Format</a></li>
+                    <li><a href="#rule1">Rule 1 – The Game, Player Conduct and the Rules</a></li>
+                    <li><a href="#rule2">Rule 2 – The Course</a></li>
+                    <li><a href="#rule3">Rule 3 – The Competition</a></li>
+                    <li><a href="#rule4">Rule 4 – The Player's Equipment</a></li>
+                    <li><a href="#rule5">Rule 5 – Playing the Round</a></li>
+                    <li><a href="#rule6">Rule 6 – Playing a Hole</a></li>
+                    <li><a href="#rule10">Rule 10 – Preparing for and Making a Stroke</a></li>
+                    <li><a href="#rule17">Rule 17 – Penalty Areas</a></li>
+                    <li><a href="#rule18">Rule 18 – Stroke-and-Distance Relief</a></li>
+                    <li><a href="#rule19">Rule 19 – Unplayable Ball</a></li>
+                    <li><a href="#ncaa-specific">NCAA-Specific Rules and Policies</a></li>
+                </ul>
+            </div>
+
+            <div id="rules-changes" class="rule-section">
+                <h2>Principal Changes Introduced in the 2023 Rules of Golf</h2>
+                
+                <div class="rule-change">
+                    <h4>Applying Penalties to Multiple Breaches (Rule 1.3c(4))</h4>
+                    <p>The Rule has been amended so that determining whether breaches are related or unrelated is no longer part of its application, meaning there will be <span class="highlight">fewer instances where multiple penalties will be applied</span>.</p>
+                </div>
+
+                <div class="rule-change">
+                    <h4>Handicap on Scorecard (Rule 3.3b(4))</h4>
+                    <p>A player is <span class="highlight">no longer required to show their handicap on their scorecard</span>. The Committee is responsible for calculating the player's handicap strokes.</p>
+                </div>
+
+                <div class="rule-change">
+                    <h4>Club Repair or Replacement (Rule 4.1a(2))</h4>
+                    <p>A player may now <span class="highlight">replace a damaged club</span>, provided the club has not been damaged through abuse.</p>
+                </div>
+
+                <div class="rule-change">
+                    <h4>Incorrectly Substituted Ball (Rule 6.3b(3))</h4>
+                    <p>The penalty for playing an incorrectly substituted ball has been <span class="highlight">reduced from the general penalty to one penalty stroke</span>.</p>
+                </div>
+
+                <div class="rule-change">
+                    <h4>Back-on-the-Line Relief Procedure</h4>
+                    <p>The player is now required to drop on the line. The spot where the ball first touches the ground creates a <span class="highlight">relief area that is one club-length in any direction</span> from that point.</p>
+                </div>
+            </div>
+
+            <div id="ncaa-format" class="rule-section">
+                <h2>NCAA Division I Men's Golf Championship Format</h2>
+                
+                <h3>Regionals (May 12-14, 2025)</h3>
+                <p>Six 54-hole regional tournaments determine the 30 qualifying teams and six individuals not on qualifying teams who advance to the finals.</p>
+                <ul>
+                    <li>Three regionals: 13 teams and 10 individuals</li>
+                    <li>Three regionals: 14 teams and 5 individuals</li>
+                    <li><strong>Advancement:</strong> Top 5 teams and top individual not on advancing teams from each regional</li>
+                </ul>
+
+                <h3>Regional Sites (2025)</h3>
+                <ul>
+                    <li><strong>Amherst, Virginia</strong> – Poplar Grove Golf Course (Liberty University, host)</li>
+                    <li><strong>Auburn, Alabama</strong> – Auburn University Club (Auburn University, host)</li>
+                    <li><strong>Bremerton, Washington</strong> – Gold Mountain Golf Club (University of Washington, host)</li>
+                    <li><strong>Reno, Nevada</strong> – Montreux Golf and Country Club (University of Nevada, Reno, host)</li>
+                    <li><strong>Tallahassee, Florida</strong> – Seminole Legacy Golf Club (Florida State University, host)</li>
+                    <li><strong>Urbana, Illinois</strong> – Atkins Golf Club (University of Illinois, host)</li>
+                </ul>
+
+                <h3>Finals (May 23-28, 2025)</h3>
+                <p><strong>Location:</strong> Omni La Costa Resort & Spa, Carlsbad, California (University of Texas at Austin, host)</p>
+                
+                <h4>Stroke Play (72 holes)</h4>
+                <ul>
+                    <li>All 30 teams and 6 individuals complete 54 holes</li>
+                    <li>Top 15 teams and top 9 individuals advance for 4th round</li>
+                    <li>72-hole individual champion crowned after 4th round</li>
+                    <li>Top 8 teams after 72 holes advance to match play</li>
+                </ul>
+
+                <h4>Match Play (Team Competition)</h4>
+                <ul>
+                    <li>Quarterfinals: #1 vs #8, #2 vs #7, #3 vs #6, #4 vs #5</li>
+                    <li>Five individual matches per team match</li>
+                    <li>First team to win 3 points advances</li>
+                    <li>Semifinals and finals determine national champion</li>
+                </ul>
+            </div>
+
+            <div id="rule1" class="rule-section">
+                <h2>Rule 1 – The Game, Player Conduct and the Rules</h2>
+                
+                <h3>1.1 The Game of Golf</h3>
+                <p>Golf is played on a course by striking a ball with a club. Each hole starts with a stroke from the teeing area and ends when the ball is holed on the putting green.</p>
+                <p>For each stroke, the player:</p>
+                <ul>
+                    <li>Plays the course as they find it, and</li>
+                    <li>Plays the ball as it lies</li>
+                </ul>
+
+                <h3>1.2 Standards of Player Conduct</h3>
+                <p>All players are expected to play in the spirit of the game by:</p>
+                <ul>
+                    <li><strong>Acting with integrity</strong> – following the Rules, applying all penalties, and being honest</li>
+                    <li><strong>Showing consideration to others</strong> – playing at a prompt pace, looking out for safety</li>
+                    <li><strong>Taking good care of the course</strong> – replacing divots, smoothing bunkers, repairing ball-marks</li>
+                </ul>
+
+                <h3>1.3 Playing by the Rules</h3>
+                <p>Players are responsible for applying the Rules to themselves. If a player knows they have breached a Rule that involves a penalty and deliberately fails to apply the penalty, <span class="highlight">the player is disqualified</span>.</p>
+            </div>
+
+            <div id="rule2" class="rule-section">
+                <h2>Rule 2 – The Course</h2>
+                
+                <h3>Five Areas of the Course</h3>
+                <ul>
+                    <li><strong>General Area:</strong> The entire course except the four specific areas below</li>
+                    <li><strong>Teeing Area:</strong> Where the player starts each hole</li>
+                    <li><strong>Penalty Areas:</strong> Bodies of water and other defined areas</li>
+                    <li><strong>Bunkers:</strong> Prepared areas of sand</li>
+                    <li><strong>Putting Green:</strong> Specially prepared area for putting</li>
+                </ul>
+
+                <h3>Objects and Conditions</h3>
+                <ul>
+                    <li><strong>Loose Impediments:</strong> Natural objects not fixed or growing (leaves, stones, twigs)</li>
+                    <li><strong>Movable Obstructions:</strong> Artificial objects that can be moved</li>
+                    <li><strong>Immovable Obstructions:</strong> Artificial objects that cannot be moved</li>
+                    <li><strong>Abnormal Course Conditions:</strong> Animal holes, ground under repair, immovable obstructions, temporary water</li>
+                </ul>
+            </div>
+
+            <div id="rule3" class="rule-section">
+                <h2>Rule 3 – The Competition</h2>
+                
+                <h3>3.2 Match Play</h3>
+                <p>In match play, a player and opponent compete based on holes won, lost, or tied.</p>
+                <ul>
+                    <li><strong>Winning a Hole:</strong> Complete the hole in fewer strokes than the opponent</li>
+                    <li><strong>Tying a Hole:</strong> Complete the hole in the same number of strokes (halved)</li>
+                    <li><strong>Winning a Match:</strong> Lead opponent by more holes than remain to be played</li>
+                </ul>
+
+                <h3>3.3 Stroke Play</h3>
+                <p>In stroke play, all players compete based on total strokes.</p>
+                <ul>
+                    <li>The player who completes all rounds in the <strong>fewest total strokes</strong> is the winner</li>
+                    <li>The marker keeps the player's score</li>
+                    <li>After each hole, the marker confirms strokes and enters the gross score</li>
+                    <li>Player must certify scores and return the scorecard promptly</li>
+                </ul>
+
+                <h3>Scoring Responsibilities</h3>
+                <p><strong>Marker's Responsibility:</strong></p>
+                <ul>
+                    <li>Enter gross score for each hole</li>
+                    <li>Certify hole scores after the round</li>
+                </ul>
+                <p><strong>Player's Responsibility:</strong></p>
+                <ul>
+                    <li>Check hole scores entered by marker</li>
+                    <li>Ensure marker certifies the scorecard</li>
+                    <li>Certify hole scores and return scorecard promptly</li>
+                    <li><strong>Note:</strong> Player is NOT responsible for adding up scores or showing handicap</li>
+                </ul>
+            </div>
+
+            <div id="rule4" class="rule-section">
+                <h2>Rule 4 – The Player's Equipment</h2>
+                
+                <h3>4.1 Clubs</h3>
+                <p><strong>Conforming Clubs:</strong> Players must use clubs that conform to Equipment Rules</p>
+                <p><strong>14-Club Limit:</strong> A player must not:</p>
+                <ul>
+                    <li>Start a round with more than 14 clubs</li>
+                    <li>Have more than 14 clubs during the round</li>
+                </ul>
+                <p><strong>Damaged Clubs:</strong> If a club is damaged during the round (except through abuse), the player may:</p>
+                <ul>
+                    <li>Continue to make strokes with the damaged club, or</li>
+                    <li>Repair the club or replace it with another club</li>
+                </ul>
+
+                <h3>4.2 Balls</h3>
+                <ul>
+                    <li>Must use a <strong>conforming ball</strong> in making each stroke</li>
+                    <li>May get a conforming ball from anyone, including another player</li>
+                    <li>Must not play a ball whose characteristics have been deliberately altered</li>
+                </ul>
+
+                <h3>4.3 Use of Equipment</h3>
+                <p><strong>Allowed Uses:</strong></p>
+                <ul>
+                    <li>Getting distance or directional information (distance-measuring devices)</li>
+                    <li>Getting weather information available from forecasts</li>
+                    <li>Using plain gloves that meet Equipment Rules</li>
+                    <li>Using equipment for general stretching</li>
+                </ul>
+                <p><strong>Not Allowed:</strong></p>
+                <ul>
+                    <li>Measuring elevation changes</li>
+                    <li>Using devices to get recommended club selection</li>
+                    <li>Listening to music to eliminate distractions or help with swing tempo</li>
+                    <li>Using training or swing aids during the round</li>
+                </ul>
+            </div>
+
+            <div id="rule5" class="rule-section">
+                <h2>Rule 5 – Playing the Round</h2>
+                
+                <h3>5.2 Practice on Course</h3>
+                <p><strong>Match Play:</strong> Player may practice on the course before a round</p>
+                <p><strong>Stroke Play:</strong> Player must not practice on the course before a round, except:</p>
+                <ul>
+                    <li>Practice putting/chipping on or near first teeing area</li>
+                    <li>Practice on any practice area</li>
+                </ul>
+
+                <h3>5.3 Starting and Ending Round</h3>
+                <ul>
+                    <li><strong>Starting:</strong> Round starts when player makes stroke to start first hole</li>
+                    <li>Player must start at (and not before) their starting time</li>
+                    <li>Starting time is treated as exact (9:00 am means 9:00:00 am)</li>
+                    <li><strong>Penalty for late arrival:</strong> Disqualification (unless arrival is ≤5 minutes late, then general penalty on first hole)</li>
+                </ul>
+
+                <h3>5.6 Pace of Play</h3>
+                <p>Players must not unreasonably delay play. When it is the player's turn:</p>
+                <ul>
+                    <li>It is recommended the player make the stroke in <strong>no more than 40 seconds</strong></li>
+                    <li>Usually the player should play more quickly than that</li>
+                </ul>
+                <p><strong>Ready Golf in Stroke Play:</strong> Players are encouraged to play out of turn in a safe and responsible way to help pace of play.</p>
+            </div>
+
+            <div id="rule6" class="rule-section">
+                <h2>Rule 6 – Playing a Hole</h2>
+                
+                <h3>6.1 Starting Play of a Hole</h3>
+                <p>A player must start each hole by playing a ball from anywhere inside the teeing area.</p>
+                <ul>
+                    <li><strong>Match Play:</strong> If played from outside teeing area, opponent may cancel the stroke</li>
+                    <li><strong>Stroke Play:</strong> General penalty (two strokes) and must correct by playing from inside teeing area</li>
+                </ul>
+
+                <h3>6.2 Playing Ball from Teeing Area</h3>
+                <p><strong>Ball may be teed or played from ground:</strong></p>
+                <ul>
+                    <li>From a tee placed in or on the ground, or</li>
+                    <li>From the ground itself</li>
+                </ul>
+                <p><strong>Ball is not in play until stroke is made:</strong></p>
+                <ul>
+                    <li>Ball may be lifted or moved without penalty before the stroke</li>
+                    <li>If teed ball falls off tee before stroke, it may be re-teed without penalty</li>
+                </ul>
+
+                <h3>6.3 Ball Used in Play of Hole</h3>
+                <p>A player must hole out with the <strong>same ball played from the teeing area</strong>, except when:</p>
+                <ul>
+                    <li>That ball is lost or out of bounds, or</li>
+                    <li>The player substitutes another ball (whether allowed or not)</li>
+                </ul>
+                <p><strong>Wrong Ball:</strong> A player must not make a stroke at a wrong ball</p>
+                <ul>
+                    <li><strong>Match Play:</strong> Loss of hole</li>
+                    <li><strong>Stroke Play:</strong> Two penalty strokes and must correct the mistake</li>
+                </ul>
+            </div>
+
+            <div id="rule10" class="rule-section">
+                <h2>Rule 10 – Preparing for and Making a Stroke</h2>
+                
+                <h3>10.1 Making a Stroke</h3>
+                <p>In making a stroke:</p>
+                <ul>
+                    <li>The player must <strong>fairly strike</strong> the ball with the head of the club</li>
+                    <li>Must not push, scrape or scoop the ball</li>
+                    <li>If the club accidentally hits the ball more than once, it counts as only one stroke with no penalty</li>
+                </ul>
+
+                <h3>10.2 Advice and Help</h3>
+                <p><strong>Advice:</strong> Any verbal comment or action intended to influence a player in:</p>
+                <ul>
+                    <li>Choosing a club</li>
+                    <li>Making a stroke</li>
+                    <li>Deciding how to play during a hole or round</li>
+                </ul>
+                <p><strong>Who May Give Advice:</strong></p>
+                <ul>
+                    <li>The player's caddie (if they have one)</li>
+                    <li>Partner or partner's caddie (in team formats)</li>
+                    <li><strong>NCAA:</strong> Two designated advice givers per team</li>
+                </ul>
+                <p><strong>Asking for/Giving Wrong Advice:</strong> General penalty</p>
+            </div>
+
+            <div id="rule17" class="rule-section">
+                <h2>Rule 17 – Penalty Areas</h2>
+                
+                <h3>Relief Options for Ball in Penalty Area</h3>
+                <p>When a ball is in a penalty area, the player may:</p>
+                <ol>
+                    <li><strong>Play as it lies</strong> (no penalty)</li>
+                    <li><strong>Stroke-and-distance relief</strong> (one penalty stroke)
+                        <ul>
+                            <li>Play from where previous stroke was made</li>
+                        </ul>
+                    </li>
+                    <li><strong>Back-on-the-line relief</strong> (one penalty stroke)
+                        <ul>
+                            <li>Drop on line from hole through point where ball last crossed edge</li>
+                            <li>Relief area is one club-length from where ball first touches ground</li>
+                        </ul>
+                    </li>
+                    <li><strong>Lateral relief</strong> (one penalty stroke, red penalty areas only)
+                        <ul>
+                            <li>Two club-lengths from where ball last crossed edge</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div id="rule18" class="rule-section">
+                <h2>Rule 18 – Stroke-and-Distance Relief; Ball Lost or Out of Bounds</h2>
+                
+                <h3>18.2 Ball Lost or Out of Bounds</h3>
+                <p>A ball is <strong>lost</strong> if not found in three minutes after search begins.</p>
+                <p>A ball is <strong>out of bounds</strong> when all of it is outside the course boundary.</p>
+                
+                <p><strong>Procedure:</strong> The player must take stroke-and-distance relief:</p>
+                <ul>
+                    <li>Add <strong>one penalty stroke</strong></li>
+                    <li>Play from where previous stroke was made</li>
+                </ul>
+
+                <h3>18.3 Provisional Ball</h3>
+                <p>If the original ball might be lost or out of bounds, the player may play a provisional ball:</p>
+                <ul>
+                    <li>Must be played before going forward to search</li>

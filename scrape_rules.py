@@ -40,7 +40,7 @@ SPORTS_RULEBOOKS = {
     "Volleyball": "https://ncaaorg.s3.amazonaws.com/championships/sports/volleyball/rules/women/2024PRWVB_2024and2025RulesChanges.pdf",
     
     # Golf - USGA Rules apply, but NCAA has modifications
-    "Men's Golf": "https://www.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html#!ruletype=pe&section=rule&rulenum=1",
+    "Men's Golf": "https://assets-us-01.kc-usercontent.com/c42c7bf4-dca7-00ea-4f2e-373223f80f76/48712d47-76dc-4fd3-add1-53972c021580/2023%20Rules%20of%20Golf.pdf",
     "Women's Golf": "https://www.usga.org/rules/rules-and-clarifications/rules-and-clarifications.html#!ruletype=pe&section=rule&rulenum=1",
     
     # Tennis - USTA Rules apply with NCAA modifications
