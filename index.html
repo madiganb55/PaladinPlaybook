@@ -149,6 +149,56 @@
       margin: 0;
       font-size: 1.8rem;
     }
+    
+    .calendar-legend {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .legend-color {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border-left: 3px solid;
+    }
+
+    .legend-color.home {
+      background: #f3e5f5;
+      border-color: #7b1fa2;
+    }
+
+    .legend-color.away {
+      background: #f5f5f5;
+      border-color: #757575;
+    }
+
+    .legend-color.neutral {
+      background: #e3f2fd;
+      border-color: #2196f3;
+    }
+
+    .legend-color.win {
+      background: #c8e6c9;
+      border-color: #388e3c;
+    }
+
+    .legend-color.loss {
+      background: #ffcdd2;
+      border-color: #d32f2f;
+    }
     .calendar-nav {
       display: flex;
       align-items: center;
@@ -226,14 +276,14 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
     .event-home {
-      background: #e8f5e9;
-      border-left: 3px solid #4caf50;
-      color: #2e7d32;
+      background: #f3e5f5;
+      border-left: 3px solid #7b1fa2;
+      color: #6a1b9a;
     }
     .event-away {
-      background: #fff3e0;
-      border-left: 3px solid #ff9800;
-      color: #e65100;
+      background: #f5f5f5;
+      border-left: 3px solid #757575;
+      color: #616161;
     }
     .event-neutral {
       background: #e3f2fd;
@@ -501,6 +551,28 @@
             <button onclick="nextMonth()">Next ›</button>
           </div>
         </div>
+        <div class="calendar-legend">
+      <div class="legend-item">
+        <div class="legend-color home"></div>
+        <span>🏠 Home Games</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color away"></div>
+        <span>✈️ Away Games</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color neutral"></div>
+        <span>🌐 Neutral Site</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color win"></div>
+        <span>✅ Win</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color loss"></div>
+        <span>❌ Loss</span>
+  </div>
+</div>
         <div class="calendar-grid" id="calendarGrid"></div>
       </div>
       <div class="sports-grid" id="sportsGrid"></div>
@@ -764,7 +836,14 @@
         resultUs: event.resultUs || event.resultFurScore || '',
         resultThem: event.resultThem || event.resultOppScore || '',
         postscore_info: event.postscore_info || event.postscoreInfo || '',
-        url: event.url || event.sportURL || ''
+        url: (() => {
+      const rawUrl = event.url || event.sportURL || '';
+      // If URL starts with /, prepend the Furman athletics domain
+      if (rawUrl && rawUrl.startsWith('/')) {
+        return 'https://furmanpaladins.com' + rawUrl;
+      }
+      return rawUrl;
+})()
       };
     }).filter(event => event !== null); // Remove any null entries
     
@@ -970,17 +1049,16 @@
           `;
         }
         
-        if (event.url && event.url !== 'null') {
-          bodyHTML += `
-            <div class="event-detail-row">
-              <a href="${escapeHtml(event.url)}" target="_blank" style="color: #4a1e7c; text-decoration: none; font-weight: 600;">
-                📰 View Game Recap →
-              </a>
-            </div>
-          `;
-        }
-      }
-      
+        if (event.url && event.url !== 'null' && event.url !== '') {
+      bodyHTML += `
+        <div class="event-detail-row">
+          <a href="${event.url}" target="_blank" rel="noopener noreferrer" style="color: #4a1e7c; text-decoration: underline; font-weight: 600; cursor: pointer;">
+            📰 View Game Recap →
+          </a>
+        </div>
+      `;
+    }
+  }
       body.innerHTML = bodyHTML;
       modal.classList.add('show');
     }

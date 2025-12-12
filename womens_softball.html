@@ -388,6 +388,8 @@
       <p><strong>Furman Women's Softball Athletics Page</strong><br>
       
       <a href="https://furmanpaladins.com/sports/softball" style="color: #4a1e7c;">www.FurmanSoftball.com</a></p>
+        <p><strong>Roster Page</strong><br>
+        <a href="https://furmanpaladins.com/sports/softball/roster" style="color: #4a1e7c;">www.FurmanSoftball.com/roster</a></p>
             
             <p><strong>National Collegiate Athletic Association</strong><br>
             P.O. Box 6222<br>
@@ -405,8 +407,8 @@
                         <circle cx="500" cy="500" r="300" fill="#8b6f47" opacity="0.3"/>
                         
                         <!-- Foul lines -->
-                        <line x1="500" y1="500" x2="200" y2="800" class="field-line" stroke-dasharray="5,5"/>
-                        <line x1="500" y1="500" x2="800" y2="800" class="field-line" stroke-dasharray="5,5"/>
+                        <line x1="500" y1="800" x2="190" y2="550" class="field-line" stroke-dasharray="5,5"/>
+                        <line x1="500" y1="800" x2="900" y2="480" class="field-line" stroke-dasharray="5,5"/>
                         
                         <!-- Bases -->
                         <g class="base">
@@ -738,5 +740,86 @@
             <p>For complete rules and detailed interpretations, consult the official NCAA Softball Rules Book</p>
         </footer>
     </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('sportDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        window.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('sportDropdown');
+            const btn = document.querySelector('.dropdown-btn');
+            if (!event.target.matches('.dropdown-btn') && !event.target.matches('.dropdown-btn *')) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Interactive field positions
+        const positionDescriptions = {
+            'pitcher': {
+                name: 'Pitcher (P)',
+                description: 'The primary defensive player who delivers pitches to the batter from 43 feet away. Must use underhand delivery and follow specific pitching mechanics.',
+                responsibilities: 'Controls the pace of the game, fields bunts and grounders, covers bases on plays, and backs up throws to home plate.'
+            },
+            'catcher': {
+                name: 'Catcher (C)',
+                description: 'The defensive leader positioned behind home plate, responsible for receiving pitches and directing the defense.',
+                responsibilities: 'Calls pitches, blocks balls in the dirt, throws out base stealers, fields bunts, and protects home plate on plays at the plate.'
+            },
+            'first-base': {
+                name: 'First Base (1B)',
+                description: 'Positioned near first base, this player receives throws from infielders to record outs on ground balls.',
+                responsibilities: 'Catches throws for force outs, holds runners on base, fields ground balls in their area, and participates in bunt coverage.'
+            },
+            'second-base': {
+                name: 'Second Base (2B)',
+                description: 'Covers the area between first and second base, working closely with the shortstop on double plays.',
+                responsibilities: 'Turns double plays, covers second base on steals, fields ground balls up the middle, and covers first base on bunts.'
+            },
+            'third-base': {
+                name: 'Third Base (3B)',
+                description: 'Guards the "hot corner" near third base, requiring quick reflexes to handle hard-hit balls.',
+                responsibilities: 'Fields bunts and hard grounders, makes long throws to first base, covers third base, and backs up plays at second base.'
+            },
+            'shortstop': {
+                name: 'Shortstop (SS)',
+                description: 'The key infielder positioned between second and third base, often the best defensive player on the team.',
+                responsibilities: 'Covers the most ground in the infield, turns double plays with the second baseman, covers second base on steals, and has a strong arm for long throws.'
+            },
+            'left-field': {
+                name: 'Left Field (LF)',
+                description: 'The outfielder positioned in left field, responsible for catching fly balls and preventing extra-base hits.',
+                responsibilities: 'Catches fly balls, fields ground balls through the infield, backs up throws to third base, and has a strong arm to throw out runners.'
+            },
+            'center-field': {
+                name: 'Center Field (CF)',
+                description: 'The primary outfielder with the most ground to cover, typically the fastest and most skilled defensive player in the outfield.',
+                responsibilities: 'Covers the most ground in the outfield, directs other outfielders, backs up second base on throws, and makes quick decisions on fly balls.'
+            },
+            'right-field': {
+                name: 'Right Field (RF)',
+                description: 'The outfielder in right field, often with the strongest throwing arm to make long throws to third base.',
+                responsibilities: 'Catches fly balls, fields base hits, makes long throws to third base and home plate, and backs up first base on throws.'
+            }
+        };
+
+        document.querySelectorAll('.player').forEach(player => {
+            player.addEventListener('click', function() {
+                const position = this.getAttribute('data-position');
+                const info = positionDescriptions[position];
+                const panel = document.getElementById('softballInfoPanel');
+                
+                if (info) {
+                    panel.innerHTML = `
+                        <h3 style="margin: 0 0 0.5rem 0; color: #4a1e7c;">${info.name}</h3>
+                        <p style="margin: 0.5rem 0;"><strong>Description:</strong> ${info.description}</p>
+                        <p style="margin: 0.5rem 0;"><strong>Responsibilities:</strong> ${info.responsibilities}</p>
+                    `;
+                    panel.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
